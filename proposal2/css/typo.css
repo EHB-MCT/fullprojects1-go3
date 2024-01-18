@@ -1,0 +1,40 @@
+/* TYPOGRAPHY */
+
+h1 {
+	font-family: "HURTMOLD_", sans-serif;
+	font-size: 108px;
+}
+
+h2 {
+	font-family: "HURTMOLD_", sans-serif;
+	font-size: 64px;
+}
+
+h3 {
+	font-family: "roboto", sans-serif;
+	font-size: 32px;
+}
+
+h4 {
+}
+
+h5 {
+}
+
+h6 {
+}
+
+p {
+	font-family: "roboto", sans-serif;
+	font-size: 20px;
+}
+
+a {
+	font-family: "roboto", sans-serif;
+	font-size: 20px;
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration: underline;
+}

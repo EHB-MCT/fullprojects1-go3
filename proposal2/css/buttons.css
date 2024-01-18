@@ -1,0 +1,15 @@
+/* BUTTONS */
+
+.btn-primary {
+	color: white;
+	background-color: aqua;
+	padding: 10px 40px;
+	border-radius: 20px;
+}
+
+.btn-secondary {
+    color: #000;
+	background-color: #EBE9E9;
+	padding: 10px 30px;
+	border-radius: 20px;
+}

@@ -1,0 +1,16 @@
+/* BUTTONS */
+
+.btn-primary {
+	padding: 5px 20px;
+	text-decoration: none;
+}
+.btn-primary:hover {
+	text-decoration: underline;
+    transition: background-color 1.5s ease;
+    background-color: aqua;
+}
+
+.btn-secondary {
+	border-radius: 20px;
+	border-color: black;
+}

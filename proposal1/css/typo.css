@@ -1,13 +1,17 @@
 /* TYPOGRAPHY */
-
-h1 {
+h1 {font-family: "kenyan coffee",sans-serif;
+	font-size: 250px;
 }
 
 h2 {
+    font-family: "kenyan coffee",sans-serif;
+	font-size: 200px;
 }
 
-h3 {
+h3 {font-family: "kenyan coffee",sans-serif;
+    font-size: 105px;
 }
+
 
 h4 {
 }
@@ -18,8 +22,12 @@ h5 {
 h6 {
 }
 
-p {
+p {font-family: "verdana",sans-serif;
+    font-size: 30px;
 }
 
-a {
+a {font-family: "kenyan coffee",sans-serif;
+    font-size: 35px;
 }
+
+

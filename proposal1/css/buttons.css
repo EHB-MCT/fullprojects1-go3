@@ -1,7 +1,25 @@
 /* BUTTONS */
 
 .btn-primary {
+	background-color: #000000;
+	padding: 10px 20px;
+	color: white;
+	border: 1px solid #000000;
+}
+
+.btn-primary:hover {
+	color: #000000;
+	background-color: #ffffff;
 }
 
 .btn-secondary {
+	background-color: #ffffff;
+	padding: 10px 20px;
+	color: rgb(0, 0, 0);
+	border: 1px solid #000000;
+}
+
+.btn-secondary:hover {
+	background-color: #000000;
+	color: #ffffff;
 }
