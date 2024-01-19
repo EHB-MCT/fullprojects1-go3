@@ -3,14 +3,21 @@
 .btn-primary {
 	padding: 5px 20px;
 	text-decoration: none;
+	background-color: aqua;
 }
 .btn-primary:hover {
 	text-decoration: underline;
-    transition: background-color 1.5s ease;
-    background-color: aqua;
+	transition: background-color 1.5s ease;
 }
 
 .btn-secondary {
-	border-radius: 20px;
+	padding: 30px;
+	border-radius: 30px;
+}
+.btn-secondary:hover {
+	border: 1px solid #000000;
+
+	border-style: ridge;
 	border-color: black;
+	transition: border 1.5s ease;
 }

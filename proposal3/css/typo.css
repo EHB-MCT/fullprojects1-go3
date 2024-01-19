@@ -31,9 +31,11 @@ a {
 	font-family: "Merriwheather Sans", sans-serif;
 	font-size: 25px;
 	text-decoration: none;
+	color: black;
 }
 ul li {
 	font-family: "Merriwheather Sans", sans-serif;
 	font-size: 25px;
+	
 	text-decoration: none;
 }

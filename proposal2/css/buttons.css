@@ -2,14 +2,36 @@
 
 .btn-primary {
 	color: white;
-	background-color: aqua;
+	background-color: #44F259;
+	/* alternatieve kleuren
+	#C8F514 
+	#F0E211 
+	#F3B934 
+	#F98163 
+	#FD508C
+	 */
+
 	padding: 10px 40px;
-	border-radius: 20px;
+	border-bottom-left-radius: 20px;
+	border-bottom-right-radius: 20px;
 }
 
+/* .btn-primary:hover {
+	padding-bottom: 30px;
+	border-bottom-left-radius: 20px;
+	border-bottom-right-radius: 20px;
+} */
+
 .btn-secondary {
-    color: #000;
-	background-color: #EBE9E9;
+	color: white;
+	background-color: #44F259;
+		/* alternatieve kleuren
+	#C8F514 
+	#F0E211 
+	#F3B934 
+	#F98163 
+	#FD508C
+	 */
 	padding: 10px 30px;
 	border-radius: 20px;
-}
+}	
