@@ -70,3 +70,11 @@ a {
 .nav-button:hover {
 	text-decoration: underline;
 }
+.diamond-doodle {
+	position: absolute;
+	width: 100px;
+	left: 800px;
+	bottom: 100px;
+	
+}
+
