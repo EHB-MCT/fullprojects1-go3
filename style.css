@@ -14,6 +14,8 @@ body {
 
 h1,
 h2 {
+h1,
+h2 {
 	font-family: "Delius Unicase", cursive;
 	text-decoration: underline;
 	text-decoration-color: lime;
@@ -49,12 +51,10 @@ nav {
 
 .nav-links li {
 	padding: 40px;
-	background-color: aqua;
 	display: inline;
 	margin: 20px;
 }
 .person {
-	background-color: aqua;
 	flex: 1;
 }
 .person img {
@@ -71,6 +71,8 @@ nav {
 	display: inline;
 }
 .personnel {
+	background-color: darkgrey;
+	padding: 20px;
 	display: inline;
 	display: flex;
 }
@@ -81,9 +83,46 @@ a {
 a:hover {
 	text-decoration: underline;
 }
+.buttons {
+	display: flex;
+	justify-content: space-around;
+}
+.buttonClass {
+	background-color: antiquewhite;
+	border-radius: 50px;
+	padding: 20px 50px;
+}
 .diamond-doodle {
 	position: absolute;
 	width: 100px;
 	left: 800px;
 	bottom: 100px;
+}
+.ContactInformation {
+	display: flex;
+	width: 200px;
+}
+.sendUs {
+	flex: 1;
+}
+.sendUs input {
+	margin-bottom: 20px;
+}
+.Messege {
+	flex: 1;
+	margin-left: 130px;
+}
+.Messege input {
+	margin-bottom: 20px;
+	height: 100px;
+}
+.contactData {
+	display: flex;
+	width: 600px;
+}
+.links {
+	flex: 1;
+}
+.socials {
+	flex: 1;
 }
