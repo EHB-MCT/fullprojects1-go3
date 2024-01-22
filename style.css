@@ -12,11 +12,14 @@ body {
 	text-decoration: none;
 }
 
-h1 {
-	font-size: 40px;
+h1,
+h2 {
 	font-family: "Delius Unicase", cursive;
 	text-decoration: underline;
 	text-decoration-color: lime;
+}
+h1 {
+	font-size: 40px;
 }
 
 p {
@@ -42,12 +45,10 @@ nav {
 
 .nav-links li {
 	padding: 40px;
-	background-color: aqua;
 	display: inline;
 	margin: 20px;
 }
 .person {
-	background-color: aqua;
 	flex: 1;
 }
 .person img {
@@ -64,6 +65,8 @@ nav {
 	display: inline;
 }
 .personnel {
+	background-color: darkgrey;
+	padding: 20px;
 	display: inline;
 	display: flex;
 }
@@ -73,6 +76,15 @@ a {
 }
 a:hover {
 	text-decoration: underline;
+}
+.buttons {
+	display: flex;
+	justify-content: space-around;
+}
+.buttonClass {
+	background-color: antiquewhite;
+	border-radius: 50px;
+	padding: 20px 50px;
 }
 .diamond-doodle {
 	position: absolute;
