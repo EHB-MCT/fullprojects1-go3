@@ -94,13 +94,12 @@ a:hover {
 	margin-left: 130px;
 }
 .Messege input {
-	
-	margin-bottom: 20px;
+	margin-bottom: 40px;
 	height: 100px;
 }
 .contactData{
 	display: flex;
-	width: 600px;
+	width: 800px;
 }
 .links{
 	flex: 1;
