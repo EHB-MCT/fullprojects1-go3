@@ -92,3 +92,31 @@ a:hover {
 	left: 800px;
 	bottom: 100px;
 }
+.ContactInformation {
+	display: flex;
+	width: 200px;
+}
+.sendUs{
+	flex: 1;
+}
+.sendUs input { 
+	margin-bottom: 20px;}
+.Messege{
+	flex: 1;
+	margin-left: 130px;
+}
+.Messege input {
+	
+	margin-bottom: 20px;
+	height: 100px;
+}
+.contactData{
+	display: flex;
+	width: 600px;
+}
+.links{
+	flex: 1;
+}
+.socials{
+	flex: 1;
+}
