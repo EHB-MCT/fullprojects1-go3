@@ -1,9 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Delius+Unicase&family=Roboto&display=swap");
 
 body {
-	
 }
-.wrapper{
+.wrapper {
 	margin: 5%;
 }
 .slogan {
@@ -47,14 +46,22 @@ nav {
 	display: inline;
 	margin: 20px;
 }
-.personeel {
+.person {
 	background-color: aqua;
+	flex: 1;
 }
-.personen li {
+.person img{
+	width: 130px;
+}
+.department li {
 	background-color: red;
 	width: 20%;
 	margin: 20px;
 	display: inline;
+}
+.personnel {
+	display: inline;
+	display: flex;
 }
 a {
 	color: black;
