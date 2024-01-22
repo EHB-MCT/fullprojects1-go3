@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Delius+Unicase&family=Roboto&display=swap");
 
 body {
+	margin: 0px;
 }
 .wrapper {
 	margin: 5%;
@@ -122,4 +123,11 @@ a:hover {
 }
 .socials {
 	flex: 1;
+}
+
+.duck {
+	position: absolute;
+	width: 400px;
+	left: 130vh;
+	bottom: 20vh;
 }
