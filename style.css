@@ -12,7 +12,6 @@ body {
 	text-decoration: none;
 }
 
-
 h1,
 h2 {
 	font-family: "Delius Unicase", cursive;
@@ -43,7 +42,6 @@ a {
 }
 
 nav {
-	background-color: blue;
 	display: flex;
 	justify-content: space-between;
 }
@@ -121,4 +119,23 @@ a:hover {
 }
 .socials {
 	flex: 1;
+}
+
+table,
+th,
+td {
+	font-family: "Roboto", sans-serif;
+	border: 1px solid black;
+	text-align: center;
+}
+
+.courseTitle {
+	text-align: left;
+}
+table {
+	width: 40%;
+}
+
+main div {
+	margin-bottom: 50px;
 }
