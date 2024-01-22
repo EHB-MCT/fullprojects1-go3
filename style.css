@@ -12,11 +12,18 @@ body {
 	text-decoration: none;
 }
 
-h1 {
-	font-size: 40px;
+h1,
+h2 {
 	font-family: "Delius Unicase", cursive;
 	text-decoration: underline;
 	text-decoration-color: lime;
+}
+h1 {
+	font-size: 40px;
+}
+
+h2 {
+	font-size: 30px;
 }
 
 p {
