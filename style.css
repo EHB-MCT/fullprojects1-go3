@@ -50,11 +50,15 @@ nav {
 	background-color: aqua;
 	flex: 1;
 }
-.person img{
+.person img {
 	width: 130px;
 }
+.department {
+	background-color: dimgray;
+	padding: 20px 30px;
+	text-align: center;
+}
 .department li {
-	background-color: red;
 	width: 20%;
 	margin: 20px;
 	display: inline;
@@ -67,7 +71,7 @@ a {
 	color: black;
 	text-decoration: none;
 }
-.nav-button:hover {
+a:hover {
 	text-decoration: underline;
 }
 .diamond-doodle {
@@ -75,6 +79,4 @@ a {
 	width: 100px;
 	left: 800px;
 	bottom: 100px;
-	
 }
-
