@@ -1,0 +1,65 @@
+@import url("https://fonts.googleapis.com/css2?family=Delius+Unicase&family=Roboto&display=swap");
+
+body {
+	
+}
+.wrapper{
+	margin: 5%;
+}
+.slogan {
+	font-size: 70px;
+	width: 65%;
+	text-align: center;
+	text-decoration: none;
+}
+
+h1 {
+	font-size: 40px;
+	font-family: "Delius Unicase", cursive;
+	text-decoration: underline;
+	text-decoration-color: lime;
+}
+
+p {
+	font-family: "Roboto", sans-serif;
+	width: 40%;
+}
+
+a {
+	color: black;
+	text-decoration: none;
+}
+
+.logo {
+	width: 80px;
+	height: 80px;
+}
+
+nav {
+	background-color: blue;
+	display: flex;
+	justify-content: space-between;
+}
+
+.nav-links li {
+	padding: 40px;
+	background-color: aqua;
+	display: inline;
+	margin: 20px;
+}
+.personeel {
+	background-color: aqua;
+}
+.personen li {
+	background-color: red;
+	width: 20%;
+	margin: 20px;
+	display: inline;
+}
+a {
+	color: black;
+	text-decoration: none;
+}
+.nav-button:hover {
+	text-decoration: underline;
+}
