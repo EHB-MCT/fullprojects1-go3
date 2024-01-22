@@ -12,7 +12,6 @@ body {
 	text-decoration: none;
 }
 
-
 h1,
 h2 {
 	font-family: "Delius Unicase", cursive;
@@ -121,4 +120,15 @@ a:hover {
 }
 .socials {
 	flex: 1;
+}
+
+.stickman-2 {
+	position: absolute;
+
+	width: 10%;
+	left: 800px;
+}
+.basispeilers {
+	padding-top: 25px;
+	padding-bottom: 100px;
 }
