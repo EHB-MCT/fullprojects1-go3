@@ -70,10 +70,7 @@ nav {
 	display: inline;
 	display: flex;
 }
-a {
-	color: black;
-	text-decoration: none;
-}
+
 a:hover {
 	text-decoration: underline;
 }
@@ -96,27 +93,27 @@ a:hover {
 	display: flex;
 	width: 200px;
 }
-.sendUs{
+.sendUs {
 	flex: 1;
 }
-.sendUs input { 
-	margin-bottom: 20px;}
-.Messege{
+.sendUs input {
+	margin-bottom: 20px;
+}
+.Messege {
 	flex: 1;
 	margin-left: 130px;
 }
 .Messege input {
-	
 	margin-bottom: 20px;
 	height: 100px;
 }
-.contactData{
+.contactData {
 	display: flex;
 	width: 600px;
 }
-.links{
+.links {
 	flex: 1;
 }
-.socials{
+.socials {
 	flex: 1;
 }
