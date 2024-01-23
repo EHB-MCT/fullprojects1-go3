@@ -131,6 +131,7 @@ td {
 	font-family: "Roboto", sans-serif;
 	border: 1px solid black;
 	text-align: center;
+	background-color: white;
 	
 }
 
@@ -144,6 +145,7 @@ td {
 }
 .tables1stYear {
 	display: flex;
+	justify-content: space-between;
 	
 }
 
