@@ -2,8 +2,7 @@
 
 body {
 	margin: 0px;
-	background-image: url(./images/background\ image.svg);
-	background-image: url(./images/background\ image.svg);
+	background-image:url(./images/background\ image.svg);
 	background-repeat: repeat-y;
 	background-size: 100%;
 }
@@ -133,25 +132,22 @@ td {
 	border: 1px solid black;
 	text-align: center;
 	background-color: white;
+	
 }
 
 .courseTitle {
 	text-align: left;
 }
-.tables1stGrade,
-.tables2ndGrade {
-	display: flex;
-	justify-content: space-around;
-}
 .firstYear,
-.secondYear,
-.thirdYear,
-.fourthYear,
-.fifthYear {
-	width: 40%;
-	box-sizing: border-box;
+.secondYear {
+	flex: 1;
+	
 }
-
+.tables1stYear {
+	display: flex;
+	justify-content: space-between;
+	
+}
 
 main div {
 	margin-bottom: 50px;
@@ -161,7 +157,7 @@ main div {
 	position: absolute;
 
 	width: 10%;
-	left: 1200px;
+	left: 800px;
 }
 .basispeilers {
 	padding-top: 25px;
@@ -174,12 +170,38 @@ main div {
 	bottom: 20vh;
 }
 
-.download {
-	display: flex;
+
+
+.filter input {
+  display: inline-block;
+  width: 100px;
 }
-.sportzaal {
-	width: 30%;
-}
-.filter {
+
+.filter p{
 	display: inline-block;
+	width: 30px;
+	margin-left: 70px;
+}
+
+.eventImg {
+	width: 250px;
+	height: 250px;
+}
+.event{
+	display: flex;
+	margin: 30px;
+}
+.eventText{
+	margin-left: 100px;
+}
+
+.eventText h2{
+	margin: 0px;
+}
+
+
+.eventlist{
+	overflow-y: scroll;
+	height: 600px;
+	background-color: rgba(255, 255, 255, 0.5);
 }
