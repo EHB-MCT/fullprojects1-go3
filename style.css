@@ -154,7 +154,7 @@ main div {
 	position: absolute;
 
 	width: 10%;
-	left: 1200px;
+	left: 800px;
 }
 .basispeilers {
 	padding-top: 25px;
@@ -167,8 +167,9 @@ main div {
 	bottom: 20vh;
 }
 
-.download {
-	display: flex;
+.filter input {
+	display: inline-block;
+	width: 100px;
 }
 .sportzaal {
 	width: 30%;
@@ -182,7 +183,34 @@ main div {
 	width: 25%;
 }
 .filter {
+}
+
+.filter p {
 	display: inline-block;
+	width: 30px;
+	margin-left: 70px;
+}
+
+.eventImg {
+	width: 250px;
+	height: 250px;
+}
+.event {
+	display: flex;
+	margin: 30px;
+}
+.eventText {
+	margin-left: 100px;
+}
+
+.eventText h2 {
+	margin: 0px;
+}
+
+.eventlist {
+	overflow-y: scroll;
+	height: 600px;
+	background-color: rgba(255, 255, 255, 0.5);
 }
 .pdf {
 	font-family: "Roboto", sans-serif;
