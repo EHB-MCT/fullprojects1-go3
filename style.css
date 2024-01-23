@@ -3,6 +3,7 @@
 body {
 	margin: 0px;
 	background-image: url(./images/background\ image.svg);
+	background-image: url(./images/background\ image.svg);
 	background-repeat: repeat-y;
 	background-size: 100%;
 }
@@ -137,14 +138,20 @@ td {
 .courseTitle {
 	text-align: left;
 }
-.firstYear,
-.secondYear {
-	flex: 1;
-}
-.tables1stYear {
+.tables1stGrade,
+.tables2ndGrade {
 	display: flex;
-	justify-content: space-between;
+	justify-content: space-around;
 }
+.firstYear,
+.secondYear,
+.thirdYear,
+.fourthYear,
+.fifthYear {
+	width: 40%;
+	box-sizing: border-box;
+}
+
 
 main div {
 	margin-bottom: 50px;
@@ -174,5 +181,5 @@ main div {
 	width: 30%;
 }
 .filter {
-	display:inline-block;
+	display: inline-block;
 }
