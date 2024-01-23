@@ -172,4 +172,28 @@ main div {
 
 .filter {
 	display:inline-block;
+	margin: 30px;
+}
+
+.eventImg {
+	width: 250px;
+	height: 250px;
+}
+.event{
+	display: flex;
+	margin: 30px;
+}
+.eventText{
+	margin-left: 100px;
+}
+
+.eventText h2{
+	margin: 0px;
+}
+
+
+.eventlist{
+	overflow-y: scroll;
+	height: 600px;
+	background-color: rgba(255, 255, 255, 0.5);
 }
