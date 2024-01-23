@@ -2,7 +2,7 @@
 
 body {
 	margin: 0px;
-	background-image:url(./images/background\ image.svg);
+	background-image: url(./images/background\ image.svg);
 	background-repeat: repeat-y;
 	background-size: 100%;
 }
@@ -132,7 +132,6 @@ td {
 	border: 1px solid black;
 	text-align: center;
 	background-color: white;
-	
 }
 
 .courseTitle {
@@ -141,12 +140,10 @@ td {
 .firstYear,
 .secondYear {
 	flex: 1;
-	
 }
 .tables1stYear {
 	display: flex;
 	justify-content: space-between;
-	
 }
 
 main div {
@@ -157,7 +154,7 @@ main div {
 	position: absolute;
 
 	width: 10%;
-	left: 800px;
+	left: 1200px;
 }
 .basispeilers {
 	padding-top: 25px;
@@ -170,30 +167,12 @@ main div {
 	bottom: 20vh;
 }
 
+.download {
+	display: flex;
+}
+.sportzaal {
+	width: 30%;
+}
 .filter {
 	display:inline-block;
-	margin: 30px;
-}
-
-.eventImg {
-	width: 250px;
-	height: 250px;
-}
-.event{
-	display: flex;
-	margin: 30px;
-}
-.eventText{
-	margin-left: 100px;
-}
-
-.eventText h2{
-	margin: 0px;
-}
-
-
-.eventlist{
-	overflow-y: scroll;
-	height: 600px;
-	background-color: rgba(255, 255, 255, 0.5);
 }
