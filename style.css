@@ -138,12 +138,16 @@ td {
 .courseTitle {
 	text-align: left;
 }
-.tables1stGrade {
+.tables1stGrade,
+.tables2ndGrade {
 	display: flex;
 	justify-content: space-around;
 }
 .firstYear,
-.secondYear {
+.secondYear,
+.thirdYear,
+.fourthYear,
+.fifthYear {
 	width: 40%;
 	box-sizing: border-box;
 }
