@@ -131,13 +131,20 @@ td {
 	font-family: "Roboto", sans-serif;
 	border: 1px solid black;
 	text-align: center;
+	
 }
 
 .courseTitle {
 	text-align: left;
 }
-table {
-	width: 40%;
+.firstYear,
+.secondYear {
+	flex: 1;
+	
+}
+.tables1stYear {
+	display: flex;
+	
 }
 
 main div {
