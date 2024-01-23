@@ -3,6 +3,7 @@
 body {
 	margin: 0px;
 	background-image: url(./images/background\ image.svg);
+	background-image: url(./images/background\ image.svg);
 	background-repeat: repeat-y;
 	background-size: 100%;
 }
@@ -130,6 +131,15 @@ td {
 .courseTitle {
 	text-align: left;
 }
+<<<<<<< HEAD
+.firstYear,
+.secondYear {
+	flex: 1;
+}
+.tables1stYear {
+	display: flex;
+	justify-content: space-between;
+=======
 .tables1stGrade,
 .tables2ndGrade,
 .tables3rdGrade {
@@ -144,6 +154,41 @@ td {
 .fifthYearDF {
 	width: 40%;
 	box-sizing: border-box;
+>>>>>>> 80b0642da1ad97c3efc53f30085e5fcbbcf32423
+}
+
+.buttons {
+	display: flex;
+	justify-content: space-around;
+}
+/* .buttonFirstGrade,
+.buttonSecondGrade,
+.buttonThirdGrade {
+	background-color: antiquewhite;
+	border-radius: 50px;
+	padding: 20px 50px;
+} */
+.buttonGrade {
+	cursor: pointer;
+	padding: 5px 10px;
+	background-color: #ddd;
+	border-radius: 5px;
+}
+
+input[name="grade"]:checked + label + #firstGrade,
+input[name="grade"]:checked + label + input[name="grade"] + label #secondGrade,
+input[name="grade"]:checked
+	+ label
+	+ input[name="grade"]
+	+ label
+	+ input[name="grade"]
+	+ label
+	+ #thirdGrade {
+	display: block;
+}
+
+.hiddenDiv {
+	display: none;
 }
 
 .buttons {
@@ -204,8 +249,24 @@ main div {
 .filter input {
 	display: inline-block;
 	width: 100px;
+	display: inline-block;
+	width: 100px;
+}
+.sportzaal {
+	width: 30%;
+	margin-right: 125px;
+}
+.speelplaats {
+	width: 25%;
+	margin-right: 125px;
+}
+.bib {
+	width: 25%;
+}
+.filter {
 }
 
+.filter p {
 .filter p {
 	display: inline-block;
 	width: 30px;
@@ -230,6 +291,46 @@ main div {
 
 .eventlist {
 	overflow-y: scroll;
+	border: 1px;
+	border-color: black;
 	height: 600px;
 	background-color: rgba(255, 255, 255, 0.5);
+}
+.pdf {
+	font-family: "Roboto", sans-serif;
+	color: #ff0000;
+	text-decoration: underline;
+}
+
+.download {
+	display: flex;
+}
+.ssh {
+	display: flex;
+}
+
+.item{
+	min-width: 30%;
+	background-color:rgba(255, 255, 255, 0.9) ;
+	text-align: center;
+	margin: 10px;
+}
+.item img{
+	width: 100%;
+}
+
+
+.item p{
+	width: 100%;
+	text-align: left;
+
+}
+.item a{
+	display: inline-block;
+}
+.caroussel{
+	margin-top: 20px;
+	max-height: 600px;
+	display: flex;
+	overflow-x: auto;
 }
