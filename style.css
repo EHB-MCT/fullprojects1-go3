@@ -31,7 +31,8 @@ h2 {
 	font-size: 30px;
 }
 
-p {
+p,
+li {
 	font-family: "Roboto", sans-serif;
 	width: 40%;
 }
@@ -139,7 +140,8 @@ td {
 	text-align: left;
 }
 .tables1stGrade,
-.tables2ndGrade {
+.tables2ndGrade,
+.tables3rdGrade {
 	display: flex;
 	justify-content: space-around;
 }
@@ -147,11 +149,11 @@ td {
 .secondYear,
 .thirdYear,
 .fourthYear,
-.fifthYear {
+.fifthYearDS,
+.fifthYearDF {
 	width: 40%;
 	box-sizing: border-box;
 }
-
 
 main div {
 	margin-bottom: 50px;
