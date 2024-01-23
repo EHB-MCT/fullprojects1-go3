@@ -156,13 +156,6 @@ td {
 	display: flex;
 	justify-content: space-around;
 }
-/* .buttonFirstGrade,
-.buttonSecondGrade,
-.buttonThirdGrade {
-	background-color: antiquewhite;
-	border-radius: 50px;
-	padding: 20px 50px;
-} */
 .buttonGrade {
 	cursor: pointer;
 	padding: 5px 10px;
@@ -170,56 +163,16 @@ td {
 	border-radius: 5px;
 }
 
-input[name="grade"]:checked + label + #firstGrade,
-input[name="grade"]:checked + label + input[name="grade"] + label #secondGrade,
-input[name="grade"]:checked
-	+ label
-	+ input[name="grade"]
-	+ label
-	+ input[name="grade"]
-	+ label
-	+ #thirdGrade {
-	display: block;
-}
-
-.hiddenDiv {
-	display: none;
-}
-
-.buttons {
-	display: flex;
-	justify-content: space-around;
-}
-/* .buttonFirstGrade,
+.buttonFirstGrade,
 .buttonSecondGrade,
 .buttonThirdGrade {
 	background-color: antiquewhite;
 	border-radius: 50px;
 	padding: 20px 50px;
-} */
-.buttonGrade {
-	cursor: pointer;
-	padding: 5px 10px;
-	background-color: #ddd;
-	border-radius: 5px;
 }
-
-input[name="grade"]:checked + label + #firstGrade,
-input[name="grade"]:checked + label + input[name="grade"] + label #secondGrade,
-input[name="grade"]:checked
-	+ label
-	+ input[name="grade"]
-	+ label
-	+ input[name="grade"]
-	+ label
-	+ #thirdGrade {
-	display: block;
-}
-
 .hiddenDiv {
 	display: none;
 }
-
 main div {
 	margin-bottom: 50px;
 }
@@ -242,8 +195,6 @@ main div {
 }
 
 .filter input {
-	display: inline-block;
-	width: 100px;
 	display: inline-block;
 	width: 100px;
 }

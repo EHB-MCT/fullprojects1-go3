@@ -95,24 +95,24 @@
 				<div>
 					<h1>Welke richtingen bieden we aan?</h1>
 					<div class="buttons">
-						<a
-							class="buttonFirstGrade"
-							href="#"
-							onclick="showGrade('firstGrade')"
-							>1ste graad</a
-						>
-						<a
-							class="buttonSecondGrade"
-							href="#"
-							onclick="showGrade('secondGrade')"
-							>2de graad</a
-						>
-						<a
-							class="buttonThirdGrade"
-							href="#"
-							onclick="showGrade('thirdGrade')"
-							>3de graad</a
-						>
+						<input
+							type="checkbox"
+							id="buttonGrade1"
+							onchange="toggleDiv('buttonGrade1','firstGrade')"
+						/>
+						<label for="buttonGrade1" class="buttonGrade">1ste graad</label>
+						<input
+							type="checkbox"
+							id="buttonGrade2"
+							onchange="toggleDiv('buttonGrade2','secondGrade')"
+						/>
+						<label for="buttonGrade2" class="buttonGrade">2de graad</label>
+						<input
+							type="checkbox"
+							id="buttonGrade3"
+							onchange="toggleDiv('buttonGrade3','thirdGrade')"
+						/>
+						<label for="buttonGrade3" class="buttonGrade">3de graad</label>
 					</div>
 					<div class="hiddenDiv" id="firstGrade">
 						<p>
@@ -1243,17 +1243,20 @@
 							</table>
 						</div>
 					</div>
-					<script>
-						function showGrade(grade) {
-							// Hide all grade containers
-							document
-								.querySelectorAll(".grade-container")
-								.forEach((container) => {
-									container.style.display = "none";
-								});
 
-							// Show the selected grade container
-							document.getElementById(grade).style.display = "block";
+					<script>
+						function toggleDiv(button, grade) {
+							var checkbox = document.getElementById(button);
+							var hiddenDiv = document.getElementById(grade);
+							console.log(checkbox);
+							// If the checkbox is checked, show the div; otherwise, hide it
+							if (checkbox.checked) {
+								hiddenDiv.style.display = "block";
+								console.log("block");
+							} else {
+								hiddenDiv.style.display = "none";
+								console.log("hidden");
+							}
 						}
 					</script>
 					<p>
