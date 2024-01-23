@@ -131,12 +131,11 @@ td {
 .courseTitle {
 	text-align: left;
 }
-<<<<<<< HEAD
 .firstYear,
 .secondYear {
 	flex: 1;
 }
-=======
+
 .tables1stGrade,
 .tables2ndGrade,
 .tables3rdGrade {
@@ -151,7 +150,6 @@ td {
 .fifthYearDF {
 	width: 40%;
 	box-sizing: border-box;
->>>>>>> 80b0642da1ad97c3efc53f30085e5fcbbcf32423
 }
 
 .buttons {
@@ -305,26 +303,24 @@ main div {
 	display: flex;
 }
 
-.item{
+.item {
 	min-width: 30%;
-	background-color:rgba(255, 255, 255, 0.9) ;
+	background-color: rgba(255, 255, 255, 0.9);
 	text-align: center;
 	margin: 10px;
 }
-.item img{
+.item img {
 	width: 100%;
 }
 
-
-.item p{
+.item p {
 	width: 100%;
 	text-align: left;
-
 }
-.item a{
+.item a {
 	display: inline-block;
 }
-.caroussel{
+.caroussel {
 	margin-top: 20px;
 	max-height: 600px;
 	display: flex;
