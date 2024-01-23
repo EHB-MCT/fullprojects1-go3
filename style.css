@@ -30,7 +30,8 @@ h2 {
 	font-size: 30px;
 }
 
-p {
+p,
+li {
 	font-family: "Roboto", sans-serif;
 	width: 40%;
 }
@@ -137,6 +138,7 @@ td {
 .courseTitle {
 	text-align: left;
 }
+<<<<<<< HEAD
 .firstYear,
 .secondYear {
 	flex: 1;
@@ -144,6 +146,22 @@ td {
 .tables1stYear {
 	display: flex;
 	justify-content: space-between;
+=======
+.tables1stGrade,
+.tables2ndGrade,
+.tables3rdGrade {
+	display: flex;
+	justify-content: space-around;
+}
+.firstYear,
+.secondYear,
+.thirdYear,
+.fourthYear,
+.fifthYearDS,
+.fifthYearDF {
+	width: 40%;
+	box-sizing: border-box;
+>>>>>>> 80b0642da1ad97c3efc53f30085e5fcbbcf32423
 }
 
 main div {
@@ -209,6 +227,8 @@ main div {
 
 .eventlist {
 	overflow-y: scroll;
+	border: 1px;
+	border-color: black;
 	height: 600px;
 	background-color: rgba(255, 255, 255, 0.5);
 }
@@ -223,4 +243,30 @@ main div {
 }
 .ssh {
 	display: flex;
+}
+
+.item{
+	min-width: 30%;
+	background-color:rgba(255, 255, 255, 0.9) ;
+	text-align: center;
+	margin: 10px;
+}
+.item img{
+	width: 100%;
+}
+
+
+.item p{
+	width: 100%;
+	text-align: left;
+
+}
+.item a{
+	display: inline-block;
+}
+.caroussel{
+	margin-top: 20px;
+	max-height: 600px;
+	display: flex;
+	overflow-x: auto;
 }
