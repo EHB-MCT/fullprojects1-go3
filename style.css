@@ -2,6 +2,9 @@
 
 body {
 	margin: 0px;
+	background-image: url(./images/background\ image.svg);
+	background-repeat: repeat-y;
+	background-size: 100%;
 }
 .wrapper {
 	margin: 5%;
@@ -43,7 +46,6 @@ a {
 }
 
 nav {
-	background-color: blue;
 	display: flex;
 	justify-content: space-between;
 }
@@ -123,6 +125,31 @@ a:hover {
 	flex: 1;
 }
 
+table,
+th,
+td {
+	font-family: "Roboto", sans-serif;
+	border: 1px solid black;
+	text-align: center;
+	background-color: white;
+}
+
+.courseTitle {
+	text-align: left;
+}
+.firstYear,
+.secondYear {
+	flex: 1;
+}
+.tables1stYear {
+	display: flex;
+	justify-content: space-between;
+}
+
+main div {
+	margin-bottom: 50px;
+}
+
 .stickman-2 {
 	position: absolute;
 
@@ -145,4 +172,7 @@ a:hover {
 }
 .sportzaal {
 	width: 30%;
+}
+.filter {
+	display: inline-block;
 }
