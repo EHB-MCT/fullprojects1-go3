@@ -214,4 +214,13 @@ main div {
 }
 .pdf {
 	font-family: "Roboto", sans-serif;
+	color: #ff0000;
+	text-decoration: underline;
+}
+
+.download {
+	display: flex;
+}
+.ssh {
+	display: flex;
 }
