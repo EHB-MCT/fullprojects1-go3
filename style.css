@@ -127,7 +127,7 @@ a:hover {
 	position: absolute;
 
 	width: 10%;
-	left: 800px;
+	left: 1200px;
 }
 .basispeilers {
 	padding-top: 25px;
@@ -138,4 +138,11 @@ a:hover {
 	width: 400px;
 	left: 130vh;
 	bottom: 20vh;
+}
+
+.download {
+	display: flex;
+}
+.sportzaal {
+	width: 30%;
 }
