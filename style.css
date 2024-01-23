@@ -136,9 +136,6 @@ td {
 .secondYear {
 	flex: 1;
 }
-.tables1stYear {
-	display: flex;
-	justify-content: space-between;
 =======
 .tables1stGrade,
 .tables2ndGrade,
@@ -266,7 +263,6 @@ main div {
 .filter {
 }
 
-.filter p {
 .filter p {
 	display: inline-block;
 	width: 30px;
