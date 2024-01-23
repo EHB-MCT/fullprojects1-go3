@@ -2,6 +2,9 @@
 
 body {
 	margin: 0px;
+	background-image:url(./images/background\ image.svg);
+	background-repeat: repeat-y;
+	background-size: 100%;
 }
 .wrapper {
 	margin: 5%;
@@ -156,4 +159,8 @@ main div {
 	width: 400px;
 	left: 130vh;
 	bottom: 20vh;
+}
+
+.filter {
+	display:inline-block;
 }
