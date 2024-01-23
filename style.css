@@ -3,6 +3,7 @@
 body {
 	margin: 0px;
 	background-image: url(./images/background\ image.svg);
+	background-image: url(./images/background\ image.svg);
 	background-repeat: repeat-y;
 	background-size: 100%;
 }
@@ -156,7 +157,7 @@ main div {
 	position: absolute;
 
 	width: 10%;
-	left: 800px;
+	left: 1200px;
 }
 .basispeilers {
 	padding-top: 25px;
@@ -169,6 +170,13 @@ main div {
 	bottom: 20vh;
 }
 
+.download {
+	display: flex;
+}
+.sportzaal {
+	width: 30%;
+}
 .filter {
+	display: inline-block;
 	display: inline-block;
 }
