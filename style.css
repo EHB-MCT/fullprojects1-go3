@@ -172,7 +172,18 @@ main div {
 }
 .sportzaal {
 	width: 30%;
+	margin-right: 125px;
+}
+.speelplaats {
+	width: 25%;
+	margin-right: 125px;
+}
+.bib {
+	width: 25%;
 }
 .filter {
 	display: inline-block;
+}
+.pdf {
+	font-family: "Roboto", sans-serif;
 }
