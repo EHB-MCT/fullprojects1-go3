@@ -273,6 +273,7 @@ main div {
 	background-color: rgba(255, 255, 255, 0.9);
 	text-align: center;
 	margin: 10px;
+	
 }
 .item img {
 	max-width:100%;
@@ -288,7 +289,6 @@ main div {
 }
 .caroussel {
 	margin-top: 20px;
-	max-height: 600px;
 	display: flex;
 	overflow-x: auto;
 	scroll-behavior: smooth;
@@ -297,14 +297,14 @@ main div {
 .arrowLeft{
 	height: 50px;
 	position: absolute;
-	top: 1170px;
+	top: 1200px;
 	left: 20px;
 	cursor: pointer;
 }
 .arrowRight{
 	height: 50px;
 	position: absolute;
-	top: 1170px;
+	top: 1200px;
 	right: 20px;
 	cursor: pointer;
 
