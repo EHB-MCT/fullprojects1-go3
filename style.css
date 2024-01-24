@@ -202,10 +202,6 @@ main div {
 	bottom: 20vh;
 }
 
-.filter input {
-	display: inline-block;
-	width: 100px;
-}
 .sportzaal {
 	width: 30%;
 	margin-left: 25px;
@@ -217,14 +213,6 @@ main div {
 }
 .bib {
 	width: 25%;
-}
-.filter {
-}
-
-.filter p {
-	display: inline-block;
-	width: 30px;
-	margin-left: 70px;
 }
 
 .eventImg {
