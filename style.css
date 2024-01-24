@@ -190,6 +190,7 @@ main div {
 
 .stickman-2 {
 	position: absolute;
+	float: right;
 
 	width: 10%;
 	left: 800px;
@@ -211,11 +212,12 @@ main div {
 }
 .sportzaal {
 	width: 30%;
-	margin-right: 125px;
+	margin-left: 25px;
+	margin-right: 100px;
 }
 .speelplaats {
 	width: 25%;
-	margin-right: 125px;
+	margin-right: 100px;
 }
 .bib {
 	width: 25%;
@@ -258,11 +260,24 @@ main div {
 	text-decoration: underline;
 }
 
+.factuurbutton {
+	font-family: "Roboto", sans-serif;
+	color: white;
+	display: flex;
+	margin-right: 50px;
+
+	background-color: blue;
+	border-radius: 50px;
+	padding: 20px 50px;
+}
+
 .download {
 	display: flex;
+	justify-content: flex-start;
 }
 .ssh {
 	display: flex;
+	text-align: center;
 }
 
 .item {
@@ -287,4 +302,21 @@ main div {
 	max-height: 600px;
 	display: flex;
 	overflow-x: auto;
+	scroll-behavior: smooth;
+	overflow: hidden;
+}
+.arrowLeft{
+	height: 50px;
+	position: absolute;
+	top: 1170px;
+	left: 20px;
+	cursor: pointer;
+}
+.arrowRight{
+	height: 50px;
+	position: absolute;
+	top: 1170px;
+	right: 20px;
+	cursor: pointer;
+
 }
