@@ -63,15 +63,22 @@ nav {
 .person img {
 	width: 130px;
 }
-.department {
-	background-color: dimgray;
-	padding: 20px 30px;
-	text-align: center;
+.departments {
+	display: flex;
+	justify-content: space-between;
 }
-.department li {
-	width: 20%;
-	margin: 20px;
-	display: inline;
+.buttonStaff {
+	padding: 20px;
+	background-color: #9f9f9f;
+	border-radius: 20px;
+}
+.departments [id^="button"] {
+	display: none;
+}
+.departments [id^="button"]:checked + label.buttonStaff,
+.buttonStaff:hover {
+	background-color: rgb(141, 255, 192);
+	text-decoration: underline;
 }
 .personnel {
 	background-color: darkgrey;
@@ -162,19 +169,14 @@ td {
 	background-color: #9f9f9f;
 	border-radius: 25px;
 }
+
+.buttons [id^="button"] {
+	display: none;
+}
+.buttons [id^="button"]:checked + label.buttonGrade,
 .buttonGrade:hover {
 	background-color: rgb(141, 255, 192);
 	text-decoration: underline;
-}
-#buttonGrade1,
-#buttonGrade2,
-#buttonGrade3 {
-	display: none;
-}
-#buttonGrade1:checked + label.buttonGrade,
-#buttonGrade2:checked + label.buttonGrade,
-#buttonGrade3:checked + label.buttonGrade {
-	background-color: rgb(141, 255, 192);
 }
 
 .hiddenDiv {
@@ -202,10 +204,6 @@ main div {
 	bottom: 20vh;
 }
 
-.filter input {
-	display: inline-block;
-	width: 100px;
-}
 .sportzaal {
 	width: 30%;
 	margin-left: 25px;
@@ -217,14 +215,6 @@ main div {
 }
 .bib {
 	width: 25%;
-}
-.filter {
-}
-
-.filter p {
-	display: inline-block;
-	width: 30px;
-	margin-left: 70px;
 }
 
 .eventImg {
@@ -283,7 +273,8 @@ main div {
 	margin: 10px;
 }
 .item img {
-	width: 100%;
+	max-width:100%;
+	max-height: 400px;
 }
 
 .item p {
@@ -298,18 +289,20 @@ main div {
 	max-height: 600px;
 	display: flex;
 	overflow-x: auto;
+	scroll-behavior: smooth;
+	overflow: hidden;
 }
-.arrowLeft{
-	height: 60px;
+.arrowLeft {
+	height: 50px;
 	position: absolute;
 	top: 1170px;
 	left: 20px;
-
+	cursor: pointer;
 }
-.arrowRight{
-	height: 60px;
+.arrowRight {
+	height: 50px;
 	position: absolute;
 	top: 1170px;
 	right: 20px;
-
+	cursor: pointer;
 }
