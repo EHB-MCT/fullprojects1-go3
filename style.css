@@ -73,6 +73,10 @@ nav {
 	margin: 20px;
 	display: inline;
 }
+.department li a:hover{
+	text-decoration: underline;
+	color: aliceblue;
+}
 .personnel {
 	background-color: darkgrey;
 	padding: 20px;
