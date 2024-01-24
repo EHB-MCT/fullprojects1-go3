@@ -63,19 +63,22 @@ nav {
 .person img {
 	width: 130px;
 }
-.department {
-	background-color: dimgray;
-	padding: 20px 30px;
-	text-align: center;
+.departments {
+	display: flex;
+	justify-content: space-between;
 }
-.department li {
-	width: 20%;
-	margin: 20px;
-	display: inline;
+.buttonStaff {
+	padding: 20px;
+	background-color: #9f9f9f;
+	border-radius: 20px;
 }
-.department li a:hover{
+.departments [id^="button"] {
+	display: none;
+}
+.departments [id^="button"]:checked + label.buttonStaff,
+.buttonStaff:hover {
+	background-color: rgb(141, 255, 192);
 	text-decoration: underline;
-	color: aliceblue;
 }
 .personnel {
 	background-color: darkgrey;
@@ -166,19 +169,14 @@ td {
 	background-color: #9f9f9f;
 	border-radius: 25px;
 }
+
+.buttons [id^="button"] {
+	display: none;
+}
+.buttons [id^="button"]:checked + label.buttonGrade,
 .buttonGrade:hover {
 	background-color: rgb(141, 255, 192);
 	text-decoration: underline;
-}
-#buttonGrade1,
-#buttonGrade2,
-#buttonGrade3 {
-	display: none;
-}
-#buttonGrade1:checked + label.buttonGrade,
-#buttonGrade2:checked + label.buttonGrade,
-#buttonGrade3:checked + label.buttonGrade {
-	background-color: rgb(141, 255, 192);
 }
 
 .hiddenDiv {
@@ -293,18 +291,17 @@ main div {
 	scroll-behavior: smooth;
 	overflow: hidden;
 }
-.arrowLeft{
+.arrowLeft {
 	height: 50px;
 	position: absolute;
 	top: 1170px;
 	left: 20px;
 	cursor: pointer;
 }
-.arrowRight{
+.arrowRight {
 	height: 50px;
 	position: absolute;
 	top: 1170px;
 	right: 20px;
 	cursor: pointer;
-
 }
