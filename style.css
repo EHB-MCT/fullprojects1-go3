@@ -283,18 +283,21 @@ main div {
 	max-height: 600px;
 	display: flex;
 	overflow-x: auto;
+	scroll-behavior: smooth;
+	overflow: hidden;
 }
 .arrowLeft{
-	height: 60px;
+	height: 50px;
 	position: absolute;
 	top: 1170px;
 	left: 20px;
-
+	cursor: pointer;
 }
 .arrowRight{
-	height: 60px;
+	height: 50px;
 	position: absolute;
 	top: 1170px;
 	right: 20px;
+	cursor: pointer;
 
 }
