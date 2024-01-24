@@ -284,3 +284,17 @@ main div {
 	display: flex;
 	overflow-x: auto;
 }
+.arrowLeft{
+	height: 60px;
+	position: absolute;
+	top: 1170px;
+	left: 20px;
+
+}
+.arrowRight{
+	height: 60px;
+	position: absolute;
+	top: 1170px;
+	right: 20px;
+
+}
