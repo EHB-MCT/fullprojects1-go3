@@ -46,36 +46,84 @@
 				</div>
 				<div class="staff">
 					<h1>Wie is wie?</h1>
-					<ul class="department">
+
+					<div class="departments">
 						<input
 							type="checkbox"
-							id="department"
-							onchange="toggleDiv('buttonDepartment','directie')"
-							onclick="uncheckCheckbox('buttonGrade2','buttonGrade3')"
+							id="buttonDirectie"
+							onchange="toggleDiv('buttonDirectie','directie','begeleiding','coaches','taal','secretariaat','personeels','Vakgroepen')"
+							onclick="uncheckCheckbox('buttonBegeleiding','buttonCoaches','buttonTaal','buttonSecretariaat','buttonPersoneels','buttonVakgroepen')"
 						/>
-						<label for="buttonDepartment" class="buttonStaff">Directie</label>
+						<label for="buttonDirectie" class="buttonStaff">Directie</label>
+						<input
+							type="checkbox"
+							id="buttonBegeleiding"
+							onchange="toggleDiv('buttonBegeleiding','begeleiding','directie','coaches','taal','secretariaat','personeels','Vakgroepen')"
+							onclick="uncheckCheckbox('buttonDirectie','buttonCoaches','buttonTaal','buttonSecretariaat','buttonPersoneels','buttonVakgroepen')"
+						/>
+						<label for="buttonBegeleiding" class="buttonStaff"
+							>leerlingbegeleiding</label
+						>
+						<input
+							type="checkbox"
+							id="buttonCoaches"
+							onchange="toggleDiv('buttonCoaches','coaches','begeleiding','directie','taal','secretariaat','personeels','Vakgroepen')"
+							onclick="uncheckCheckbox('buttonDirectie','buttonBegeleiding','buttonDirectie','buttonTaal','buttonSecretariaat','buttonPersoneels','buttonVakgroepen')"
+						/>
+						<label for="buttonCoaches" class="buttonStaff"
+							>leerlingen coaches</label
+						>
 
-						<li><a href="#">Directie</a></li>
-						<li><a href="#">leerlingbegeleiding</a></li>
-						<li><a href="#">leerlingen coaches</a></li>
-						<li><a href="#">Taal en kwaliteitscoördinaten</a></li>
-						<li><a href="#">Leerlingen secretariaat</a></li>
-						<li><a href="#">Personeels zaken</a></li>
-						<li><a href="#">Vakgroepen</a></li>
-					</ul>
+						<input
+							type="checkbox"
+							id="buttonTaal"
+							onchange="toggleDiv('buttonTaal','taal','coaches','begeleiding','directie','secretariaat','personeels','Vakgroepen')"
+							onclick="uncheckCheckbox('buttonCoaches','buttonBegeleiding','buttonDirectie','buttonSecretariaat','buttonPersoneels','buttonVakgroepen')"
+						/>
+						<label for="buttonTaal" class="buttonStaff"
+							>Taal en kwaliteitscoördinaten</label
+						>
+
+						<input
+							type="checkbox"
+							id="buttonSecretariaat"
+							onchange="toggleDiv('buttonSecretariaat','secretariaat','taal','coaches','begeleiding','directie','personeels','Vakgroepen')"
+							onclick="uncheckCheckbox('buttonCoaches','buttonBegeleiding','buttonDirectie','buttonTaal','buttonPersoneels','buttonVakgroepen')"
+						/>
+						<label for="buttonSecretariaat" class="buttonStaff"
+							>Leerlingen secretariaat</label
+						>
+						<input
+							type="checkbox"
+							id="buttonPersoneels"
+							onchange="toggleDiv('buttonPersoneels','personeels','taal','coaches','begeleiding','directie','secretariaat','Vakgroepen')"
+							onclick="uncheckCheckbox('buttonCoaches','buttonBegeleiding','buttonDirectie','buttonSecretariaat','buttonTaal','buttonVakgroepen')"
+						/>
+						<label for="buttonPersoneels" class="buttonStaff"
+							>Personeels zaken</label
+						>
+						<input
+							type="checkbox"
+							id="buttonVakgroepen"
+							onchange="toggleDiv('buttonVakgroepen','Vakgroepen','taal','coaches','begeleiding','directie','secretariaat','personeels')"
+							onclick="uncheckCheckbox('buttonCoaches','buttonBegeleiding','buttonDirectie','buttonSecretariaat','buttonPersoneels','buttonTaal')"
+						/>
+						<label for="buttonVakgroepen" class="buttonStaff">Vakgroepen</label>
+					</div>
+
 					<div class="personnel">
 						<div class="person">
 							<img class="portrait" src="images/persoon.png" alt="" />
 							<p>
-								Naam <br />
-								Functie
+								Johan Schellemans <br />
+								Directeur
 							</p>
 						</div>
 						<div class="person">
 							<img class="portrait" src="images/persoon.png" alt="" />
 							<p>
-								Naam <br />
-								Functie
+								Nele Van de Velde <br />
+								Adjunct-directeur
 							</p>
 						</div>
 						<div class="person">
