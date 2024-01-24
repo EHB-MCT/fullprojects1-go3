@@ -95,1127 +95,1167 @@
 				<div>
 					<h1>Welke richtingen bieden we aan?</h1>
 					<div class="buttons">
-						<a class="buttonClass" href="">1ste graad</a>
-						<a class="buttonClass" href="">2de graad</a>
-						<a class="buttonClass" href="">3de graad</a>
+						<input
+							type="checkbox"
+							id="buttonGrade1"
+							onchange="toggleDiv('buttonGrade1','firstGrade')"
+						/>
+						<label for="buttonGrade1" class="buttonGrade">1ste graad</label>
+						<input
+							type="checkbox"
+							id="buttonGrade2"
+							onchange="toggleDiv('buttonGrade2','secondGrade')"
+						/>
+						<label for="buttonGrade2" class="buttonGrade">2de graad</label>
+						<input
+							type="checkbox"
+							id="buttonGrade3"
+							onchange="toggleDiv('buttonGrade3','thirdGrade')"
+						/>
+						<label for="buttonGrade3" class="buttonGrade">3de graad</label>
 					</div>
-					<p>
-						In de eerste graad kan je kiezen voor een algemene vorming. Het
-						eerste en tweede middelbaar in de A-stroom bereiden je voor op
-						algemeen secundair onderwijs (ASO), technisch secundair onderwijs
-						(TSO) of kunstsecundair onderwijs (KSO).
-					</p>
-					<p>A-stroom</p>
-					<ul>
-						<li>1A: Latijn of Moderne wetenschappen</li>
-						<li>
-							2A: Klassieke talen of Moderne talen en wetenschappen of Economie
-							en organisatie
-						</li>
-					</ul>
+					<div class="hiddenDiv" id="firstGrade">
+						<p>
+							In de eerste graad kan je kiezen voor een algemene vorming. Het
+							eerste en tweede middelbaar in de A-stroom bereiden je voor op
+							algemeen secundair onderwijs (ASO), technisch secundair onderwijs
+							(TSO) of kunstsecundair onderwijs (KSO).
+						</p>
+						<p>A-stroom</p>
+						<ul>
+							<li>1A: Latijn of Moderne wetenschappen</li>
+							<li>
+								2A: Klassieke talen of Moderne talen en wetenschappen of
+								Economie en organisatie
+							</li>
+						</ul>
 
-					<div class="tables1stGrade">
-						<table class="firstYear">
-							<caption>
-								1ste Leerjaar
-							</caption>
-							<tr>
-								<th>Vakken</th>
-								<th>Latijn</th>
-								<th>Wet.</th>
-							</tr>
-							<tr>
-								<td class="courseTitle"><strong>Basisvorming</strong></td>
-								<td><strong>27u</strong></td>
-								<td><strong>27u</strong></td>
-							</tr>
-							<tr>
-								<td class="courseTitle">Godsdienst / Zedenleer</td>
-								<td>2</td>
-								<td>2</td>
-							</tr>
-							<tr>
-								<td class="courseTitle">Nederlands</td>
-								<td>5</td>
-								<td>5</td>
-							</tr>
-							<tr>
-								<td class="courseTitle">Frans</td>
-								<td>4</td>
-								<td>4</td>
-							</tr>
-							<tr>
-								<td class="courseTitle">Engels</td>
-								<td>2</td>
-								<td>2</td>
-							</tr>
-							<tr>
-								<td class="courseTitle">Wiskunde</td>
-								<td>5</td>
-								<td>5</td>
-							</tr>
-							<tr>
-								<td class="courseTitle">Geschiedenis</td>
-								<td>1</td>
-								<td>1</td>
-							</tr>
-							<tr>
-								<td class="courseTitle">Aardrijkskunde</td>
-								<td>1</td>
-								<td>1</td>
-							</tr>
-							<tr>
-								<td class="courseTitle">Burgerschap</td>
-								<td>1</td>
-								<td>1</td>
-							</tr>
-							<tr>
-								<td class="courseTitle">Natuurwetenschappen</td>
-								<td>2</td>
-								<td>2</td>
-							</tr>
-							<tr>
-								<td class="courseTitle">Plastische Opvoeding</td>
-								<td>1</td>
-								<td>1</td>
-							</tr>
-							<tr>
-								<td class="courseTitle">Techniek</td>
-								<td>1</td>
-								<td>1</td>
-							</tr>
-							<tr>
-								<td class="courseTitle">Muzikale Opvoeding</td>
-								<td>1</td>
-								<td>1</td>
-							</tr>
-							<tr>
-								<td class="courseTitle">Lichamelijke Opvoeding</td>
-								<td>2</td>
-								<td>2</td>
-							</tr>
-							<tr>
-								<td class="courseTitle">
-									<strong>Remediëring & Keuzegedeelte</strong>
-								</td>
-								<td><strong>2</strong></td>
-								<td><strong>2</strong></td>
-							</tr>
-							<tr>
-								<td class="courseTitle">Latijn</td>
-								<td>4</td>
-								<td>-</td>
-							</tr>
-							<tr>
-								<td class="courseTitle">Wetenschappen/ Wiskunde</td>
-								<td>-</td>
-								<td>1</td>
-							</tr>
-							<tr>
-								<td class="courseTitle">Flex*</td>
-								<td>-</td>
-								<td>3</td>
-							</tr>
-							<tr>
-								<td class="courseTitle">Klastitularis</td>
-								<td>1</td>
-								<td>1</td>
-							</tr>
-						</table>
+						<div class="tables1stGrade">
+							<table class="firstYear">
+								<caption>
+									1ste Leerjaar
+								</caption>
+								<tr>
+									<th>Vakken</th>
+									<th>Latijn</th>
+									<th>Wet.</th>
+								</tr>
+								<tr>
+									<td class="courseTitle"><strong>Basisvorming</strong></td>
+									<td><strong>27u</strong></td>
+									<td><strong>27u</strong></td>
+								</tr>
+								<tr>
+									<td class="courseTitle">Godsdienst / Zedenleer</td>
+									<td>2</td>
+									<td>2</td>
+								</tr>
+								<tr>
+									<td class="courseTitle">Nederlands</td>
+									<td>5</td>
+									<td>5</td>
+								</tr>
+								<tr>
+									<td class="courseTitle">Frans</td>
+									<td>4</td>
+									<td>4</td>
+								</tr>
+								<tr>
+									<td class="courseTitle">Engels</td>
+									<td>2</td>
+									<td>2</td>
+								</tr>
+								<tr>
+									<td class="courseTitle">Wiskunde</td>
+									<td>5</td>
+									<td>5</td>
+								</tr>
+								<tr>
+									<td class="courseTitle">Geschiedenis</td>
+									<td>1</td>
+									<td>1</td>
+								</tr>
+								<tr>
+									<td class="courseTitle">Aardrijkskunde</td>
+									<td>1</td>
+									<td>1</td>
+								</tr>
+								<tr>
+									<td class="courseTitle">Burgerschap</td>
+									<td>1</td>
+									<td>1</td>
+								</tr>
+								<tr>
+									<td class="courseTitle">Natuurwetenschappen</td>
+									<td>2</td>
+									<td>2</td>
+								</tr>
+								<tr>
+									<td class="courseTitle">Plastische Opvoeding</td>
+									<td>1</td>
+									<td>1</td>
+								</tr>
+								<tr>
+									<td class="courseTitle">Techniek</td>
+									<td>1</td>
+									<td>1</td>
+								</tr>
+								<tr>
+									<td class="courseTitle">Muzikale Opvoeding</td>
+									<td>1</td>
+									<td>1</td>
+								</tr>
+								<tr>
+									<td class="courseTitle">Lichamelijke Opvoeding</td>
+									<td>2</td>
+									<td>2</td>
+								</tr>
+								<tr>
+									<td class="courseTitle">
+										<strong>Remediëring & Keuzegedeelte</strong>
+									</td>
+									<td><strong>2</strong></td>
+									<td><strong>2</strong></td>
+								</tr>
+								<tr>
+									<td class="courseTitle">Latijn</td>
+									<td>4</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td class="courseTitle">Wetenschappen/ Wiskunde</td>
+									<td>-</td>
+									<td>1</td>
+								</tr>
+								<tr>
+									<td class="courseTitle">Flex*</td>
+									<td>-</td>
+									<td>3</td>
+								</tr>
+								<tr>
+									<td class="courseTitle">Klastitularis</td>
+									<td>1</td>
+									<td>1</td>
+								</tr>
+							</table>
 
-						<table class="secondYear">
-							<caption>
-								2de Leerjaar
-							</caption>
-							<tr>
-								<th>Vakken</th>
-								<th>KI T</th>
-								<th>MTW</th>
-								<th>E&O</th>
-							</tr>
-							<tr>
-								<td class="courseTitle"><strong>Basisvorming</strong></td>
-								<td><strong>27u</strong></td>
-								<td><strong>27u</strong></td>
-								<td><strong>27u</strong></td>
-							</tr>
-							<tr>
-								<td class="courseTitle">Godsdienst / Zedenleer</td>
-								<td>2</td>
-								<td>2</td>
-								<td>2</td>
-							</tr>
-							<tr>
-								<td class="courseTitle">Nederlands</td>
-								<td>5</td>
-								<td>5</td>
-								<td>5</td>
-							</tr>
-							<tr>
-								<td class="courseTitle">Frans</td>
-								<td>3</td>
-								<td>3</td>
-								<td>3</td>
-							</tr>
-							<tr>
-								<td class="courseTitle">Engels</td>
-								<td>2</td>
-								<td>2</td>
-								<td>2</td>
-							</tr>
-							<tr>
-								<td class="courseTitle">Wiskunde</td>
-								<td>4</td>
-								<td>4</td>
-								<td>4</td>
-							</tr>
-							<tr>
-								<td class="courseTitle">Geschiedenis</td>
-								<td>2</td>
-								<td>2</td>
-								<td>2</td>
-							</tr>
-							<tr>
-								<td class="courseTitle">Aardrijkskunde</td>
-								<td>1</td>
-								<td>1</td>
-								<td>1</td>
-							</tr>
-							<tr>
-								<td class="courseTitle">Techniek</td>
-								<td>2</td>
-								<td>2</td>
-								<td>2</td>
-							</tr>
-							<tr>
-								<td class="courseTitle">Natuurwetenschappen</td>
-								<td>1</td>
-								<td>1</td>
-								<td>1</td>
-							</tr>
-							<tr>
-								<td class="courseTitle">Lichamelijke Opvoeding</td>
-								<td>2</td>
-								<td>2</td>
-								<td>2</td>
-							</tr>
-							<tr>
-								<td class="courseTitle">Socio-economische initiatie</td>
-								<td>2</td>
-								<td>2</td>
-								<td>2</td>
-							</tr>
-							<tr>
-								<td class="courseTitle"><strong>Specifieke vorming</strong></td>
-								<td><strong>5u</strong></td>
-								<td><strong>5u</strong></td>
-								<td><strong>5u</strong></td>
-							</tr>
-							<tr>
-								<td class="courseTitle">Latijn</td>
-								<td>4</td>
-								<td>-</td>
-								<td>-</td>
-							</tr>
-							<tr>
-								<td class="courseTitle">Wetenschappelijk werk</td>
-								<td>-</td>
-								<td>3</td>
-								<td>-</td>
-							</tr>
-							<tr>
-								<td class="courseTitle">Engels</td>
-								<td>-</td>
-								<td>1</td>
-								<td>-</td>
-							</tr>
-							<tr>
-								<td class="courseTitle">Extra Nederlands</td>
-								<td>-</td>
-								<td>1</td>
-								<td>-</td>
-							</tr>
-							<tr>
-								<td class="courseTitle">Klassieke studies</td>
-								<td>1</td>
-								<td>-</td>
-								<td>-</td>
-							</tr>
-							<tr>
-								<td class="courseTitle">Economie</td>
-								<td>-</td>
-								<td>-</td>
-								<td>4</td>
-							</tr>
-							<tr>
-								<td class="courseTitle">Taal & ICT</td>
-								<td>-</td>
-								<td>-</td>
-								<td>1</td>
-							</tr>
-						</table>
+							<table class="secondYear">
+								<caption>
+									2de Leerjaar
+								</caption>
+								<tr>
+									<th>Vakken</th>
+									<th>KI T</th>
+									<th>MTW</th>
+									<th>E&O</th>
+								</tr>
+								<tr>
+									<td class="courseTitle"><strong>Basisvorming</strong></td>
+									<td><strong>27u</strong></td>
+									<td><strong>27u</strong></td>
+									<td><strong>27u</strong></td>
+								</tr>
+								<tr>
+									<td class="courseTitle">Godsdienst / Zedenleer</td>
+									<td>2</td>
+									<td>2</td>
+									<td>2</td>
+								</tr>
+								<tr>
+									<td class="courseTitle">Nederlands</td>
+									<td>5</td>
+									<td>5</td>
+									<td>5</td>
+								</tr>
+								<tr>
+									<td class="courseTitle">Frans</td>
+									<td>3</td>
+									<td>3</td>
+									<td>3</td>
+								</tr>
+								<tr>
+									<td class="courseTitle">Engels</td>
+									<td>2</td>
+									<td>2</td>
+									<td>2</td>
+								</tr>
+								<tr>
+									<td class="courseTitle">Wiskunde</td>
+									<td>4</td>
+									<td>4</td>
+									<td>4</td>
+								</tr>
+								<tr>
+									<td class="courseTitle">Geschiedenis</td>
+									<td>2</td>
+									<td>2</td>
+									<td>2</td>
+								</tr>
+								<tr>
+									<td class="courseTitle">Aardrijkskunde</td>
+									<td>1</td>
+									<td>1</td>
+									<td>1</td>
+								</tr>
+								<tr>
+									<td class="courseTitle">Techniek</td>
+									<td>2</td>
+									<td>2</td>
+									<td>2</td>
+								</tr>
+								<tr>
+									<td class="courseTitle">Natuurwetenschappen</td>
+									<td>1</td>
+									<td>1</td>
+									<td>1</td>
+								</tr>
+								<tr>
+									<td class="courseTitle">Lichamelijke Opvoeding</td>
+									<td>2</td>
+									<td>2</td>
+									<td>2</td>
+								</tr>
+								<tr>
+									<td class="courseTitle">Socio-economische initiatie</td>
+									<td>2</td>
+									<td>2</td>
+									<td>2</td>
+								</tr>
+								<tr>
+									<td class="courseTitle">
+										<strong>Specifieke vorming</strong>
+									</td>
+									<td><strong>5u</strong></td>
+									<td><strong>5u</strong></td>
+									<td><strong>5u</strong></td>
+								</tr>
+								<tr>
+									<td class="courseTitle">Latijn</td>
+									<td>4</td>
+									<td>-</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td class="courseTitle">Wetenschappelijk werk</td>
+									<td>-</td>
+									<td>3</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td class="courseTitle">Engels</td>
+									<td>-</td>
+									<td>1</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td class="courseTitle">Extra Nederlands</td>
+									<td>-</td>
+									<td>1</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td class="courseTitle">Klassieke studies</td>
+									<td>1</td>
+									<td>-</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td class="courseTitle">Economie</td>
+									<td>-</td>
+									<td>-</td>
+									<td>4</td>
+								</tr>
+								<tr>
+									<td class="courseTitle">Taal & ICT</td>
+									<td>-</td>
+									<td>-</td>
+									<td>1</td>
+								</tr>
+							</table>
+						</div>
 					</div>
-					<p>
-						In de tweede graad kan je kiezen voor doorstroomfinaliteit of
-						dubbele finaliteit. Waarin je verschillende richtingen aanleunend
-						bij jouw talenten en interesses kiezen.
-					</p>
-					<h2>doorstroom finaliteit</h2>
-					<ul>
-						<li>Economische Wetenschappen (EW)</li>
-						<li>Bedrijfswetenschappen (BW)</li>
-						<li>Humane wetenschappen (HW)</li>
-						<li>Natuurwetenschappen (NW)</li>
-					</ul>
-					<div class="tables2ndGrade DS">
-						<table class="thirdYear">
-							<caption>
-								3de Jaar - DS
-							</caption>
-							<tr>
-								<th>Vakken</th>
-								<th>EW</th>
-								<th>BW</th>
-								<th>HW</th>
-								<th>NW</th>
-							</tr>
-							<tr>
-								<td class="courseTitle">Aardrijkskunde</td>
-								<td>1</td>
-								<td>1</td>
-								<td>1</td>
-								<td>1</td>
-							</tr>
-							<tr>
-								<td class="courseTitle">Biologie</td>
-								<td>1</td>
-								<td>1</td>
-								<td>1</td>
-								<td>2</td>
-							</tr>
-							<tr>
-								<td class="courseTitle">Chemie</td>
-								<td>1</td>
-								<td>1</td>
-								<td>1</td>
-								<td>2</td>
-							</tr>
-							<tr>
-								<td class="courseTitle">Cultuur</td>
-								<td>1</td>
-								<td>1</td>
-								<td>1</td>
-								<td>1</td>
-							</tr>
-							<tr>
-								<td class="courseTitle">Engels</td>
-								<td>3</td>
-								<td>3</td>
-								<td>3</td>
-								<td>3</td>
-							</tr>
-							<tr>
-								<td class="courseTitle">Frans</td>
-								<td>3</td>
-								<td>3</td>
-								<td>3</td>
-								<td>3</td>
-							</tr>
-							<tr>
-								<td class="courseTitle">Fysica</td>
-								<td>1</td>
-								<td>1</td>
-								<td>1</td>
-								<td>2</td>
-							</tr>
-							<tr>
-								<td class="courseTitle">Geschiedenis</td>
-								<td>2</td>
-								<td>2</td>
-								<td>2</td>
-								<td>2</td>
-							</tr>
-							<tr>
-								<td class="courseTitle">Levensbeschouwing</td>
-								<td>2</td>
-								<td>2</td>
-								<td>2</td>
-								<td>2</td>
-							</tr>
-							<tr>
-								<td class="courseTitle">Lichamelijke Opvoeding</td>
-								<td>2</td>
-								<td>2</td>
-								<td>2</td>
-								<td>2</td>
-							</tr>
-							<tr>
-								<td class="courseTitle">Nederlands</td>
-								<td>5</td>
-								<td>5</td>
-								<td>5</td>
-								<td>5</td>
-							</tr>
-							<tr>
-								<td class="courseTitle">Wiskunde</td>
-								<td>5</td>
-								<td>5</td>
-								<td>4</td>
-								<td>5</td>
-							</tr>
-							<tr>
-								<td class="courseTitle">Economie</td>
-								<td>4</td>
-								<td>4</td>
-								<td>-</td>
-								<td>-</td>
-							</tr>
-							<tr>
-								<td class="courseTitle">Toegepaste Informatica</td>
-								<td>1</td>
-								<td>1</td>
-								<td>1</td>
-								<td>1</td>
-							</tr>
-							<tr>
-								<td class="courseTitle">STEM</td>
-								<td>-</td>
-								<td>-</td>
-								<td>-</td>
-								<td>1</td>
-							</tr>
-							<tr>
-								<td class="courseTitle">Filosofie</td>
-								<td>-</td>
-								<td>-</td>
-								<td>1</td>
-								<td>-</td>
-							</tr>
-							<tr>
-								<td class="courseTitle">Gedragswetenschappen</td>
-								<td>-</td>
-								<td>-</td>
-								<td>3</td>
-								<td>-</td>
-							</tr>
-							<tr>
-								<td class="courseTitle">Cultuurwetenschappen</td>
-								<td>-</td>
-								<td>-</td>
-								<td>1</td>
-								<td>-</td>
-							</tr>
-							<tr>
-								<td class="courseTitle">Kunstbeschouwing</td>
-								<td>-</td>
-								<td>-</td>
-								<td>-</td>
-								<td>-</td>
-							</tr>
-						</table>
+					<div class="hiddenDiv" id="secondGrade">
+						<p>
+							In de tweede graad kan je kiezen voor doorstroomfinaliteit of
+							dubbele finaliteit. Waarin je verschillende richtingen aanleunend
+							bij jouw talenten en interesses kiezen.
+						</p>
+						<h2>doorstroom finaliteit</h2>
+						<ul>
+							<li>Economische Wetenschappen (EW)</li>
+							<li>Bedrijfswetenschappen (BW)</li>
+							<li>Humane wetenschappen (HW)</li>
+							<li>Natuurwetenschappen (NW)</li>
+						</ul>
+						<div class="tables2ndGrade DS">
+							<table class="thirdYear">
+								<caption>
+									3de Jaar - DS
+								</caption>
+								<tr>
+									<th>Vakken</th>
+									<th>EW</th>
+									<th>BW</th>
+									<th>HW</th>
+									<th>NW</th>
+								</tr>
+								<tr>
+									<td class="courseTitle">Aardrijkskunde</td>
+									<td>1</td>
+									<td>1</td>
+									<td>1</td>
+									<td>1</td>
+								</tr>
+								<tr>
+									<td class="courseTitle">Biologie</td>
+									<td>1</td>
+									<td>1</td>
+									<td>1</td>
+									<td>2</td>
+								</tr>
+								<tr>
+									<td class="courseTitle">Chemie</td>
+									<td>1</td>
+									<td>1</td>
+									<td>1</td>
+									<td>2</td>
+								</tr>
+								<tr>
+									<td class="courseTitle">Cultuur</td>
+									<td>1</td>
+									<td>1</td>
+									<td>1</td>
+									<td>1</td>
+								</tr>
+								<tr>
+									<td class="courseTitle">Engels</td>
+									<td>3</td>
+									<td>3</td>
+									<td>3</td>
+									<td>3</td>
+								</tr>
+								<tr>
+									<td class="courseTitle">Frans</td>
+									<td>3</td>
+									<td>3</td>
+									<td>3</td>
+									<td>3</td>
+								</tr>
+								<tr>
+									<td class="courseTitle">Fysica</td>
+									<td>1</td>
+									<td>1</td>
+									<td>1</td>
+									<td>2</td>
+								</tr>
+								<tr>
+									<td class="courseTitle">Geschiedenis</td>
+									<td>2</td>
+									<td>2</td>
+									<td>2</td>
+									<td>2</td>
+								</tr>
+								<tr>
+									<td class="courseTitle">Levensbeschouwing</td>
+									<td>2</td>
+									<td>2</td>
+									<td>2</td>
+									<td>2</td>
+								</tr>
+								<tr>
+									<td class="courseTitle">Lichamelijke Opvoeding</td>
+									<td>2</td>
+									<td>2</td>
+									<td>2</td>
+									<td>2</td>
+								</tr>
+								<tr>
+									<td class="courseTitle">Nederlands</td>
+									<td>5</td>
+									<td>5</td>
+									<td>5</td>
+									<td>5</td>
+								</tr>
+								<tr>
+									<td class="courseTitle">Wiskunde</td>
+									<td>5</td>
+									<td>5</td>
+									<td>4</td>
+									<td>5</td>
+								</tr>
+								<tr>
+									<td class="courseTitle">Economie</td>
+									<td>4</td>
+									<td>4</td>
+									<td>-</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td class="courseTitle">Toegepaste Informatica</td>
+									<td>1</td>
+									<td>1</td>
+									<td>1</td>
+									<td>1</td>
+								</tr>
+								<tr>
+									<td class="courseTitle">STEM</td>
+									<td>-</td>
+									<td>-</td>
+									<td>-</td>
+									<td>1</td>
+								</tr>
+								<tr>
+									<td class="courseTitle">Filosofie</td>
+									<td>-</td>
+									<td>-</td>
+									<td>1</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td class="courseTitle">Gedragswetenschappen</td>
+									<td>-</td>
+									<td>-</td>
+									<td>3</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td class="courseTitle">Cultuurwetenschappen</td>
+									<td>-</td>
+									<td>-</td>
+									<td>1</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td class="courseTitle">Kunstbeschouwing</td>
+									<td>-</td>
+									<td>-</td>
+									<td>-</td>
+									<td>-</td>
+								</tr>
+							</table>
 
-						<table class="fourthYear">
-							<caption>
-								4de Jaar - DS
-							</caption>
-							<tr>
-								<th>Vakken</th>
-								<th>EW</th>
-								<th>BW</th>
-								<th>HW</th>
-								<th>NW</th>
-							</tr>
-							<tr>
-								<td class="courseTitle">Aardrijkskunde</td>
-								<td>1</td>
-								<td>1</td>
-								<td>1</td>
-								<td>1</td>
-							</tr>
-							<tr>
-								<td class="courseTitle">Biologie</td>
-								<td>1</td>
-								<td>1</td>
-								<td>1</td>
-								<td>2</td>
-							</tr>
-							<tr>
-								<td class="courseTitle">Chemie</td>
-								<td>1</td>
-								<td>1</td>
-								<td>1</td>
-								<td>2</td>
-							</tr>
-							<tr>
-								<td class="courseTitle">Cultuur</td>
-								<td>-</td>
-								<td>-</td>
-								<td>-</td>
-								<td>-</td>
-							</tr>
-							<tr>
-								<td class="courseTitle">Engels</td>
-								<td>3</td>
-								<td>3</td>
-								<td>3</td>
-								<td>3</td>
-							</tr>
-							<tr>
-								<td class="courseTitle">Frans</td>
-								<td>3</td>
-								<td>3</td>
-								<td>3</td>
-								<td>3</td>
-							</tr>
-							<tr>
-								<td class="courseTitle">Fysica</td>
-								<td>1</td>
-								<td>1</td>
-								<td>1</td>
-								<td>2</td>
-							</tr>
-							<tr>
-								<td class="courseTitle">Geschiedenis</td>
-								<td>3</td>
-								<td>3</td>
-								<td>3</td>
-								<td>3</td>
-							</tr>
-							<tr>
-								<td class="courseTitle">Levensbeschouwing</td>
-								<td>2</td>
-								<td>2</td>
-								<td>2</td>
-								<td>2</td>
-							</tr>
-							<tr>
-								<td class="courseTitle">Lichamelijke Opvoeding</td>
-								<td>2</td>
-								<td>2</td>
-								<td>2</td>
-								<td>2</td>
-							</tr>
-							<tr>
-								<td class="courseTitle">Nederlands</td>
-								<td>5</td>
-								<td>5</td>
-								<td>5</td>
-								<td>5</td>
-							</tr>
-							<tr>
-								<td class="courseTitle">Wiskunde</td>
-								<td>5</td>
-								<td>5</td>
-								<td>4</td>
-								<td>5</td>
-							</tr>
-							<tr>
-								<td class="courseTitle">Economie</td>
-								<td>4</td>
-								<td>4</td>
-								<td>-</td>
-								<td>-</td>
-							</tr>
-							<tr>
-								<td class="courseTitle">Toegepaste Informatica</td>
-								<td>1</td>
-								<td>1</td>
-								<td>-</td>
-								<td>1</td>
-							</tr>
-							<tr>
-								<td class="courseTitle">STEM</td>
-								<td>-</td>
-								<td>-</td>
-								<td>-</td>
-								<td>1</td>
-							</tr>
-							<tr>
-								<td class="courseTitle">Filosofie</td>
-								<td>-</td>
-								<td>-</td>
-								<td>1</td>
-								<td>-</td>
-							</tr>
-							<tr>
-								<td class="courseTitle">Gedragswetenschappen</td>
-								<td>-</td>
-								<td>-</td>
-								<td>2</td>
-								<td>-</td>
-							</tr>
-							<tr>
-								<td class="courseTitle">Cultuurwetenschappen</td>
-								<td>-</td>
-								<td>-</td>
-								<td>2</td>
-								<td>-</td>
-							</tr>
-							<tr>
-								<td class="courseTitle">Kunstbeschouwing</td>
-								<td>-</td>
-								<td>-</td>
-								<td>1</td>
-								<td>-</td>
-							</tr>
-						</table>
+							<table class="fourthYear">
+								<caption>
+									4de Jaar - DS
+								</caption>
+								<tr>
+									<th>Vakken</th>
+									<th>EW</th>
+									<th>BW</th>
+									<th>HW</th>
+									<th>NW</th>
+								</tr>
+								<tr>
+									<td class="courseTitle">Aardrijkskunde</td>
+									<td>1</td>
+									<td>1</td>
+									<td>1</td>
+									<td>1</td>
+								</tr>
+								<tr>
+									<td class="courseTitle">Biologie</td>
+									<td>1</td>
+									<td>1</td>
+									<td>1</td>
+									<td>2</td>
+								</tr>
+								<tr>
+									<td class="courseTitle">Chemie</td>
+									<td>1</td>
+									<td>1</td>
+									<td>1</td>
+									<td>2</td>
+								</tr>
+								<tr>
+									<td class="courseTitle">Cultuur</td>
+									<td>-</td>
+									<td>-</td>
+									<td>-</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td class="courseTitle">Engels</td>
+									<td>3</td>
+									<td>3</td>
+									<td>3</td>
+									<td>3</td>
+								</tr>
+								<tr>
+									<td class="courseTitle">Frans</td>
+									<td>3</td>
+									<td>3</td>
+									<td>3</td>
+									<td>3</td>
+								</tr>
+								<tr>
+									<td class="courseTitle">Fysica</td>
+									<td>1</td>
+									<td>1</td>
+									<td>1</td>
+									<td>2</td>
+								</tr>
+								<tr>
+									<td class="courseTitle">Geschiedenis</td>
+									<td>3</td>
+									<td>3</td>
+									<td>3</td>
+									<td>3</td>
+								</tr>
+								<tr>
+									<td class="courseTitle">Levensbeschouwing</td>
+									<td>2</td>
+									<td>2</td>
+									<td>2</td>
+									<td>2</td>
+								</tr>
+								<tr>
+									<td class="courseTitle">Lichamelijke Opvoeding</td>
+									<td>2</td>
+									<td>2</td>
+									<td>2</td>
+									<td>2</td>
+								</tr>
+								<tr>
+									<td class="courseTitle">Nederlands</td>
+									<td>5</td>
+									<td>5</td>
+									<td>5</td>
+									<td>5</td>
+								</tr>
+								<tr>
+									<td class="courseTitle">Wiskunde</td>
+									<td>5</td>
+									<td>5</td>
+									<td>4</td>
+									<td>5</td>
+								</tr>
+								<tr>
+									<td class="courseTitle">Economie</td>
+									<td>4</td>
+									<td>4</td>
+									<td>-</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td class="courseTitle">Toegepaste Informatica</td>
+									<td>1</td>
+									<td>1</td>
+									<td>-</td>
+									<td>1</td>
+								</tr>
+								<tr>
+									<td class="courseTitle">STEM</td>
+									<td>-</td>
+									<td>-</td>
+									<td>-</td>
+									<td>1</td>
+								</tr>
+								<tr>
+									<td class="courseTitle">Filosofie</td>
+									<td>-</td>
+									<td>-</td>
+									<td>1</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td class="courseTitle">Gedragswetenschappen</td>
+									<td>-</td>
+									<td>-</td>
+									<td>2</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td class="courseTitle">Cultuurwetenschappen</td>
+									<td>-</td>
+									<td>-</td>
+									<td>2</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td class="courseTitle">Kunstbeschouwing</td>
+									<td>-</td>
+									<td>-</td>
+									<td>1</td>
+									<td>-</td>
+								</tr>
+							</table>
+						</div>
+						<h2>dubbele finaliteit</h2>
+						<ul>
+							<li>Bedrijf & Organisatie (B&O)</li>
+							<li>Toerisme (TOE)</li>
+						</ul>
+						<div class="tables2ndGrade DF">
+							<table class="thirdYear">
+								<caption>
+									3de Jaar - DF
+								</caption>
+
+								<tr>
+									<th>Vakken</th>
+									<th>B&O</th>
+									<th>TOE</th>
+								</tr>
+								<tr>
+									<td class="courseTitle">Aardrijkskunde</td>
+									<td>1</td>
+									<td>1</td>
+								</tr>
+								<tr>
+									<td class="courseTitle">Cultuur</td>
+									<td>-</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td class="courseTitle">Duits</td>
+									<td>-</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td class="courseTitle">Engels</td>
+									<td>3</td>
+									<td>3</td>
+								</tr>
+								<tr>
+									<td class="courseTitle">Frans</td>
+									<td>3</td>
+									<td>3</td>
+								</tr>
+
+								<tr>
+									<td class="courseTitle">Geschiedenis</td>
+									<td>2</td>
+									<td>2</td>
+								</tr>
+								<tr>
+									<td class="courseTitle">Levensbeschouwing</td>
+									<td>2</td>
+									<td>2</td>
+								</tr>
+								<tr>
+									<td class="courseTitle">Lichamelijke Opvoeding</td>
+									<td>2</td>
+									<td>2</td>
+								</tr>
+								<tr>
+									<td class="courseTitle">Natuurwetenschappen</td>
+									<td>1</td>
+									<td>1</td>
+								</tr>
+								<tr>
+									<td class="courseTitle">Nederlands</td>
+									<td>5</td>
+									<td>5</td>
+								</tr>
+								<tr>
+									<td class="courseTitle">Toegepaste Economie</td>
+									<td>8</td>
+									<td>8</td>
+								</tr>
+								<tr>
+									<td class="courseTitle">Toegepaste Informatica</td>
+									<td>1</td>
+									<td>1</td>
+								</tr>
+								<tr>
+									<td class="courseTitle">Toerisme</td>
+									<td>-</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td class="courseTitle">Toeristische Geografie</td>
+									<td>-</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td class="courseTitle">Wiskunde</td>
+									<td>4</td>
+									<td>4</td>
+								</tr>
+							</table>
+
+							<table class="fourthYear">
+								<caption>
+									4de Jaar - DF
+								</caption>
+
+								<tr>
+									<th>Vakken</th>
+									<th>B&O</th>
+									<th>TOE</th>
+								</tr>
+								<tr>
+									<td class="courseTitle">Aardrijkskunde</td>
+									<td>-</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td class="courseTitle">Cultuur</td>
+									<td>1</td>
+									<td>1</td>
+								</tr>
+								<tr>
+									<td class="courseTitle">Duits</td>
+									<td>-</td>
+									<td>2</td>
+								</tr>
+								<tr>
+									<td class="courseTitle">Engels</td>
+									<td>3</td>
+									<td>3</td>
+								</tr>
+								<tr>
+									<td class="courseTitle">Frans</td>
+									<td>3</td>
+									<td>3</td>
+								</tr>
+
+								<tr>
+									<td class="courseTitle">Geschiedenis</td>
+									<td>2</td>
+									<td>2</td>
+								</tr>
+								<tr>
+									<td class="courseTitle">Levensbeschouwing</td>
+									<td>2</td>
+									<td>2</td>
+								</tr>
+								<tr>
+									<td class="courseTitle">Lichamelijke Opvoeding</td>
+									<td>2</td>
+									<td>2</td>
+								</tr>
+								<tr>
+									<td class="courseTitle">Natuurwetenschappen</td>
+									<td>1</td>
+									<td>1</td>
+								</tr>
+								<tr>
+									<td class="courseTitle">Nederlands</td>
+									<td>5</td>
+									<td>5</td>
+								</tr>
+								<tr>
+									<td class="courseTitle">Toegepaste Economie</td>
+									<td>9</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td class="courseTitle">Toegepaste Informatica</td>
+									<td>1</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td class="courseTitle">Toerisme</td>
+									<td>-</td>
+									<td>6</td>
+								</tr>
+								<tr>
+									<td class="courseTitle">Toeristische Geografie</td>
+									<td>-</td>
+									<td>2</td>
+								</tr>
+								<tr>
+									<td class="courseTitle">Wiskunde</td>
+									<td>3</td>
+									<td>3</td>
+								</tr>
+							</table>
+						</div>
 					</div>
-					<h2>dubbele finaliteit</h2>
-					<ul>
-						<li>Bedrijf & Organisatie (B&O)</li>
-						<li>Toerisme (TOE)</li>
-					</ul>
-					<div class="tables2ndGrade DF">
-						<table class="thirdYear">
-							<caption>
-								3de Jaar - DF
-							</caption>
+					<div class="hiddenDiv" id="thirdGrade">
+						<p>
+							In de derde graad start de modernisering in het vijfde jaar en kan
+							je kiezen voor diverse richtingen in zowel doorstroom als dubbele
+							finaliteit secundair onderwijs:
+						</p>
+						<p><strong>doorstroom finaliteit</strong></p>
+						<ul>
+							<li>Wetenschappen-Wiskunde (WW)</li>
+							<li>Economie-Moderne talen (EM)</li>
+							<li>Economie-Wiskunde (EW)</li>
+							<li>Humane Wetenschappen (HW)</li>
+							<li>Bedrijfswetenschappen (BW)</li>
+						</ul>
 
-							<tr>
-								<th>Vakken</th>
-								<th>B&O</th>
-								<th>TOE</th>
-							</tr>
-							<tr>
-								<td class="courseTitle">Aardrijkskunde</td>
-								<td>1</td>
-								<td>1</td>
-							</tr>
-							<tr>
-								<td class="courseTitle">Cultuur</td>
-								<td>-</td>
-								<td>-</td>
-							</tr>
-							<tr>
-								<td class="courseTitle">Duits</td>
-								<td>-</td>
-								<td>-</td>
-							</tr>
-							<tr>
-								<td class="courseTitle">Engels</td>
-								<td>3</td>
-								<td>3</td>
-							</tr>
-							<tr>
-								<td class="courseTitle">Frans</td>
-								<td>3</td>
-								<td>3</td>
-							</tr>
+						<p><strong>Dubbele finaliteit</strong></p>
+						<ul>
+							<li>Bedrijfsorganisatie (BO)</li>
+							<li>Taal & Communicatie (T&C)</li>
+						</ul>
+						<div class="tables3rdGrade">
+							<table class="fifthYearDS">
+								<caption>
+									5de Jaar - DS
+								</caption>
 
-							<tr>
-								<td class="courseTitle">Geschiedenis</td>
-								<td>2</td>
-								<td>2</td>
-							</tr>
-							<tr>
-								<td class="courseTitle">Levensbeschouwing</td>
-								<td>2</td>
-								<td>2</td>
-							</tr>
-							<tr>
-								<td class="courseTitle">Lichamelijke Opvoeding</td>
-								<td>2</td>
-								<td>2</td>
-							</tr>
-							<tr>
-								<td class="courseTitle">Natuurwetenschappen</td>
-								<td>1</td>
-								<td>1</td>
-							</tr>
-							<tr>
-								<td class="courseTitle">Nederlands</td>
-								<td>5</td>
-								<td>5</td>
-							</tr>
-							<tr>
-								<td class="courseTitle">Toegepaste Economie</td>
-								<td>8</td>
-								<td>8</td>
-							</tr>
-							<tr>
-								<td class="courseTitle">Toegepaste Informatica</td>
-								<td>1</td>
-								<td>1</td>
-							</tr>
-							<tr>
-								<td class="courseTitle">Toerisme</td>
-								<td>-</td>
-								<td>-</td>
-							</tr>
-							<tr>
-								<td class="courseTitle">Toeristische Geografie</td>
-								<td>-</td>
-								<td>-</td>
-							</tr>
-							<tr>
-								<td class="courseTitle">Wiskunde</td>
-								<td>4</td>
-								<td>4</td>
-							</tr>
-						</table>
+								<tr>
+									<th>Vakken</th>
+									<th>BW</th>
+									<th>ET</th>
+									<th>EW</th>
+									<th>WW</th>
+									<th>HW</th>
+								</tr>
+								<tr>
+									<td class="courseTitle">Aardrijkskunde</td>
+									<td>-</td>
+									<td>-</td>
+									<td>-</td>
+									<td>1</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td class="courseTitle">Biologie</td>
+									<td>-</td>
+									<td>-</td>
+									<td>-</td>
+									<td>2</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td class="courseTitle">Chemie</td>
+									<td>-</td>
+									<td>-</td>
+									<td>-</td>
+									<td>2</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td class="courseTitle">Cultuur</td>
+									<td>-</td>
+									<td>-</td>
+									<td>-</td>
+									<td>-</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td class="courseTitle">Duits</td>
+									<td>-</td>
+									<td>3</td>
+									<td>-</td>
+									<td>-</td>
+									<td>-</td>
+								</tr>
 
-						<table class="fourthYear">
-							<caption>
-								4de Jaar - DF
-							</caption>
+								<tr>
+									<td class="courseTitle">Engels</td>
+									<td>3</td>
+									<td>4</td>
+									<td>3</td>
+									<td>3</td>
+									<td>3</td>
+								</tr>
+								<tr>
+									<td class="courseTitle">Frans</td>
+									<td>-</td>
+									<td>-</td>
+									<td>-</td>
+									<td>2</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td class="courseTitle">Fysica</td>
+									<td>-</td>
+									<td>-</td>
+									<td>-</td>
+									<td>2</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td class="courseTitle">Geschiedenis</td>
+									<td>2</td>
+									<td>2</td>
+									<td>2</td>
+									<td>2</td>
+									<td>2</td>
+								</tr>
+								<tr>
+									<td class="courseTitle">Levensbeschouwing</td>
+									<td>2</td>
+									<td>2</td>
+									<td>2</td>
+									<td>2</td>
+									<td>2</td>
+								</tr>
+								<tr>
+									<td class="courseTitle">Lichamelijke Opvoeding</td>
+									<td>2</td>
+									<td>2</td>
+									<td>2</td>
+									<td>2</td>
+									<td>2</td>
+								</tr>
+								<tr>
+									<td class="courseTitle">Natuurwetenschappen</td>
+									<td>2</td>
+									<td>2</td>
+									<td>2</td>
+									<td>-</td>
+									<td>2</td>
+								</tr>
+								<tr>
+									<td class="courseTitle">Nederlands</td>
+									<td>5</td>
+									<td>6</td>
+									<td>5</td>
+									<td>5</td>
+									<td>5</td>
+								</tr>
+								<tr>
+									<td class="courseTitle">Toegepaste Informatica</td>
+									<td>1</td>
+									<td>-</td>
+									<td>3</td>
+									<td>1</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td class="courseTitle">Economie</td>
+									<td>3</td>
+									<td>3</td>
+									<td>3</td>
+									<td>-</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td class="courseTitle">
+										Economische Financiële Competenties
+									</td>
+									<td>-</td>
+									<td>-</td>
+									<td>-</td>
+									<td>-</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td class="courseTitle">Bedrijfswetenschappen & Recht</td>
+									<td>5</td>
+									<td>1</td>
+									<td>1</td>
+									<td>-</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td class="courseTitle">Toegepaste economie - BO</td>
+									<td>-</td>
+									<td>-</td>
+									<td>-</td>
+									<td>-</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td class="courseTitle">Wiskunde</td>
+									<td>4</td>
+									<td>4</td>
+									<td>7</td>
+									<td>7</td>
+									<td>4</td>
+								</tr>
+								<tr>
+									<td class="courseTitle">Onderzoekscompetenties</td>
+									<td>-</td>
+									<td>-</td>
+									<td>-</td>
+									<td>1</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td class="courseTitle">Gedragswetenschappen</td>
+									<td>-</td>
+									<td>-</td>
+									<td>-</td>
+									<td>-</td>
+									<td>3</td>
+								</tr>
+								<tr>
+									<td class="courseTitle">Cultuurwetenschappen</td>
+									<td>-</td>
+									<td>-</td>
+									<td>-</td>
+									<td>-</td>
+									<td>2</td>
+								</tr>
+								<tr>
+									<td class="courseTitle">Filosofie</td>
+									<td>-</td>
+									<td>-</td>
+									<td>-</td>
+									<td>-</td>
+									<td>2</td>
+								</tr>
+								<tr>
+									<td class="courseTitle">Kunstbeschouwing</td>
+									<td>-</td>
+									<td>-</td>
+									<td>-</td>
+									<td>-</td>
+									<td>2</td>
+								</tr>
+								<tr>
+									<td class="courseTitle">Public Relations</td>
+									<td>-</td>
+									<td>-</td>
+									<td>-</td>
+									<td>-</td>
+									<td>-</td>
+								</tr>
+							</table>
 
-							<tr>
-								<th>Vakken</th>
-								<th>B&O</th>
-								<th>TOE</th>
-							</tr>
-							<tr>
-								<td class="courseTitle">Aardrijkskunde</td>
-								<td>-</td>
-								<td>-</td>
-							</tr>
-							<tr>
-								<td class="courseTitle">Cultuur</td>
-								<td>1</td>
-								<td>1</td>
-							</tr>
-							<tr>
-								<td class="courseTitle">Duits</td>
-								<td>-</td>
-								<td>2</td>
-							</tr>
-							<tr>
-								<td class="courseTitle">Engels</td>
-								<td>3</td>
-								<td>3</td>
-							</tr>
-							<tr>
-								<td class="courseTitle">Frans</td>
-								<td>3</td>
-								<td>3</td>
-							</tr>
+							<table class="fifthYearDF">
+								<caption>
+									5de Jaar - DF
+								</caption>
 
-							<tr>
-								<td class="courseTitle">Geschiedenis</td>
-								<td>2</td>
-								<td>2</td>
-							</tr>
-							<tr>
-								<td class="courseTitle">Levensbeschouwing</td>
-								<td>2</td>
-								<td>2</td>
-							</tr>
-							<tr>
-								<td class="courseTitle">Lichamelijke Opvoeding</td>
-								<td>2</td>
-								<td>2</td>
-							</tr>
-							<tr>
-								<td class="courseTitle">Natuurwetenschappen</td>
-								<td>1</td>
-								<td>1</td>
-							</tr>
-							<tr>
-								<td class="courseTitle">Nederlands</td>
-								<td>5</td>
-								<td>5</td>
-							</tr>
-							<tr>
-								<td class="courseTitle">Toegepaste Economie</td>
-								<td>9</td>
-								<td>-</td>
-							</tr>
-							<tr>
-								<td class="courseTitle">Toegepaste Informatica</td>
-								<td>1</td>
-								<td>-</td>
-							</tr>
-							<tr>
-								<td class="courseTitle">Toerisme</td>
-								<td>-</td>
-								<td>6</td>
-							</tr>
-							<tr>
-								<td class="courseTitle">Toeristische Geografie</td>
-								<td>-</td>
-								<td>2</td>
-							</tr>
-							<tr>
-								<td class="courseTitle">Wiskunde</td>
-								<td>3</td>
-								<td>3</td>
-							</tr>
-						</table>
+								<tr>
+									<th>Vakken</th>
+									<th>BO</th>
+									<th>T&C</th>
+								</tr>
+								<tr>
+									<td class="courseTitle">Aardrijkskunde</td>
+									<td>-</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td class="courseTitle">Biologie</td>
+									<td>-</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td class="courseTitle">Chemie</td>
+									<td>-</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td class="courseTitle">Cultuur</td>
+									<td>1</td>
+									<td>1</td>
+								</tr>
+								<tr>
+									<td class="courseTitle">Duits</td>
+									<td>-</td>
+									<td>3</td>
+								</tr>
+
+								<tr>
+									<td class="courseTitle">Engels</td>
+									<td>3</td>
+									<td>4</td>
+								</tr>
+								<tr>
+									<td class="courseTitle">Frans</td>
+									<td>2</td>
+									<td>4</td>
+								</tr>
+								<tr>
+									<td class="courseTitle">Fysica</td>
+									<td>-</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td class="courseTitle">Geschiedenis</td>
+									<td>1</td>
+									<td>1</td>
+								</tr>
+								<tr>
+									<td class="courseTitle">Levensbeschouwing</td>
+									<td>2</td>
+									<td>2</td>
+								</tr>
+								<tr>
+									<td class="courseTitle">Lichamelijke Opvoeding</td>
+									<td>2</td>
+									<td>2</td>
+								</tr>
+								<tr>
+									<td class="courseTitle">Natuurwetenschappen</td>
+									<td>1</td>
+									<td>1</td>
+								</tr>
+								<tr>
+									<td class="courseTitle">Nederlands</td>
+									<td>4</td>
+									<td>5</td>
+								</tr>
+								<tr>
+									<td class="courseTitle">Toegepaste Informatica</td>
+									<td>1</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td class="courseTitle">Economie</td>
+									<td>2</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td class="courseTitle">
+										Economische Financiële Competenties
+									</td>
+									<td>-</td>
+									<td>2</td>
+								</tr>
+								<tr>
+									<td class="courseTitle">Bedrijfswetenschappen & Recht</td>
+									<td>2</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td class="courseTitle">Toegepaste economie - BO</td>
+									<td>7</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td class="courseTitle">Wiskunde</td>
+									<td>3</td>
+									<td>2</td>
+								</tr>
+								<tr>
+									<td class="courseTitle">Onderzoekscompetenties</td>
+									<td>-</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td class="courseTitle">Gedragswetenschappen</td>
+									<td>-</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td class="courseTitle">Cultuurwetenschappen</td>
+									<td>-</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td class="courseTitle">Filosofie</td>
+									<td>-</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td class="courseTitle">Kunstbeschouwing</td>
+									<td>-</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td class="courseTitle">Public Relations</td>
+									<td>-</td>
+									<td>5</td>
+								</tr>
+							</table>
+						</div>
 					</div>
-					<p>
-						In de derde graad start de modernisering in het vijfde jaar en kan
-						je kiezen voor diverse richtingen in zowel doorstroom als dubbele
-						finaliteit secundair onderwijs:
-					</p>
-					<p><strong>doorstroom finaliteit</strong></p>
-					<ul>
-						<li>Wetenschappen-Wiskunde (WW)</li>
-						<li>Economie-Moderne talen (EM)</li>
-						<li>Economie-Wiskunde (EW)</li>
-						<li>Humane Wetenschappen (HW)</li>
-						<li>Bedrijfswetenschappen (BW)</li>
-					</ul>
 
-					<p><strong>Dubbele finaliteit</strong></p>
-					<ul>
-						<li>Bedrijfsorganisatie (BO)</li>
-						<li>Taal & Communicatie (T&C)</li>
-					</ul>
-					<div class="tables3rdGrade">
-						<table class="fifthYearDS">
-							<caption>
-								5de Jaar - DS
-							</caption>
-
-							<tr>
-								<th>Vakken</th>
-								<th>BW</th>
-								<th>ET</th>
-								<th>EW</th>
-								<th>WW</th>
-								<th>HW</th>
-							</tr>
-							<tr>
-								<td class="courseTitle">Aardrijkskunde</td>
-								<td>-</td>
-								<td>-</td>
-								<td>-</td>
-								<td>1</td>
-								<td>-</td>
-							</tr>
-							<tr>
-								<td class="courseTitle">Biologie</td>
-								<td>-</td>
-								<td>-</td>
-								<td>-</td>
-								<td>2</td>
-								<td>-</td>
-							</tr>
-							<tr>
-								<td class="courseTitle">Chemie</td>
-								<td>-</td>
-								<td>-</td>
-								<td>-</td>
-								<td>2</td>
-								<td>-</td>
-							</tr>
-							<tr>
-								<td class="courseTitle">Cultuur</td>
-								<td>-</td>
-								<td>-</td>
-								<td>-</td>
-								<td>-</td>
-								<td>-</td>
-							</tr>
-							<tr>
-								<td class="courseTitle">Duits</td>
-								<td>-</td>
-								<td>3</td>
-								<td>-</td>
-								<td>-</td>
-								<td>-</td>
-							</tr>
-
-							<tr>
-								<td class="courseTitle">Engels</td>
-								<td>3</td>
-								<td>4</td>
-								<td>3</td>
-								<td>3</td>
-								<td>3</td>
-							</tr>
-							<tr>
-								<td class="courseTitle">Frans</td>
-								<td>-</td>
-								<td>-</td>
-								<td>-</td>
-								<td>2</td>
-								<td>-</td>
-							</tr>
-							<tr>
-								<td class="courseTitle">Fysica</td>
-								<td>-</td>
-								<td>-</td>
-								<td>-</td>
-								<td>2</td>
-								<td>-</td>
-							</tr>
-							<tr>
-								<td class="courseTitle">Geschiedenis</td>
-								<td>2</td>
-								<td>2</td>
-								<td>2</td>
-								<td>2</td>
-								<td>2</td>
-							</tr>
-							<tr>
-								<td class="courseTitle">Levensbeschouwing</td>
-								<td>2</td>
-								<td>2</td>
-								<td>2</td>
-								<td>2</td>
-								<td>2</td>
-							</tr>
-							<tr>
-								<td class="courseTitle">Lichamelijke Opvoeding</td>
-								<td>2</td>
-								<td>2</td>
-								<td>2</td>
-								<td>2</td>
-								<td>2</td>
-							</tr>
-							<tr>
-								<td class="courseTitle">Natuurwetenschappen</td>
-								<td>2</td>
-								<td>2</td>
-								<td>2</td>
-								<td>-</td>
-								<td>2</td>
-							</tr>
-							<tr>
-								<td class="courseTitle">Nederlands</td>
-								<td>5</td>
-								<td>6</td>
-								<td>5</td>
-								<td>5</td>
-								<td>5</td>
-							</tr>
-							<tr>
-								<td class="courseTitle">Toegepaste Informatica</td>
-								<td>1</td>
-								<td>-</td>
-								<td>3</td>
-								<td>1</td>
-								<td>-</td>
-							</tr>
-							<tr>
-								<td class="courseTitle">Economie</td>
-								<td>3</td>
-								<td>3</td>
-								<td>3</td>
-								<td>-</td>
-								<td>-</td>
-							</tr>
-							<tr>
-								<td class="courseTitle">Economische Financiële Competenties</td>
-								<td>-</td>
-								<td>-</td>
-								<td>-</td>
-								<td>-</td>
-								<td>-</td>
-							</tr>
-							<tr>
-								<td class="courseTitle">Bedrijfswetenschappen & Recht</td>
-								<td>5</td>
-								<td>1</td>
-								<td>1</td>
-								<td>-</td>
-								<td>-</td>
-							</tr>
-							<tr>
-								<td class="courseTitle">Toegepaste economie - BO</td>
-								<td>-</td>
-								<td>-</td>
-								<td>-</td>
-								<td>-</td>
-								<td>-</td>
-							</tr>
-							<tr>
-								<td class="courseTitle">Wiskunde</td>
-								<td>4</td>
-								<td>4</td>
-								<td>7</td>
-								<td>7</td>
-								<td>4</td>
-							</tr>
-							<tr>
-								<td class="courseTitle">Onderzoekscompetenties</td>
-								<td>-</td>
-								<td>-</td>
-								<td>-</td>
-								<td>1</td>
-								<td>-</td>
-							</tr>
-							<tr>
-								<td class="courseTitle">Gedragswetenschappen</td>
-								<td>-</td>
-								<td>-</td>
-								<td>-</td>
-								<td>-</td>
-								<td>3</td>
-							</tr>
-							<tr>
-								<td class="courseTitle">Cultuurwetenschappen</td>
-								<td>-</td>
-								<td>-</td>
-								<td>-</td>
-								<td>-</td>
-								<td>2</td>
-							</tr>
-							<tr>
-								<td class="courseTitle">Filosofie</td>
-								<td>-</td>
-								<td>-</td>
-								<td>-</td>
-								<td>-</td>
-								<td>2</td>
-							</tr>
-							<tr>
-								<td class="courseTitle">Kunstbeschouwing</td>
-								<td>-</td>
-								<td>-</td>
-								<td>-</td>
-								<td>-</td>
-								<td>2</td>
-							</tr>
-							<tr>
-								<td class="courseTitle">Public Relations</td>
-								<td>-</td>
-								<td>-</td>
-								<td>-</td>
-								<td>-</td>
-								<td>-</td>
-							</tr>
-						</table>
-
-						<table class="fifthYearDF">
-							<caption>
-								5de Jaar - DF
-							</caption>
-
-							<tr>
-								<th>Vakken</th>
-								<th>BO</th>
-								<th>T&C</th>
-							</tr>
-							<tr>
-								<td class="courseTitle">Aardrijkskunde</td>
-								<td>-</td>
-								<td>-</td>
-							</tr>
-							<tr>
-								<td class="courseTitle">Biologie</td>
-								<td>-</td>
-								<td>-</td>
-							</tr>
-							<tr>
-								<td class="courseTitle">Chemie</td>
-								<td>-</td>
-								<td>-</td>
-							</tr>
-							<tr>
-								<td class="courseTitle">Cultuur</td>
-								<td>1</td>
-								<td>1</td>
-							</tr>
-							<tr>
-								<td class="courseTitle">Duits</td>
-								<td>-</td>
-								<td>3</td>
-							</tr>
-
-							<tr>
-								<td class="courseTitle">Engels</td>
-								<td>3</td>
-								<td>4</td>
-							</tr>
-							<tr>
-								<td class="courseTitle">Frans</td>
-								<td>2</td>
-								<td>4</td>
-							</tr>
-							<tr>
-								<td class="courseTitle">Fysica</td>
-								<td>-</td>
-								<td>-</td>
-							</tr>
-							<tr>
-								<td class="courseTitle">Geschiedenis</td>
-								<td>1</td>
-								<td>1</td>
-							</tr>
-							<tr>
-								<td class="courseTitle">Levensbeschouwing</td>
-								<td>2</td>
-								<td>2</td>
-							</tr>
-							<tr>
-								<td class="courseTitle">Lichamelijke Opvoeding</td>
-								<td>2</td>
-								<td>2</td>
-							</tr>
-							<tr>
-								<td class="courseTitle">Natuurwetenschappen</td>
-								<td>1</td>
-								<td>1</td>
-							</tr>
-							<tr>
-								<td class="courseTitle">Nederlands</td>
-								<td>4</td>
-								<td>5</td>
-							</tr>
-							<tr>
-								<td class="courseTitle">Toegepaste Informatica</td>
-								<td>1</td>
-								<td>-</td>
-							</tr>
-							<tr>
-								<td class="courseTitle">Economie</td>
-								<td>2</td>
-								<td>-</td>
-							</tr>
-							<tr>
-								<td class="courseTitle">Economische Financiële Competenties</td>
-								<td>-</td>
-								<td>2</td>
-							</tr>
-							<tr>
-								<td class="courseTitle">Bedrijfswetenschappen & Recht</td>
-								<td>2</td>
-								<td>-</td>
-							</tr>
-							<tr>
-								<td class="courseTitle">Toegepaste economie - BO</td>
-								<td>7</td>
-								<td>-</td>
-							</tr>
-							<tr>
-								<td class="courseTitle">Wiskunde</td>
-								<td>3</td>
-								<td>2</td>
-							</tr>
-							<tr>
-								<td class="courseTitle">Onderzoekscompetenties</td>
-								<td>-</td>
-								<td>-</td>
-							</tr>
-							<tr>
-								<td class="courseTitle">Gedragswetenschappen</td>
-								<td>-</td>
-								<td>-</td>
-							</tr>
-							<tr>
-								<td class="courseTitle">Cultuurwetenschappen</td>
-								<td>-</td>
-								<td>-</td>
-							</tr>
-							<tr>
-								<td class="courseTitle">Filosofie</td>
-								<td>-</td>
-								<td>-</td>
-							</tr>
-							<tr>
-								<td class="courseTitle">Kunstbeschouwing</td>
-								<td>-</td>
-								<td>-</td>
-							</tr>
-							<tr>
-								<td class="courseTitle">Public Relations</td>
-								<td>-</td>
-								<td>5</td>
-							</tr>
-						</table>
-					</div>
+					<script>
+						function toggleDiv(button, grade) {
+							var checkbox = document.getElementById(button);
+							var hiddenDiv = document.getElementById(grade);
+							// If the checkbox is checked, show the div; otherwise, hide it
+							if (checkbox.checked) {
+								hiddenDiv.style.display = "block";
+							} else {
+								hiddenDiv.style.display = "none";
+							}
+						}
+					</script>
 					<p>
 						De lessenroosters vind je op ons elektronisch leerplatform
 						Smartschool. Alle leerlingen en hun ouders krijgen toegang tot

@@ -3,6 +3,7 @@
 body {
 	margin: 0px;
 	background-image: url(./images/background\ image.svg);
+	background-image: url(./images/background\ image.svg);
 	background-repeat: repeat-y;
 	background-size: 100%;
 }
@@ -82,15 +83,7 @@ nav {
 a:hover {
 	text-decoration: underline;
 }
-.buttons {
-	display: flex;
-	justify-content: space-around;
-}
-.buttonClass {
-	background-color: antiquewhite;
-	border-radius: 50px;
-	padding: 20px 50px;
-}
+
 .diamond-doodle {
 	position: absolute;
 	width: 100px;
@@ -159,6 +152,34 @@ td {
 	box-sizing: border-box;
 }
 
+.buttons {
+	display: flex;
+	justify-content: space-around;
+}
+.buttonGrade {
+	cursor: pointer;
+	padding: 20px 60px;
+	background-color: #9f9f9f;
+	border-radius: 25px;
+}
+.buttonGrade:hover {
+	background-color: rgb(141, 255, 192);
+	text-decoration: underline;
+}
+#buttonGrade1,
+#buttonGrade2,
+#buttonGrade3 {
+	display: none;
+}
+#buttonGrade1:checked + label.buttonGrade,
+#buttonGrade2:checked + label.buttonGrade,
+#buttonGrade3:checked + label.buttonGrade {
+	background-color: rgb(141, 255, 192);
+}
+
+.hiddenDiv {
+	display: none;
+}
 main div {
 	margin-bottom: 50px;
 }
@@ -277,4 +298,18 @@ main div {
 	max-height: 600px;
 	display: flex;
 	overflow-x: auto;
+}
+.arrowLeft{
+	height: 60px;
+	position: absolute;
+	top: 1170px;
+	left: 20px;
+
+}
+.arrowRight{
+	height: 60px;
+	position: absolute;
+	top: 1170px;
+	right: 20px;
+
 }
