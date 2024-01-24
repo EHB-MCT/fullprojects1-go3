@@ -275,7 +275,8 @@ main div {
 	margin: 10px;
 }
 .item img {
-	width: 100%;
+	max-width:100%;
+	max-height: 400px;
 }
 
 .item p {
