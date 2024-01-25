@@ -5,30 +5,160 @@ let width = window.innerWidth;
 let height = window.innerHeight;
 let mouseXPos = 0;
 let mouseYpos = 0;
+let choiceXPos = 0;
+let choiceYpos = 0;
 let choices = [];
+let step = 1;
+let mouseIsDown = false;
 
 window.onmousemove = mousePos;
+window.onmousedown = mouseClickDown;
+window.onmouseup = mouseClickUp;
 
+setup();
 draw();
 
-function setup() {}
+function setup() {
+	context.font = "24px Roboto";
+}
 
 function draw() {
 	drawBackground();
-	drawStraw(mouseXPos, mouseYpos);
+	choiceButton();
+	phase();
 
-	question1();
+	drawCircle();
+
+	drawStraw(mouseXPos, mouseYpos);
 
 	requestAnimationFrame(draw);
 }
-
-function question1() {
-	context.font("52px Arial");
-	context.strokeText("text text text", width / 2 - 50, height / 2 - 100);
+function drawCircle() {
+	context.fillStyle = "white";
+	utils.fillCircle(choiceXPos, choiceYpos, 20);
 }
 
-function click(eventData) {
-	console.log(eventData);
+function phase() {
+	if (step == 1) {
+		decision1();
+	} else if (step == 2) {
+		decision2();
+	} else if (step == 3) {
+		decision3();
+	} else if (step == 4) {
+		decision4();
+	}
+}
+
+function decision1() {
+	//question 1
+	context.fillText("Ik heb interesse", width / 2 - 150, height / 2 - 165);
+	context.fillText("in de latijnse taal", width / 2 - 150, height / 2 - 125);
+	context.fillText("en geschiedenis", width / 2 - 150, height / 2 - 85);
+	//question 2
+	context.fillText("TEST22", width / 2 + 100, height / 2 - 100);
+
+	if (choiceXPos < width / 2 && mouseIsDown == true) {
+		choices.push("1");
+	} else if (choiceXPos > width / 2 && mouseIsDown == true) {
+		choices.push("2");
+	}
+}
+function decision2() {
+	//question 3
+	context.fillText("IDK", width / 2 - 150, height / 2 - 100);
+	//question 4
+	context.fillText("WHAT THE FUCK", width / 2 + 100, height / 2 - 100);
+	//question 5
+	context.fillText("text", width / 2, height / 2 - 100);
+
+	if (choiceXPos < (width * 1) / 3 && mouseIsDown == true) {
+		choices.push("1");
+	} else if (
+		choiceXPos > (width * 1) / 3 &&
+		choiceXPos < (width * 2) / 3 &&
+		mouseIsDown == true
+	) {
+		choices.push("2");
+	} else if (choiceXPos > (width * 2) / 3 && mouseIsDown == true) {
+		choices.push("3");
+	}
+}
+
+function decision3() {
+	//question 6
+	context.fillText("this is question 3", width / 2 - 150, height / 2 - 100);
+	//question 7
+	context.fillText("text", width / 2 + 100, height / 2 - 100);
+	//question 8
+	context.fillText("text", width / 2 + 100, height / 2 - 100);
+	//question 9
+	context.fillText("text", width / 2 + 100, height / 2 - 100);
+}
+
+function decision4() {
+	//question 10
+	context.fillText("text", width / 2 - 150, height / 2 - 100);
+	//question 11
+	context.fillText("text", width / 2 + 100, height / 2 - 100);
+}
+
+function decision51() {
+	//question 12
+	context.fillText("text", width / 2 - 150, height / 2 - 100);
+	//question 13
+	context.fillText("text", width / 2 + 100, height / 2 - 100);
+}
+
+function decision52() {
+	//question 14
+	context.fillText("text", width / 2 - 150, height / 2 - 100);
+	//question 15
+	context.fillText("text", width / 2 + 100, height / 2 - 100);
+}
+
+function decision61() {
+	//question 16
+	context.fillText("text", width / 2 - 150, height / 2 - 100);
+	//question 17
+	context.fillText("text", width / 2 + 100, height / 2 - 100);
+	//question 18
+	context.fillText("text", width / 2 + 100, height / 2 - 100);
+}
+
+function decision62() {
+	//question 19
+	context.strokeText("text", width / 2 - 150, height / 2 - 100);
+	//question 20
+	context.strokeText("text", width / 2 + 100, height / 2 - 100);
+}
+
+function choiceButton() {
+	context.fillStyle = "orange";
+	context.fillRect(width - 200, height - 100, 200, 100);
+
+	context.fillStyle = "black";
+	context.strokeText("press", width - 180, height - 50);
+
+	if (
+		choiceXPos != 0 &&
+		mouseXPos > width - 200 &&
+		mouseYpos > height - 100 &&
+		mouseIsDown == true
+	) {
+		choiceXPos = 0;
+		choiceYpos = 0;
+		step++;
+	}
+}
+
+function mouseClickDown(eventData) {
+	mouseIsDown = true;
+	choiceXPos = eventData.pageX;
+	choiceYpos = eventData.pageY;
+}
+function mouseClickUp(eventData) {
+	mouseIsDown = false;
 }
 
 function mousePos(eventdata) {
