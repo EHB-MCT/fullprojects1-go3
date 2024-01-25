@@ -224,8 +224,7 @@ main div {
 	left: 800px;
 }
 .basispeilers {
-	padding-top: 25px;
-	padding-bottom: 100px;
+	display: flex;
 }
 .duck {
 	position: absolute;
