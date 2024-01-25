@@ -16,18 +16,21 @@ body {
 	margin: 3.5%;
 }
 .slogan {
+	margin: 150px;
 	font-size: 90px;
 	text-align: center;
 }
 
 h1,
 h2 {
+	
 	font-family: "besides";
 	text-decoration: underline;
 	text-decoration-color: lime;
 }
 
 h1 {
+	text-align: center;
 	font-size: 70px;
 }
 
@@ -352,4 +355,32 @@ main div {
 	top: 1200px;
 	right: 20px;
 	cursor: pointer;
+}
+
+.doubbleText{
+	display: flex;
+}
+
+.GO{
+	flex: 1;
+	text-align: center;	
+}
+.rules{
+	flex: 1;
+	text-align: center;
+}
+.rules p{
+	margin: 0 auto;
+	width: 70%;
+	margin-bottom: 50px;
+}
+.rules a { 
+	margin-top: 100px;
+}
+.GO p{
+	width: 70%;
+	margin: 0 auto;
+}
+.liferules h1{
+	text-align: center;
 }
