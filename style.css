@@ -363,11 +363,13 @@ main div {
 	margin: 0 auto;
 	width: 70%;
 	margin-bottom: 50px;
+	text-align: left;
 }
 .rules a { 
 	margin-top: 100px;
 }
 .GO p{
+	text-align: left;
 	width: 70%;
 	margin: 0 auto;
 }
