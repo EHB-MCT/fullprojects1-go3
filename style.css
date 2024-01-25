@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Delius+Unicase&family=Roboto&display=swap");
-
+@import url('https://fonts.cdnfonts.com/css/besides');
 body {
 	margin: 0px;
 	background-image: url(./images/background\ image.svg);
@@ -17,7 +17,8 @@ body {
 
 h1,
 h2 {
-	font-family: "Delius Unicase", cursive;
+	font-family: "Delius Unicase", cursive; 
+    /* font-family: 'besides'; */
 	text-decoration: underline;
 	text-decoration-color: lime;
 }
@@ -68,7 +69,6 @@ nav {
 .buttonStaff {
 	padding: 20px;
 	background-color: #9f9f9f;
-	border-radius: 20px;
 }
 .departments [id^="button"] {
 	display: none;
@@ -165,7 +165,6 @@ td {
 	cursor: pointer;
 	padding: 20px 60px;
 	background-color: #9f9f9f;
-	border-radius: 25px;
 }
 
 .buttons [id^="button"] {
@@ -269,11 +268,13 @@ main div {
 	background-color: rgba(255, 255, 255, 0.9);
 	text-align: center;
 	margin: 10px;
-	
+	padding: 20px;
 }
 .item img {
-	max-width: 100%;
-	max-height: 400px;
+	width: 100%;
+	margin-bottom: 10px;
+	aspect-ratio: 1/1;
+	object-fit: cover; /* Preserve aspect ratio */
 }
 
 .item p {
@@ -282,10 +283,19 @@ main div {
 }
 .item a {
 	display: inline-block;
+	align-self: baseline;
+}
+.flex-center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0% 3.5%;
 }
 .caroussel {
 	margin-top: 20px;
+	width: 75%;
 	display: flex;
+
 	overflow-x: auto;
 	scroll-behavior: smooth;
 }
