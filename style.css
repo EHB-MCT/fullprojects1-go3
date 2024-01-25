@@ -16,9 +16,10 @@ body {
 	margin: 5%;
 }
 .slogan {
-	font-size: 70px;
+	font-size: 90px;
 	/* width: 65%; */
 	text-align: center;
+	
 }
 
 h1,
@@ -41,10 +42,10 @@ li {
 	width: 40%;
 }
 nav a{
-	font-family: "besides";
+	
 	font-size: 10pt;
 }
-a {
+a {font-family: "besides";
 	color: black;
 	text-decoration: none;
 }
