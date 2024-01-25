@@ -24,12 +24,11 @@ body {
 h1,
 h2 {
 	font-family: "besides";
-	text-decoration: underline;
-	text-decoration-color: lime;
 }
 h3 {
 	font-family: "besides";
 }
+h3{ font-family: "besides";}
 h1 {
 	text-align: center;
 	font-size: 70px;
@@ -112,6 +111,8 @@ nav {
 }
 .departments [id^="button"]:checked + label.buttonStaff,
 .buttonStaff:hover,
+.buttonGrade:hover {
+}
 .buttons [id^="button"]:checked + label.buttonGrade,
 .buttonGrade:hover,
 .buttonFactuur:hover {
@@ -126,6 +127,22 @@ nav {
 
 .yellow {
 	text-decoration-color: #ccff00;
+}
+.nav-button2 {
+	text-decoration: underline 6px;
+	text-decoration-color: #ccff00;
+}
+.nav-button3 {
+	text-decoration: underline 6px;
+	text-decoration-color: #ff00bb;
+}
+.nav-button4 {
+	text-decoration: underline 6px;
+	text-decoration-color: #00e5ff;
+}
+.nav-button5 {
+	text-decoration: underline 6px;
+	text-decoration-color: #ff8901;
 }
 .pink {
 	text-decoration-color: #ff00bb;
@@ -173,6 +190,8 @@ a:hover {
 }
 .socials {
 	flex: 1;
+	text-decoration: underline 6px;
+	text-decoration-color: #ff8901;
 }
 
 table,
@@ -211,7 +230,7 @@ td {
 .buttons [id^="button"] {
 	display: none;
 }
-
+.buttons [id^="button"]:checked + label.buttonGrade,
 .hiddenDiv {
 	display: none;
 }
@@ -375,6 +394,29 @@ main div {
 	cursor: pointer;
 }
 
+.contactOns {
+	text-decoration: underline 6px;
+	text-decoration-color: #ff8901;
+}
+.gegevens {
+	text-decoration: underline 6px;
+	text-decoration-color: #ff8901;
+}
+
+.leefregelimages {
+	display: flex;
+	flex-wrap: wrap;
+
+	width: 70%;
+	margin-left: 250px;
+
+	justify-content: center;
+	text-align: center;
+}
+.regelpictogram {
+	width: 33%;
+}
+
 .doubbleText {
 	display: flex;
 }
@@ -391,11 +433,13 @@ main div {
 	margin: 0 auto;
 	width: 70%;
 	margin-bottom: 50px;
+	text-align: left;
 }
 .rules a {
 	margin-top: 100px;
 }
 .GO p {
+	text-align: left;
 	width: 70%;
 	margin: 0 auto;
 }
