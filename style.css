@@ -144,7 +144,7 @@ a:hover {
 .diamond-doodle {
 	position: absolute;
 	width: 100px;
-	left: 800px;
+	left: 200px;
 	bottom: 100px;
 }
 .ContactInformation {
@@ -430,3 +430,20 @@ main div {
 .facebookbtn{
 	background: #316FF6;
 }
+
+.eventlist::-webkit-scrollbar-thumb {
+	background: #ff00bb; 
+	border-radius: 10px;
+  }
+  .eventlist::-webkit-scrollbar {
+	width: 10px;
+  }
+  .eventlist::-webkit-scrollbar-track {
+	box-shadow: inset 0 0 5px grey; 
+	border-radius: 10px;
+  }
+  .eventlist::-webkit-scrollbar-thumb:hover {
+	background: #ca259e; 
+  }
+ 
+ 
