@@ -16,18 +16,21 @@ body {
 	margin: 3.5%;
 }
 .slogan {
+	margin: 150px;
 	font-size: 90px;
 	text-align: center;
 }
 
 h1,
 h2 {
+	
 	font-family: "besides";
 	text-decoration: underline;
 	text-decoration-color: lime;
 }
-
+h3{ font-family: "besides";}
 h1 {
+	text-align: center;
 	font-size: 70px;
 }
 
@@ -41,6 +44,7 @@ li {
 	width: 40%;
 }
 nav a {
+	text-decoration: underline 6px lime;
 	font-size: 10pt;
 	background-color: transparent;
 	color: black;
@@ -118,25 +122,20 @@ nav {
 	display: flex;
 	justify-content: center;
 }
-.nav-button1 {
-	text-decoration: underline 6px;
-	text-decoration-color: lime;
-}
-.nav-button2 {
-	text-decoration: underline 6px;
+
+
+
+.yellow{
 	text-decoration-color: #ccff00;
 }
-.nav-button3 {
-	text-decoration: underline 6px;
-	text-decoration-color: #ff00bb;
+.pink{
+	text-decoration-color:#ff00bb ;
 }
-.nav-button4 {
-	text-decoration: underline 6px;
+.blue{
 	text-decoration-color: #00e5ff;
 }
-.nav-button5 {
-	text-decoration: underline 6px;
-	text-decoration-color: #ff8901;
+.orange{
+	text-decoration-color:#ff8901 ;
 }
 a:hover {
 	text-decoration: underline;
@@ -373,4 +372,59 @@ main div {
 	top: 1200px;
 	right: 20px;
 	cursor: pointer;
+}
+
+.doubbleText{
+	display: flex;
+}
+
+.GO{
+	flex: 1;
+	text-align: center;	
+}
+.rules{
+	flex: 1;
+	text-align: center;
+}
+.rules p{
+	margin: 0 auto;
+	width: 70%;
+	margin-bottom: 50px;
+}
+.rules a { 
+	margin-top: 100px;
+}
+.GO p{
+	width: 70%;
+	margin: 0 auto;
+}
+.liferules h1{
+	text-align: center;
+}
+.Inschrijvingen{
+	text-align: center;
+	
+}
+
+.Inschrijvingen p {
+	margin: 0 auto;
+}
+.Inschrijvingen h2{
+	text-decoration: none;
+	font-size: 20px;
+	margin-top: 30px;
+	
+}
+.socialMedia{
+	text-align: center;
+	margin: 90px;
+}
+.socialMedia h2{
+	font-size: 20pt;
+	text-decoration: none;}
+.instagrambtn{
+	background: linear-gradient(94deg, rgba(250,126,30,1) 2%, rgba(214,41,118,1) 25%, rgba(150,47,191,1) 93%, rgba(79,91,213,1) 100%);
+	}
+.facebookbtn{
+	background: #316FF6;
 }
