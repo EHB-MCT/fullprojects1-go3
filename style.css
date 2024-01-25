@@ -65,10 +65,16 @@ nav {
 	margin: 20px;
 }
 .person {
-	flex: 1;
+	margin: 30px 60px;
+	text-align: center;
+} 
+.person p{
+	width: 100%
 }
 .person img {
-	width: 130px;
+	width: 150px;
+	height: 150px;
+	object-fit:contain;
 }
 .departments {
 	display: flex;
@@ -87,10 +93,9 @@ nav {
 	text-decoration: underline;
 }
 .personnel {
-	background-color: darkgrey;
-	padding: 20px;
-	display: inline;
+	background-color: rgb(255, 255, 255);
 	display: flex;
+	justify-content: center;
 }
 
 a:hover {
@@ -140,7 +145,6 @@ td {
 	text-align: center;
 	background-color: white;
 }
-
 .courseTitle {
 	text-align: left;
 }
