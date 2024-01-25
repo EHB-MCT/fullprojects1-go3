@@ -24,14 +24,16 @@ body {
 h1,
 h2 {
 	font-family: "besides";
+	text-decoration: underline;
+	text-decoration-color: lime;
 }
 h3 {
 	font-family: "besides";
 }
-h3{ font-family: "besides";}
 h1 {
 	text-align: center;
 	font-size: 70px;
+
 }
 
 h2 {
@@ -111,8 +113,6 @@ nav {
 }
 .departments [id^="button"]:checked + label.buttonStaff,
 .buttonStaff:hover,
-.buttonGrade:hover {
-}
 .buttons [id^="button"]:checked + label.buttonGrade,
 .buttonGrade:hover,
 .buttonFactuur:hover {
@@ -125,9 +125,6 @@ nav {
 	justify-content: center;
 }
 
-.yellow {
-	text-decoration-color: #ccff00;
-}
 .nav-button2 {
 	text-decoration: underline 6px;
 	text-decoration-color: #ccff00;
@@ -143,6 +140,9 @@ nav {
 .nav-button5 {
 	text-decoration: underline 6px;
 	text-decoration-color: #ff8901;
+}
+.yellow {
+	text-decoration-color: #ccff00;
 }
 .pink {
 	text-decoration-color: #ff00bb;
@@ -230,7 +230,7 @@ td {
 .buttons [id^="button"] {
 	display: none;
 }
-.buttons [id^="button"]:checked + label.buttonGrade,
+
 .hiddenDiv {
 	display: none;
 }
@@ -244,8 +244,6 @@ main div {
 
 	width: 10%;
 	left: 800px;
-}
-.maximumFactuur .dropdown {
 }
 .duck {
 	position: absolute;
