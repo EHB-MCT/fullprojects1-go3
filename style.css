@@ -48,7 +48,7 @@ nav a {
 a {
 	margin-top: 20px;
 	padding: 12px;
-	background-color: #9A00FF;
+	background-color: #9a00ff;
 	font-family: "besides";
 	color: rgb(255, 255, 255);
 	text-decoration: none;
@@ -90,11 +90,11 @@ nav {
 .buttonGrade {
 	padding: 20px;
 	padding: 12px;
-	background-color: #9A00FF;
+	background-color: #9a00ff;
 	font-family: "besides";
 	color: rgb(255, 255, 255);
 }
-.buttonGrade{
+.buttonGrade {
 	padding-left: 160px;
 	padding-right: 160px;
 }
@@ -102,8 +102,10 @@ nav {
 	display: none;
 }
 .departments [id^="button"]:checked + label.buttonStaff,
-.buttonStaff:hover, .buttonGrade:hover  {
-	background-color:black;
+.buttonStaff:hover,
+.buttons [id^="button"]:checked + label.buttonGrade,
+.buttonGrade:hover {
+	background-color: black;
 	color: white;
 }
 .personnel {
@@ -117,19 +119,19 @@ nav {
 }
 .nav-button2 {
 	text-decoration: underline 6px;
-	text-decoration-color: #CCFF00;
+	text-decoration-color: #ccff00;
 }
 .nav-button3 {
 	text-decoration: underline 6px;
-	text-decoration-color: #FF00BB;
+	text-decoration-color: #ff00bb;
 }
 .nav-button4 {
 	text-decoration: underline 6px;
-	text-decoration-color: #00E5FF;
+	text-decoration-color: #00e5ff;
 }
 .nav-button5 {
 	text-decoration: underline 6px;
-	text-decoration-color: #FF8901;
+	text-decoration-color: #ff8901;
 }
 a:hover {
 	text-decoration: underline;
@@ -203,12 +205,9 @@ td {
 	justify-content: space-around;
 }
 
-
 .buttons [id^="button"] {
 	display: none;
 }
-.buttons [id^="button"]:checked + label.buttonGrade,
-
 
 .hiddenDiv {
 	display: none;
