@@ -26,6 +26,7 @@ h2 {
 	text-decoration: underline;
 	text-decoration-color: lime;
 }
+
 h1 {
 	font-size: 70px;
 }
@@ -41,10 +42,15 @@ li {
 }
 nav a {
 	font-size: 10pt;
+	background-color: transparent;
+	color: black;
 }
 a {
+	margin-top: 20px;
+	padding: 12px;
+	background-color: #9A00FF;
 	font-family: "besides";
-	color: black;
+	color: rgb(255, 255, 255);
 	text-decoration: none;
 }
 
@@ -80,24 +86,51 @@ nav {
 	display: flex;
 	justify-content: space-between;
 }
-.buttonStaff {
+.buttonStaff,
+.buttonGrade {
 	padding: 20px;
-	background-color: #9f9f9f;
+	padding: 12px;
+	background-color: #9A00FF;
+	font-family: "besides";
+	color: rgb(255, 255, 255);
+}
+.buttonGrade{
+	padding-left: 160px;
+	padding-right: 160px;
 }
 .departments [id^="button"] {
 	display: none;
 }
 .departments [id^="button"]:checked + label.buttonStaff,
-.buttonStaff:hover {
-	background-color: rgb(141, 255, 192);
-	text-decoration: underline;
+.buttonStaff:hover, .buttonGrade:hover  {
+	background-color:black;
+	color: white;
 }
 .personnel {
 	background-color: rgb(255, 255, 255);
 	display: flex;
 	justify-content: center;
 }
-
+.nav-button1 {
+	text-decoration: underline 6px;
+	text-decoration-color: lime;
+}
+.nav-button2 {
+	text-decoration: underline 6px;
+	text-decoration-color: #CCFF00;
+}
+.nav-button3 {
+	text-decoration: underline 6px;
+	text-decoration-color: #FF00BB;
+}
+.nav-button4 {
+	text-decoration: underline 6px;
+	text-decoration-color: #00E5FF;
+}
+.nav-button5 {
+	text-decoration: underline 6px;
+	text-decoration-color: #FF8901;
+}
 a:hover {
 	text-decoration: underline;
 }
@@ -148,10 +181,6 @@ td {
 .courseTitle {
 	text-align: left;
 }
-.firstYear,
-.secondYear {
-	flex: 1;
-}
 
 .tables1stGrade,
 .tables2ndGrade,
@@ -173,20 +202,13 @@ td {
 	display: flex;
 	justify-content: space-around;
 }
-.buttonGrade {
-	cursor: pointer;
-	padding: 20px 60px;
-	background-color: #9f9f9f;
-}
+
 
 .buttons [id^="button"] {
 	display: none;
 }
 .buttons [id^="button"]:checked + label.buttonGrade,
-.buttonGrade:hover {
-	background-color: rgb(141, 255, 192);
-	text-decoration: underline;
-}
+
 
 .hiddenDiv {
 	display: none;
