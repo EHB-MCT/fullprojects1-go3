@@ -148,10 +148,6 @@ td {
 .courseTitle {
 	text-align: left;
 }
-.firstYear,
-.secondYear {
-	flex: 1;
-}
 
 .tables1stGrade,
 .tables2ndGrade,
