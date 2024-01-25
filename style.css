@@ -23,12 +23,13 @@ body {
 
 h1,
 h2 {
-	
 	font-family: "besides";
 	text-decoration: underline;
 	text-decoration-color: lime;
 }
-h3{ font-family: "besides";}
+h3 {
+	font-family: "besides";
+}
 h1 {
 	text-align: center;
 	font-size: 70px;
@@ -99,7 +100,7 @@ nav {
 	font-family: "besides";
 	color: rgb(255, 255, 255);
 }
-.buttonFactuur{
+.buttonFactuur {
 	margin-bottom: 0;
 }
 .buttonGrade {
@@ -123,19 +124,17 @@ nav {
 	justify-content: center;
 }
 
-
-
-.yellow{
+.yellow {
 	text-decoration-color: #ccff00;
 }
-.pink{
-	text-decoration-color:#ff00bb ;
+.pink {
+	text-decoration-color: #ff00bb;
 }
-.blue{
+.blue {
 	text-decoration-color: #00e5ff;
 }
-.orange{
-	text-decoration-color:#ff8901 ;
+.orange {
+	text-decoration-color: #ff8901;
 }
 a:hover {
 	text-decoration: underline;
@@ -227,8 +226,7 @@ main div {
 	width: 10%;
 	left: 800px;
 }
-.basispeilers {
-	display: flex;
+.maximumFactuur .dropdown {
 }
 .duck {
 	position: absolute;
@@ -274,9 +272,10 @@ main div {
 	background-color: rgba(255, 255, 255, 0.5);
 }
 .dropdown {
-	display: contents;
-	width: 100;
+	margin: 0 auto;
 	background-color: #00e5ff;
+	margin-top: 50px;
+	cursor: pointer;
 }
 .dropdownContent {
 	position: fixed;
@@ -289,11 +288,12 @@ main div {
 .pdf {
 	font-family: "Roboto", sans-serif;
 	color: #ff0000;
-	background-color: rgb(247, 0, 0);
+	background-color: white;
 	text-decoration: none;
 	display: block;
 	margin: 0%;
 	padding: 20px;
+	width: fit-content;
 }
 .dropdownContent a:hover {
 	background-color: #f1f1f1;
@@ -308,7 +308,8 @@ main div {
 .waaromKiezen p {
 	width: 100%;
 }
-.waaromKiezen div {
+.basispeilers,
+.maximumFactuur {
 	flex-direction: column;
 	width: 40%;
 }
@@ -374,57 +375,62 @@ main div {
 	cursor: pointer;
 }
 
-.doubbleText{
+.doubbleText {
 	display: flex;
 }
 
-.GO{
-	flex: 1;
-	text-align: center;	
-}
-.rules{
+.GO {
 	flex: 1;
 	text-align: center;
 }
-.rules p{
+.rules {
+	flex: 1;
+	text-align: center;
+}
+.rules p {
 	margin: 0 auto;
 	width: 70%;
 	margin-bottom: 50px;
 }
-.rules a { 
+.rules a {
 	margin-top: 100px;
 }
-.GO p{
+.GO p {
 	width: 70%;
 	margin: 0 auto;
 }
-.liferules h1{
+.liferules h1 {
 	text-align: center;
 }
-.Inschrijvingen{
+.Inschrijvingen {
 	text-align: center;
-	
 }
 
 .Inschrijvingen p {
 	margin: 0 auto;
 }
-.Inschrijvingen h2{
+.Inschrijvingen h2 {
 	text-decoration: none;
 	font-size: 20px;
 	margin-top: 30px;
-	
 }
-.socialMedia{
+.socialMedia {
 	text-align: center;
 	margin: 90px;
 }
-.socialMedia h2{
+.socialMedia h2 {
 	font-size: 20pt;
-	text-decoration: none;}
-.instagrambtn{
-	background: linear-gradient(94deg, rgba(250,126,30,1) 2%, rgba(214,41,118,1) 25%, rgba(150,47,191,1) 93%, rgba(79,91,213,1) 100%);
-	}
-.facebookbtn{
-	background: #316FF6;
+	text-decoration: none;
+}
+.instagrambtn {
+	background: linear-gradient(
+		94deg,
+		rgba(250, 126, 30, 1) 2%,
+		rgba(214, 41, 118, 1) 25%,
+		rgba(150, 47, 191, 1) 93%,
+		rgba(79, 91, 213, 1) 100%
+	);
+}
+.facebookbtn {
+	background: #316ff6;
 }
