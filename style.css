@@ -87,12 +87,16 @@ nav {
 	justify-content: space-between;
 }
 .buttonStaff,
-.buttonGrade {
+.buttonGrade,
+.buttonFactuur {
 	padding: 20px;
 	padding: 12px;
 	background-color: #9a00ff;
 	font-family: "besides";
 	color: rgb(255, 255, 255);
+}
+.buttonFactuur{
+	margin-bottom: 0;
 }
 .buttonGrade {
 	padding-left: 160px;
@@ -104,7 +108,8 @@ nav {
 .departments [id^="button"]:checked + label.buttonStaff,
 .buttonStaff:hover,
 .buttons [id^="button"]:checked + label.buttonGrade,
-.buttonGrade:hover {
+.buttonGrade:hover,
+.buttonFactuur:hover {
 	background-color: black;
 	color: white;
 }
@@ -269,23 +274,45 @@ main div {
 	height: 600px;
 	background-color: rgba(255, 255, 255, 0.5);
 }
+.dropdown {
+	display: contents;
+	width: 100;
+	background-color: #00e5ff;
+}
+.dropdownContent {
+	position: fixed;
+	display: none;
+	color: white;
+	border: none;
+	cursor: pointer;
+	margin: 0%;
+}
 .pdf {
 	font-family: "Roboto", sans-serif;
 	color: #ff0000;
-	text-decoration: underline;
+	background-color: rgb(247, 0, 0);
+	text-decoration: none;
+	display: block;
+	margin: 0%;
+	padding: 20px;
 }
-
-.factuurbutton {
-	font-family: "Roboto", sans-serif;
-	color: white;
+.dropdownContent a:hover {
+	background-color: #f1f1f1;
+}
+.dropdown:hover .dropdownContent {
+	display: block;
+}
+.waaromKiezen {
 	display: flex;
-	margin-right: 50px;
-
-	background-color: blue;
-	border-radius: 50px;
-	padding: 20px 50px;
+	justify-content: space-between;
 }
-
+.waaromKiezen p {
+	width: 100%;
+}
+.waaromKiezen div {
+	flex-direction: column;
+	width: 40%;
+}
 .download {
 	display: flex;
 	justify-content: center;
