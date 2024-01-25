@@ -9,7 +9,6 @@
 	</head>
 	<body>
 		<nav>
-			<img class="logo" src="images/HielLogo.png" alt="" />
 			<ul class="nav-links">
 				<li>
 					<a class="nav-button" href="index.html">Wie zijn we?</a>
@@ -29,21 +28,9 @@
 		<div class="wrapper">
 			<main>
 				<h1 class="slogan">
-					Waar kennis bloeit in het hart <strong>1030</strong>
+					Waar kennis bloeit <br />in het hart <strong>1030</strong>
 				</h1>
-				<div>
-					<h1>Wie zijn we?</h1>
-					<p>
-						Atheneum hiel is een warme en ondersteunende school waar het welzijn
-						van leerlingen centraal staat. Wij streven naar meertaligheid als
-						basis voor sterk Nederlands taalgebruik. Ons OLB-programma begeleidt
-						leerlingen intensief gedurende hun hele schoolloopbaan, waarbij we
-						continu evalueren en talentontwikkeling stimuleren. Onze holistische
-						aanpak richt zich op het welzijn, taalontwikkeling en
-						loopbaanbegeleiding, met als doel elke leerling optimaal voor te
-						bereiden op een succesvolle toekomst.
-					</p>
-				</div>
+				<div></div>
 				<div class="staff">
 					<h1>Wie is wie?</h1>
 
@@ -51,6 +38,7 @@
 						<input
 							type="checkbox"
 							id="buttonDirectie"
+							checked
 							onchange="toggleDiv('buttonDirectie','directie','begeleiding','coaches','taal','secretariaat','personeels','Vakgroepen')"
 							onclick="uncheckCheckbox('buttonBegeleiding','buttonCoaches','buttonTaal','buttonSecretariaat','buttonPersoneels','buttonVakgroepen')"
 						/>
@@ -110,154 +98,170 @@
 						/>
 						<label for="buttonVakgroepen" class="buttonStaff">Vakgroepen</label>
 					</div>
-					<div class="Vakgroepen">
-						<div class="person">
-							<img class="portrait" src="images/persoon.png" alt="" />
-							<p>Economie <br /></p>
-						</div>
-						<div class="person">
-							<img class="portrait" src="images/persoon.png" alt="" />
-							<p>Humane Wetenschappen <br /></p>
-						</div>
-						<div class="person">
-							<img class="portrait" src="images/persoon.png" alt="" />
-							<p>Moderne talen <br /></p>
-						</div>
-						<div class="person">
-							<img class="portrait" src="images/persoon.png" alt="" />
-							<p>Nederlands <br /></p>
-						</div>
-						<div class="person">
-							<img class="portrait" src="images/persoon.png" alt="" />
-							<p>Wiskunde-informatica <br /></p>
-						</div>
-						<div class="person">
-							<img class="portrait" src="images/persoon.png" alt="" />
-							<p>Wetenschappen <br /></p>
+					<div id="directie" >
+						<div class="personnel">
+							<div class="person">
+								<img class="portrait" src="images/persoon.png" alt="" />
+								<p>
+									Johan Schellemans <br />
+									Directeur
+								</p>
+							</div>
+							<div class="person">
+								<img class="portrait" src="images/persoon.png" alt="" />
+								<p>
+									Nele Van de Velde <br />
+									Adjunct-directeur
+								</p>
+							</div>
 						</div>
 					</div>
-
-					<div class="personeels">
-						<div class="person">
-							<img class="portrait" src="images/persoon.png" alt="" />
-							<p>
-								Catherine Lequeux <br />
-								Verantwoordelijke personeelszaken
-							</p>
+					<div id="begeleiding" class="hiddenDiv">
+						<div class="personnel">
+							<div class="person">
+								<img class="portrait" src="images/persoon.png" alt="" />
+								<p>
+									Karen Vander Elst <br />
+									Leerlingbegeleiding
+								</p>
+							</div>
+							<div class="person">
+								<img class="portrait" src="images/persoon.png" alt="" />
+								<p>
+									Goele Eggers <br />
+									Leerlingbegeleiding
+								</p>
+							</div>
+							<div class="person">
+								<img class="portrait" src="images/persoon.png" alt="" />
+								<p>
+									Eva De Corte <br />
+									Leerlingbegeleiding
+								</p>
+							</div>
+							<div class="person">
+								<img class="portrait" src="images/persoon.png" alt="" />
+								<p>
+									Eva Oggiano <br />
+									Leerlingbegeleiding
+								</p>
+							</div>
 						</div>
 					</div>
-					<div class="secretariaat">
-						<div class="person">
-							<img class="portrait" src="images/persoon.png" alt="" />
-							<p>
-								Sophie Lequeux <br />
-								Verantwoordelijke leerlingensecretariaat
-							</p>
-						</div>
-						<div class="person">
-							<img class="portrait" src="images/persoon.png" alt="" />
-							<p>
-								Francine Shimba <br />
-								Verantwoordelijke inschrijvingen & Smartschoolverantwoordelijke
-							</p>
-						</div>
-						<div class="person">
-							<img class="portrait" src="images/persoon.png" alt="" />
-							<p>
-								Amaurie Van Eylen (1e graad) <br />
-								Opvoeders
-							</p>
-						</div>
-						<div class="person">
-							<img class="portrait" src="images/persoon.png" alt="" />
-							<p>
-								Jef Schellemans (2e graad) <br />
-								Opvoeders
-							</p>
-						</div>
-						<div class="person">
-							<img class="portrait" src="images/persoon.png" alt="" />
-							<p>
-								Sercan Desovali (3e graad) <br />
-								Opvoeders
-							</p>
-						</div>
-						<div class="person">
-							<img class="portrait" src="images/persoon.png" alt="" />
-							<p>
-								Erik Neven <br />
-								Preventie- en veiligheidmanager & IT:
-							</p>
+					<div id="coaches" class="hiddenDiv">
+						<div class="personnel">
+							<div class="person">
+								<img class="portrait" src="images/persoon.png" alt="" />
+								<p>
+									Dewi Bourguignon <br />
+									Leercoaches
+								</p>
+							</div>
+							<div class="person">
+								<img class="portrait" src="images/persoon.png" alt="" />
+								<p>
+									Katia Dennequin <br />
+									Leercoaches
+								</p>
+							</div>
+							<div class="person">
+								<img class="portrait" src="images/persoon.png" alt="" />
+								<p>
+									Belinda Daemen <br />
+									Leercoaches
+								</p>
+							</div>
 						</div>
 					</div>
-					<div class="coaches">
-						<div class="person">
-							<img class="portrait" src="images/persoon.png" alt="" />
-							<p>
-								Dewi Bourguignon <br />
-								Leercoaches
-							</p>
-						</div>
-						<div class="person">
-							<img class="portrait" src="images/persoon.png" alt="" />
-							<p>
-								Katia Dennequin <br />
-								Leercoaches
-							</p>
-						</div>
-						<div class="person">
-							<img class="portrait" src="images/persoon.png" alt="" />
-							<p>
-								Belinda Daemen <br />
-								Leercoaches
-							</p>
+					<div id="taal" class="hiddenDiv">
+						<div class="personnel">
+							<div class="person">
+								<img class="portrait" src="images/persoon.png" alt="" />
+								<p>
+									Bjorn Dierickx <br />
+									Taal- & Kwaliteitscoördinator
+								</p>
+							</div>
 						</div>
 					</div>
-
-					<div class="begleiding">
-						<div class="person">
-							<img class="portrait" src="images/persoon.png" alt="" />
-							<p>
-								Karen Vander Elst <br />
-								Leerlingbegeleiding
-							</p>
-						</div>
-						<div class="person">
-							<img class="portrait" src="images/persoon.png" alt="" />
-							<p>
-								Goele Eggers <br />
-								Leerlingbegeleiding
-							</p>
-						</div>
-						<div class="person">
-							<img class="portrait" src="images/persoon.png" alt="" />
-							<p>
-								Eva De Corte <br />
-								Leerlingbegeleiding
-							</p>
-						</div>
-						<div class="person">
-							<img class="portrait" src="images/persoon.png" alt="" />
-							<p>
-								Eva Oggiano <br />
-								Leerlingbegeleiding
-							</p>
+					<div id="secretariaat" class="hiddenDiv">
+						<div class="personnel">
+							<div class="person">
+								<img class="portrait" src="images/persoon.png" alt="" />
+								<p>
+									Sophie Lequeux <br />
+									Verantwoordelijke leerlingensecretariaat
+								</p>
+							</div>
+							<div class="person">
+								<img class="portrait" src="images/persoon.png" alt="" />
+								<p>
+									Francine Shimba <br />
+									Verantwoordelijke inschrijvingen &
+									Smartschoolverantwoordelijke
+								</p>
+							</div>
+							<div class="person">
+								<img class="portrait" src="images/persoon.png" alt="" />
+								<p>
+									Amaurie Van Eylen (1e graad) <br />
+									Opvoeders
+								</p>
+							</div>
+							<div class="person">
+								<img class="portrait" src="images/persoon.png" alt="" />
+								<p>
+									Jef Schellemans (2e graad) <br />
+									Opvoeders
+								</p>
+							</div>
+							<div class="person">
+								<img class="portrait" src="images/persoon.png" alt="" />
+								<p>
+									Sercan Desovali (3e graad) <br />
+									Opvoeders
+								</p>
+							</div>
+							<div class="person">
+								<img class="portrait" src="images/persoon.png" alt="" />
+								<p>
+									Erik Neven <br />
+									Preventie- en veiligheidmanager & IT:
+								</p>
+							</div>
 						</div>
 					</div>
-					<div class="directie">
-						<div class="person">
-							<img class="portrait" src="images/persoon.png" alt="" />
-							<p>
-								Johan Schellemans <br />
-								Directeur
-							</p>
+					<div id="personeels" class="hiddenDiv">
+						<div class="personnel">
+							<div class="person">
+								<img class="portrait" src="images/persoon.png" alt="" />
+								<p>
+									Catherine Lequeux <br />
+									Verantwoordelijke personeelszaken
+								</p>
+							</div>
 						</div>
-						<div class="person">
-							<img class="portrait" src="images/persoon.png" alt="" />
-							<p>
-								Nele Van de Velde <br />
-								Adjunct-directeur
-							</p>
+					</div>
+					<div id="Vakgroepen" class="hiddenDiv">
+						<div class="personnel">
+							<div class="person">
+								<p>Economie <br /></p>
+							</div>
+							<div class="person">
+								<p>Humane Wetenschappen <br /></p>
+							</div>
+							<div class="person">
+								<p>Moderne talen <br /></p>
+							</div>
+							<div class="person">
+								<p>Nederlands <br /></p>
+							</div>
+							<div class="person">
+								<p>Wiskunde-informatica <br /></p>
+							</div>
+							<div class="person">
+								<p>Wetenschappen <br /></p>
+							</div>
 						</div>
 					</div>
 				</div>
