@@ -378,3 +378,17 @@ main div {
 .liferules h1{
 	text-align: center;
 }
+.Inschrijvingen{
+	text-align: center;
+	
+}
+
+.Inschrijvingen p {
+	margin: 0 auto;
+}
+.Inschrijvingen h2{
+	text-decoration: none;
+	font-size: 20px;
+	margin-top: 30px;
+	
+}
