@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", function () {
 	// Set initial index
 	let currentIndex = 0;
 
-	// Function to handle arrow click
+	//Function to handle arrow click
 	function handleArrowClick(direction) {
 		const itemWidth = items[0].offsetWidth;
 
@@ -39,27 +39,33 @@ document.addEventListener("DOMContentLoaded", function () {
 			currentIndex = Math.min(items.length - 1, currentIndex + 1);
 		}
 
-		// Manually scroll to the selected item
-		carousel.scrollLeft = currentIndex * itemWidth;
+		// Calculate the scroll position for the selected item
+		const scrollPosition = currentIndex * itemWidth;
+
+		// Use smooth scroll behavior
+		carousel.scrollTo({
+			left: scrollPosition,
+			behavior: "smooth",
+		});
 
 		// Ensure the currentIndex reflects the actual scroll position
-		currentIndex = Math.floor(carousel.scrollLeft / itemWidth);
+		currentIndex = Math.floor(scrollPosition / itemWidth);
 
 		// Update arrow visibility based on scroll position
-		updateArrowVisibility();
+		setTimeout(updateArrowVisibility, 150);
 	}
 
 	// Function to update arrow visibility
 	function updateArrowVisibility() {
-		const isAtLeftEdge = carousel.scrollLeft === 0;
-		const isAtRightEdge =
+		let isAtLeftEdge = carousel.scrollLeft === 0;
+		let isAtRightEdge =
 			carousel.scrollLeft + carousel.clientWidth === carousel.scrollWidth;
 
-		// Set display style for arrowLeft
-		arrowLeft.style.display = isAtLeftEdge ? "none" : "block";
+		arrowLeft.classList.toggle("arrowHidden", isAtLeftEdge);
+		arrowLeft.classList.toggle("arrowVisible", !isAtLeftEdge);
 
-		// Set display style for arrowRight
-		arrowRight.style.display = isAtRightEdge ? "none" : "block";
+		arrowRight.classList.toggle("arrowHidden", isAtRightEdge);
+		arrowRight.classList.toggle("arrowVisible", !isAtRightEdge);
 	}
 
 	// Add click event listeners to arrow buttons

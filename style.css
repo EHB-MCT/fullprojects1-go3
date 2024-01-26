@@ -33,7 +33,6 @@ h3 {
 h1 {
 	text-align: center;
 	font-size: 70px;
-
 }
 
 h2 {
@@ -155,6 +154,7 @@ nav {
 }
 a:hover {
 	text-decoration: underline;
+	cursor: pointer;
 }
 
 .diamond-doodle {
@@ -276,6 +276,7 @@ main div {
 
 	width: 10%;
 	left: 800px;
+	top: 400px;
 }
 .duck {
 	position: absolute;
@@ -284,17 +285,22 @@ main div {
 	bottom: 20vh;
 }
 
-.sportzaal {
+.infrastructure {
+	margin-top: 50px;
+	display: flex;
+	justify-content: space-between;
+}
+.infrastructurePics {
+	text-align: center;
 	width: 30%;
-	margin-left: 25px;
-	margin-right: 100px;
 }
-.speelplaats {
-	width: 25%;
-	margin-right: 100px;
+.infrastructurePics p {
+	margin: 0 auto;
 }
-.bib {
-	width: 25%;
+.infrastructurePics img {
+	width: 100%;
+	aspect-ratio: 2/1;
+	object-fit: fill; /* Preserve aspect ratio */
 }
 
 .eventImg {
@@ -321,13 +327,14 @@ main div {
 	background-color: rgba(255, 255, 255, 0.5);
 }
 .dropdown {
-	margin: 0 auto;
-	background-color: #00e5ff;
+	width: fit-content;
 	margin-top: 50px;
 	cursor: pointer;
 }
 .dropdownContent {
-	position: fixed;
+	z-index: 1;
+	float: inline-end;
+	position: absolute;
 	display: none;
 	color: white;
 	border: none;
@@ -357,28 +364,32 @@ main div {
 .waaromKiezen p {
 	width: 100%;
 }
-.basispeilers,
+.basispijlers,
 .maximumFactuur {
 	flex-direction: column;
 	width: 40%;
 }
-.download {
+/* .download {
 	display: flex;
 	justify-content: center;
-}
-.ssh {
+} */
+
+/* .ssh {
 	display: flex;
 	text-align: center;
 }
 .ssh p {
 	font-family: "besides";
-}
+} */
 .item {
 	min-width: 30%;
+	height: 70vh;
 	background-color: rgba(255, 255, 255, 0.9);
 	text-align: center;
 	margin: 10px;
-	padding: 20px;
+	padding: 25px;
+	display: flex;
+	flex-direction: column;
 }
 .item img {
 	width: 100%;
@@ -390,11 +401,14 @@ main div {
 .item p {
 	width: 100%;
 	text-align: left;
+	height: 30%;
+	overflow-y: scroll;
+	margin-bottom: 30px;
 }
-.item a {
-	display: inline-block;
-	align-self: baseline;
+.instaContainer {
+	margin-top: auto;
 }
+
 .flex-center {
 	display: flex;
 	justify-content: center;
@@ -409,25 +423,27 @@ main div {
 	overflow-x: auto;
 	scroll-behavior: smooth;
 }
-.arrowLeft {
-	height: 50px;
-	position: absolute;
-	top: 1200px;
-	left: 20px;
-	cursor: pointer;
-}
+.arrowLeft,
 .arrowRight {
 	height: 50px;
-	position: absolute;
-	top: 1200px;
-	right: 20px;
+	margin: auto;
+	position: relative;
 	cursor: pointer;
+
+	transition: opacity 0.3s ease;
+}
+.arrowHidden {
+	opacity: 0.5;
+	pointer-events: none;
 }
 
-.contactOns {
-	text-decoration: underline 6px;
-	text-decoration-color: #ff8901;
+.arrowVisible {
+	opacity: 1;
+	cursor: pointer;
+	pointer-events: auto;
 }
+
+.contactOns,
 .gegevens {
 	text-decoration: underline 6px;
 	text-decoration-color: #ff8901;
@@ -437,24 +453,28 @@ main div {
 	display: flex;
 	flex-wrap: wrap;
 
-	width: 70%;
-	margin-left: 250px;
+	width: 50%;
+	margin-left: 400px;
 
 	justify-content: center;
 	text-align: center;
 }
 .regelpictogram {
 	width: 33%;
+	text-align: center;
+}
+
+.regeltekst {
+	margin: 0 auto;
+	display: block;
+	width: 100px;
 }
 
 .doubbleText {
 	display: flex;
 }
 
-.GO {
-	flex: 1;
-	text-align: center;
-}
+.GO,
 .rules {
 	flex: 1;
 	text-align: center;
@@ -473,9 +493,7 @@ main div {
 	width: 70%;
 	margin: 0 auto;
 }
-.liferules h1 {
-	text-align: center;
-}
+.liferules h1,
 .Inschrijvingen {
 	text-align: center;
 }
@@ -510,18 +528,16 @@ main div {
 }
 
 .eventlist::-webkit-scrollbar-thumb {
-	background: #ff00bb; 
+	background: #ff00bb;
 	border-radius: 10px;
-  }
-  .eventlist::-webkit-scrollbar {
+}
+.eventlist::-webkit-scrollbar {
 	width: 10px;
-  }
-  .eventlist::-webkit-scrollbar-track {
-	box-shadow: inset 0 0 5px grey; 
+}
+.eventlist::-webkit-scrollbar-track {
+	box-shadow: inset 0 0 5px grey;
 	border-radius: 10px;
-  }
-  .eventlist::-webkit-scrollbar-thumb:hover {
-	background: #ca259e; 
-  }
- 
- 
+}
+.eventlist::-webkit-scrollbar-thumb:hover {
+	background: #ca259e;
+}
