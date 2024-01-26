@@ -189,6 +189,7 @@ a:hover {
 input::placeholder,
 textarea::placeholder {
 	font-family: "besides";
+	padding: 10px;
 }
 .Messege {
 	display: flex;
