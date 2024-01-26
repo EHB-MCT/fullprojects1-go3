@@ -166,48 +166,56 @@ a:hover {
 
 .ContactInformation {
 	display: flex;
-	justify-content: center;
-	margin: auto ;
-	width: 200px;
+	justify-content: space-between;
+	width: 50vw;
+	margin: 0 auto;
 }
-.sendText{
+.sendText {
 	text-align: center;
 	margin-bottom: 20px;
 }
 .sendUs {
-	flex: 1;
-	
+	display: flex;
+	flex-direction: column;
 }
 .sendUs input {
 	margin-bottom: 20px;
 	padding: 20px;
 	padding-right: 100px;
 }
-input::placeholder{ 
+input::placeholder,
+textarea::placeholder {
 	font-family: "besides";
-	
 }
 .Messege {
-	flex: 1;
-	margin: 0 auto;
-	position: relative;
-	left: 120px;
+	width: 30vw;
+	display: flex;
+	flex-direction: column;
 }
-.Messege button{
+.Messege button {
 	margin-top: 20px;
 	padding: 12px;
+	width: 30%;
 	background-color: #9a00ff;
 	font-family: "besides";
 	color: rgb(255, 255, 255);
 	text-decoration: none;
 	border: 0px;
 }
+.Messege button:hover {
+	background-color: black;
+	text-decoration: underline;
+	cursor: pointer;
+}
+.textField {
+	text-align: left;
+	vertical-align: top;
 
-.Messege input {
-	margin-bottom: 20px;
-	padding: 101px;
-	border-color: rgb(202, 198, 198) ;
-	
+	height: 70%;
+	box-sizing: border-box;
+	white-space: normal; /* Allow text to wrap and overflow within the box */
+	overflow: hidden; /* Make the overflow visible within the box */
+	border-color: black;
 }
 .contactData {
 	margin: 0 auto;
@@ -218,7 +226,9 @@ input::placeholder{
 	flex: 1;
 	text-align: center;
 }
-.links p{ margin: 0 auto;}
+.links p {
+	margin: 0 auto;
+}
 .socials {
 	flex: 1;
 	text-align: center;
