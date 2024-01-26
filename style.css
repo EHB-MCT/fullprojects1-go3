@@ -33,7 +33,6 @@ h3 {
 h1 {
 	text-align: center;
 	font-size: 70px;
-
 }
 
 h2 {
@@ -402,17 +401,27 @@ main div {
 }
 
 .leefregelimages {
+	background-color: #00e5ff;
 	display: flex;
 	flex-wrap: wrap;
 
-	width: 70%;
-	margin-left: 250px;
+	width: 50%;
+	margin-left: 400px;
 
 	justify-content: center;
 	text-align: center;
 }
 .regelpictogram {
+	background-color: #ff0000;
 	width: 33%;
+	text-align: center;
+}
+
+.regeltekst {
+	background-color: #ccff00;
+	margin: 0 auto;
+	display: block;
+	width: 100px;
 }
 
 .doubbleText {
@@ -478,18 +487,16 @@ main div {
 }
 
 .eventlist::-webkit-scrollbar-thumb {
-	background: #ff00bb; 
+	background: #ff00bb;
 	border-radius: 10px;
-  }
-  .eventlist::-webkit-scrollbar {
+}
+.eventlist::-webkit-scrollbar {
 	width: 10px;
-  }
-  .eventlist::-webkit-scrollbar-track {
-	box-shadow: inset 0 0 5px grey; 
+}
+.eventlist::-webkit-scrollbar-track {
+	box-shadow: inset 0 0 5px grey;
 	border-radius: 10px;
-  }
-  .eventlist::-webkit-scrollbar-thumb:hover {
-	background: #ca259e; 
-  }
- 
- 
+}
+.eventlist::-webkit-scrollbar-thumb:hover {
+	background: #ca259e;
+}
