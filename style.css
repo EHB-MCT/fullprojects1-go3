@@ -154,6 +154,7 @@ nav {
 }
 a:hover {
 	text-decoration: underline;
+	cursor: pointer;
 }
 
 .diamond-doodle {
@@ -350,10 +351,13 @@ main div {
 } */
 .item {
 	min-width: 30%;
+	height: 70vh;
 	background-color: rgba(255, 255, 255, 0.9);
 	text-align: center;
 	margin: 10px;
-	padding: 20px;
+	padding: 25px;
+	display: flex;
+	flex-direction: column;
 }
 .item img {
 	width: 100%;
@@ -365,11 +369,14 @@ main div {
 .item p {
 	width: 100%;
 	text-align: left;
+	height: 30%;
+	overflow-y: scroll;
+	margin-bottom: 30px;
 }
-.item a {
-	display: inline-block;
-	align-self: baseline;
+.instaContainer {
+	margin-top: auto;
 }
+
 .flex-center {
 	display: flex;
 	justify-content: center;
@@ -384,19 +391,24 @@ main div {
 	overflow-x: auto;
 	scroll-behavior: smooth;
 }
-.arrowLeft {
-	height: 50px;
-	position: absolute;
-	top: 1200px;
-	left: 20px;
-	cursor: pointer;
-}
+.arrowLeft,
 .arrowRight {
 	height: 50px;
-	position: absolute;
-	top: 1200px;
-	right: 20px;
+	margin: auto;
+	position: relative;
 	cursor: pointer;
+
+	transition: opacity 0.3s ease;
+}
+.arrowHidden {
+	opacity: 0.5;
+	pointer-events: none;
+}
+
+.arrowVisible {
+	opacity: 1;
+	cursor: pointer;
+	pointer-events: auto;
 }
 
 .contactOns,
