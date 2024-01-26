@@ -210,16 +210,22 @@ input::placeholder{
 	
 }
 .contactData {
+
 	margin: 0 auto;
 	display: flex;
 	width: 800px;
 }
 .links {
 	flex: 1;
-	text-align: center;
+	text-align: left;
+	margin-top: 40px;
 }
-.links p{ margin: 0 auto;}
+
+.links p{
+	margin-left: 30px;
+}
 .socials {
+	margin-top: 40px;
 	flex: 1;
 	text-align: center;
 	text-decoration: underline 6px;
@@ -541,3 +547,10 @@ main div {
 .eventlist::-webkit-scrollbar-thumb:hover {
 	background: #ca259e;
 }
+
+.icons {
+	display: flex;
+	justify-content: center;
+	margin-left: 50px;
+}
+.icons img {width: 80px;}

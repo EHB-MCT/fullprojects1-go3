@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600">
+  <defs>
+    <style>
+      .cls-1 {
+        stroke-width: 0px;
+      }
+    </style>
+  </defs>
+  <path id="Icon_fa-brands-square-facebook" data-name="Icon fa-brands-square-facebook" class="cls-1" d="M457.22,99.96H142.89c-23.68,0-42.87,19.19-42.89,42.86v314.35c0,23.69,19.2,42.89,42.89,42.89h122.54v-136.04h-56.25v-64.06h56.25v-48.75c0-55.5,33.04-86.16,83.65-86.16,16.61.23,33.18,1.68,49.58,4.32v54.44h-27.92c-27.52,0-36.1,17.08-36.1,34.59v41.56h61.43l-9.86,64.06h-51.64v136.02h122.54c23.69,0,42.89-19.2,42.89-42.89h0V142.82c0-23.69-19.2-42.89-42.89-42.89h0l.11.03Z"/>
+</svg>
