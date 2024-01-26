@@ -434,7 +434,7 @@ main div {
 	width: 75%;
 	display: flex;
 
-	overflow-x: auto;
+	overflow-x: hidden;
 	scroll-behavior: smooth;
 }
 .arrowLeft,
@@ -466,22 +466,22 @@ main div {
 .leefregelimages {
 	display: flex;
 	flex-wrap: wrap;
-
-	width: 50%;
-	margin-left: 400px;
+	width: 30%;
+	margin: 0 auto;
 
 	justify-content: center;
 	text-align: center;
 }
 .regelpictogram {
 	width: 33%;
+	margin: 0px;
 	text-align: center;
 }
 
 .regeltekst {
 	margin: 0 auto;
 	display: block;
-	width: 100px;
+	width: 150px;
 }
 
 .doubbleText {
@@ -562,3 +562,8 @@ main div {
 	margin-left: 50px;
 }
 .icons img {width: 80px;}
+.icons a{
+	background-color: transparent;
+	padding: 0px;
+	margin: 0px;
+}
