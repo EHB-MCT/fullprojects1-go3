@@ -221,7 +221,6 @@ textarea::placeholder {
 }
 
 .contactData {
-
 	margin: 0 auto;
 	display: flex;
 	width: 800px;
@@ -232,7 +231,7 @@ textarea::placeholder {
 	margin-top: 40px;
 }
 
-.links p{
+.links p {
 	margin-left: 30px;
 }
 .socials {
@@ -294,10 +293,10 @@ main div {
 	top: 400px;
 }
 .duck {
+	float: right;
 	position: absolute;
+	bottom: 100px;
 	width: 400px;
-	left: 150vh;
-	bottom: 20vh;
 }
 
 .infrastructure {
@@ -562,8 +561,10 @@ main div {
 	justify-content: center;
 	margin-left: 50px;
 }
-.icons img {width: 80px;}
-.icons a{
+.icons img {
+	width: 80px;
+}
+.icons a {
 	background-color: transparent;
 	padding: 0px;
 	margin: 0px;
