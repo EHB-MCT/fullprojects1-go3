@@ -253,22 +253,23 @@ main div {
 }
 
 .infrastructure {
-	margin-top: 20px;
+	margin-top: 50px;
 	display: flex;
 	justify-content: space-between;
-	width: 60%;
 }
-.infrastructure div {
-	flex: 1;
-	background-color: rgba(255, 255, 255, 0.9);
+.infrastructurePics {
 	text-align: center;
+	width: 30%;
+}
+.infrastructurePics p {
+	margin: 0 auto;
+}
+.infrastructurePics img {
+	width: 100%;
+	aspect-ratio: 2/1;
+	object-fit: fill; /* Preserve aspect ratio */
 }
 
-.infrastructure img {
-	width: 100%;
-	aspect-ratio: 1/1;
-	object-fit: cover; /* Preserve aspect ratio */
-}
 .eventImg {
 	width: 250px;
 	height: 250px;
@@ -330,22 +331,23 @@ main div {
 .waaromKiezen p {
 	width: 100%;
 }
-.basispeilers,
+.basispijlers,
 .maximumFactuur {
 	flex-direction: column;
 	width: 40%;
 }
-.download {
+/* .download {
 	display: flex;
 	justify-content: center;
-}
-.ssh {
+} */
+
+/* .ssh {
 	display: flex;
 	text-align: center;
 }
 .ssh p {
 	font-family: "besides";
-}
+} */
 .item {
 	min-width: 30%;
 	background-color: rgba(255, 255, 255, 0.9);
@@ -397,10 +399,7 @@ main div {
 	cursor: pointer;
 }
 
-.contactOns {
-	text-decoration: underline 6px;
-	text-decoration-color: #ff8901;
-}
+.contactOns,
 .gegevens {
 	text-decoration: underline 6px;
 	text-decoration-color: #ff8901;
@@ -424,10 +423,7 @@ main div {
 	display: flex;
 }
 
-.GO {
-	flex: 1;
-	text-align: center;
-}
+.GO,
 .rules {
 	flex: 1;
 	text-align: center;
@@ -446,9 +442,7 @@ main div {
 	width: 70%;
 	margin: 0 auto;
 }
-.liferules h1 {
-	text-align: center;
-}
+.liferules h1,
 .Inschrijvingen {
 	text-align: center;
 }
