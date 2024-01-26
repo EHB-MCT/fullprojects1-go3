@@ -409,14 +409,21 @@ main div {
 	display: flex;
 	flex-wrap: wrap;
 
-	width: 70%;
-	margin-left: 250px;
+	width: 50%;
+	margin-left: 400px;
 
 	justify-content: center;
 	text-align: center;
 }
 .regelpictogram {
 	width: 33%;
+	text-align: center;
+}
+
+.regeltekst {
+	margin: 0 auto;
+	display: block;
+	width: 100px;
 }
 
 .doubbleText {
