@@ -401,7 +401,6 @@ main div {
 }
 
 .leefregelimages {
-	background-color: #00e5ff;
 	display: flex;
 	flex-wrap: wrap;
 
@@ -412,13 +411,11 @@ main div {
 	text-align: center;
 }
 .regelpictogram {
-	background-color: #ff0000;
 	width: 33%;
 	text-align: center;
 }
 
 .regeltekst {
-	background-color: #ccff00;
 	margin: 0 auto;
 	display: block;
 	width: 100px;
