@@ -172,7 +172,7 @@ a:hover {
 	margin-bottom: 20px;
 }
 .contactWrap {
-	width: 40vw;
+	width: 55vw;
 	margin: 0 auto;
 	text-align: left;
 }
@@ -213,7 +213,7 @@ textarea::placeholder {
 .textField {
 	text-align: left;
 	vertical-align: top;
-	width: 18vw;
+	width: 25vw;
 	height: 65%;
 	box-sizing: border-box;
 	white-space: normal; /* Allow text to wrap and overflow within the box */
@@ -290,14 +290,14 @@ main div {
 	float: right;
 
 	width: 10%;
-	left: 800px;
+	left: 40dvw;
 	top: 400px;
 }
 .duck {
 	float: right;
 	position: absolute;
 	bottom: 100px;
-	width: 400px;
+	width: 290px;
 }
 
 .infrastructure {
@@ -358,8 +358,8 @@ main div {
 }
 .pdf {
 	font-family: "Roboto", sans-serif;
-	color: #ff0000;
 	background-color: white;
+	color: black;
 	text-decoration: none;
 	display: block;
 	margin: 0%;
@@ -467,15 +467,15 @@ main div {
 .leefregelimages {
 	display: flex;
 	flex-wrap: wrap;
-	width: 30%;
+	width: 40%;
 	margin: 0 auto;
 
 	justify-content: center;
 	text-align: center;
 }
 .regelpictogram {
-	width: 33%;
-	margin: 0px;
+	margin: auto;
+	padding: 10px;
 	text-align: center;
 }
 
