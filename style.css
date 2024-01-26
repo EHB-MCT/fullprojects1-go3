@@ -167,12 +167,14 @@ a:hover {
 .ContactInformation {
 	display: flex;
 	justify-content: space-between;
-	width: 50vw;
-	margin: 0 auto;
 }
 .sendText {
-	text-align: center;
 	margin-bottom: 20px;
+}
+.contactWrap {
+	width: 40vw;
+	margin: 0 auto;
+	text-align: left;
 }
 .sendUs {
 	display: flex;
@@ -182,20 +184,20 @@ a:hover {
 	margin-bottom: 20px;
 	padding: 20px;
 	padding-right: 100px;
+	margin-right: -20%;
 }
 input::placeholder,
 textarea::placeholder {
 	font-family: "besides";
 }
 .Messege {
-	width: 30vw;
 	display: flex;
 	flex-direction: column;
 }
 .Messege button {
 	margin-top: 20px;
 	padding: 12px;
-	width: 30%;
+	width: fit-content;
 	background-color: #9a00ff;
 	font-family: "besides";
 	color: rgb(255, 255, 255);
@@ -210,13 +212,14 @@ textarea::placeholder {
 .textField {
 	text-align: left;
 	vertical-align: top;
-
-	height: 70%;
+	width: 18vw;
+	height: 65%;
 	box-sizing: border-box;
 	white-space: normal; /* Allow text to wrap and overflow within the box */
 	overflow: hidden; /* Make the overflow visible within the box */
 	border-color: black;
 }
+
 .contactData {
 
 	margin: 0 auto;
@@ -236,8 +239,6 @@ textarea::placeholder {
 	margin-top: 40px;
 	flex: 1;
 	text-align: center;
-	text-decoration: underline 6px;
-	text-decoration-color: #ff8901;
 }
 
 table,
