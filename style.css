@@ -122,7 +122,8 @@ nav {
 .personnel {
 	background-color: rgb(255, 255, 255);
 	display: flex;
-	justify-content: center;
+	justify-content: left;
+	overflow-x:scroll;
 }
 
 .nav-button2 {
