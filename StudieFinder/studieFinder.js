@@ -8,15 +8,16 @@ let mouseYpos = 0;
 let choiceXPos = 0;
 let choiceYpos = 0;
 let choices = [];
-let step = 1;
+let stage = 1;
 let mouseIsDown = false;
+var rabbitDoodle = document.getElementById("rabbitImage");
 
 window.onmousemove = mousePos;
 window.onmousedown = mouseClickDown;
 window.onmouseup = mouseClickUp;
 
 setup();
-draw();
+drawBackground();
 
 function setup() {
 	context.font = "24px Roboto";
@@ -37,15 +38,99 @@ function drawCircle() {
 	context.fillStyle = "white";
 	utils.fillCircle(choiceXPos, choiceYpos, 20);
 }
+function drawStartMenu() {
+	//arrows
+	context.beginPath();
+	context.arc(666, 300, 50, 0, -2, true);
+	context.moveTo(686, 275);
+	context.lineTo(716, 300);
+	context.lineTo(738, 275);
+	context.stroke();
+
+	context.beginPath();
+	context.arc(700, 50, 350, 0.4, (Math.PI * 5) / 16);
+	context.moveTo(910, 300);
+	context.lineTo(895, 341);
+	context.lineTo(930, 352);
+	context.stroke();
+
+	context.beginPath();
+	context.arc(910, 300, 150, 1.79, 2.4);
+	context.moveTo(830, 415);
+	context.lineTo(800, 401);
+	context.lineTo(788, 420);
+	context.stroke();
+
+	// Wat zie ik in mijn richting?
+	context.fillStyle = "#FF00BB";
+	context.strokeStyle = "white";
+	context.beginPath();
+	context.moveTo(900, 395);
+	context.lineTo(width, 375);
+	context.lineTo(width, 450);
+	context.lineTo(900, 470);
+	context.closePath();
+	context.stroke();
+	context.fill();
+	context.font = "50px besides";
+	context.fillStyle = "black";
+	context.fillText("Wat zie ik in mijn", 910, 450);
+	context.fillText("richting?", 1051, 500);
+
+	//Welke richting is voor mij?
+	context.fillStyle = "#00E5FF";
+	context.beginPath();
+	context.moveTo(800, 50);
+	context.lineTo(1400, 75);
+	context.lineTo(1390, 150);
+	context.lineTo(790, 125);
+	context.closePath();
+	context.stroke();
+	context.fill();
+	context.font = "50px besides";
+	context.fillStyle = "black";
+	context.fillText("Welke richting is", 800, 120);
+	context.fillText("voor mij?", 916, 170);
+
+	//buttone
+	context.fillStyle = "#9A00FF";
+	context.fillRect(width / 2 - 80, height / 2 - 25, 160, 50);
+	context.font = "30px Roboto";
+	context.fillStyle = "white";
+	context.fillText("Druk hier", width / 2 - 60, height / 2 + 8);
+
+	//Wat ga ik doen?
+	context.beginPath();
+	context.moveTo(100, 200);
+	context.lineTo(600, 250);
+	context.lineTo(588, 350);
+	context.lineTo(90, 300);
+	context.closePath();
+	context.stroke();
+	context.fillStyle = "#43FF00";
+	context.fill();
+	context.fillStyle = "black";
+	context.font = "50px besides";
+	context.fillText("Wat ga ik doen?", 100, 300);
+
+	//rabit image
+	rabbitDoodle.style.position = "absolute";
+	rabbitDoodle.style.width = "220px";
+	rabbitDoodle.style.bottom = "50px";
+	rabbitDoodle.style.left = "277px";
+	rabbitDoodle.style.transform = "rotate(28deg)";
+}
 
 function phase() {
-	if (step == 1) {
+	if (stage == 0) {
+		startMenu();
+	} else if (stage == 1) {
 		decision1();
-	} else if (step == 2) {
+	} else if (stage == 2) {
 		decision2();
-	} else if (step == 3) {
+	} else if (stage == 3) {
 		decision3();
-	} else if (step == 4) {
+	} else if (stage == 4) {
 		decision4();
 	}
 }
@@ -84,7 +169,6 @@ function decision2() {
 		choices.push("3");
 	}
 }
-
 function decision3() {
 	//question 6
 	context.fillText("this is question 3", width / 2 - 150, height / 2 - 100);
@@ -95,28 +179,24 @@ function decision3() {
 	//question 9
 	context.fillText("text", width / 2 + 100, height / 2 - 100);
 }
-
 function decision4() {
 	//question 10
 	context.fillText("text", width / 2 - 150, height / 2 - 100);
 	//question 11
 	context.fillText("text", width / 2 + 100, height / 2 - 100);
 }
-
 function decision51() {
 	//question 12
 	context.fillText("text", width / 2 - 150, height / 2 - 100);
 	//question 13
 	context.fillText("text", width / 2 + 100, height / 2 - 100);
 }
-
 function decision52() {
 	//question 14
 	context.fillText("text", width / 2 - 150, height / 2 - 100);
 	//question 15
 	context.fillText("text", width / 2 + 100, height / 2 - 100);
 }
-
 function decision61() {
 	//question 16
 	context.fillText("text", width / 2 - 150, height / 2 - 100);
@@ -125,14 +205,12 @@ function decision61() {
 	//question 18
 	context.fillText("text", width / 2 + 100, height / 2 - 100);
 }
-
 function decision62() {
 	//question 19
 	context.strokeText("text", width / 2 - 150, height / 2 - 100);
 	//question 20
 	context.strokeText("text", width / 2 + 100, height / 2 - 100);
 }
-
 function choiceButton() {
 	context.fillStyle = "orange";
 	context.fillRect(width - 200, height - 100, 200, 100);
@@ -148,10 +226,9 @@ function choiceButton() {
 	) {
 		choiceXPos = 0;
 		choiceYpos = 0;
-		step++;
+		stage++;
 	}
 }
-
 function mouseClickDown(eventData) {
 	mouseIsDown = true;
 	choiceXPos = eventData.pageX;
@@ -160,12 +237,10 @@ function mouseClickDown(eventData) {
 function mouseClickUp(eventData) {
 	mouseIsDown = false;
 }
-
 function mousePos(eventdata) {
 	mouseXPos = eventdata.clientX;
 	mouseYpos = eventdata.clientY;
 }
-
 function drawStraw(x, y) {
 	utils.strokeCircle(x, y - 25);
 	context.fillStyle = "red";
@@ -173,60 +248,16 @@ function drawStraw(x, y) {
 	context.fillStyle = "black";
 	utils.fillCircle(x, y + 80, 8);
 }
-
 function drawBackground() {
-	//floor
-	context.fillStyle = "beige";
-	context.fillRect(0, 0, width, (height * 2) / 3);
-	context.fillStyle = "lightgrey";
-	context.fillRect(0, (height * 2) / 3, width, (height * 1) / 3);
+	rabbitDoodle.style.display = "none";
 
-	//middle board
-	context.fillStyle = "grey";
-	context.fillRect(width / 2 - 205, height / 2 - 205, 410, 210);
-
-	context.fillStyle = "darkgreen";
-	context.fillRect(width / 2 - 200, height / 2 - 200, 400, 200);
-
-	//left board
-	context.fillStyle = "Grey";
+	context.strokeRect(90, 60, width - 180, height - 180);
+	context.strokeRect(100, 70, width - 200, height - 200);
+	context.strokeStyle = "black";
 	context.beginPath();
-	context.moveTo(width / 2 - 205, height / 2 - 205);
-	context.lineTo(width / 2 - 500, height / 2 - 220);
-	context.lineTo(width / 2 - 500, height / 2 + 20);
-	context.lineTo(width / 2 - 205, height / 2 + 5);
-	context.closePath();
+	context.moveTo(90, height - 120);
+	context.lineTo(80, height - 100);
+	context.lineTo(width - 80, height - 100);
+	context.lineTo(width - 90, height - 120);
 	context.stroke();
-	context.fill();
-
-	context.fillStyle = "darkgreen";
-	context.beginPath();
-	context.moveTo(width / 2 - 210, height / 2 - 199);
-	context.lineTo(width / 2 - 495, height / 2 - 215);
-	context.lineTo(width / 2 - 495, height / 2 + 15);
-	context.lineTo(width / 2 - 210, height / 2 - 1);
-	context.closePath();
-	context.stroke();
-	context.fill();
-
-	//right board
-	context.fillStyle = "Grey";
-	context.beginPath();
-	context.moveTo(width / 2 + 205, height / 2 - 205);
-	context.lineTo(width / 2 + 500, height / 2 - 220);
-	context.lineTo(width / 2 + 500, height / 2 + 20);
-	context.lineTo(width / 2 + 205, height / 2 + 5);
-	context.closePath();
-	context.stroke();
-	context.fill();
-
-	context.fillStyle = "darkgreen";
-	context.beginPath();
-	context.moveTo(width / 2 + 210, height / 2 - 199);
-	context.lineTo(width / 2 + 495, height / 2 - 215);
-	context.lineTo(width / 2 + 495, height / 2 + 15);
-	context.lineTo(width / 2 + 210, height / 2 - 1);
-	context.closePath();
-	context.stroke();
-	context.fill();
 }
