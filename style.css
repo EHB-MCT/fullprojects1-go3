@@ -668,5 +668,13 @@ main div {
 	  .hamburger-menu:has(input:checked) + .sidebar {
 		translate: 0;
 	  }
+	  nav a {
+		text-decoration: underline 2px lime;
+		font-size: 14pt;
+		background-color: transparent;
+		color: white;
+	}
+
+	.wrapper{margin-top: 100px;}
 }
 
