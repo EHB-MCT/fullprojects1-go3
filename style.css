@@ -715,176 +715,183 @@ main div {
 			width: 100%;
 			margin: 0 auto;
 		}
-	.doubbleText {
-		flex-direction: column;
+		.doubbleText {
+			flex-direction: column;
+		}
+		[class^="tables"] {
+			flex-direction: column;
+		}
+		h1 {
+			font-size: 50px;
+		}
+		p {
+			width: 100%;
+		}
+		.leefregelimages {
+			width: 80%;
+		}
+		.firstYear,
+		.secondYear,
+		.thirdYear,
+		.fourthYear,
+		.fifthYearDS,
+		.fifthYearDF {
+			width: 75%;
+			box-sizing: border-box;
+			margin: 0 auto;
+		}
+
+		.infrastructurePics img {
+			width: 100%;
+			aspect-ratio: 2/1;
+			object-fit: fill;
+		}
+		.waaromKiezen {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: space-between;
+		}
+		.waaromKiezen p {
+			width: 100%;
+		}
+		.basispijlers,
+		.maximumFactuur {
+			flex-direction: column;
+			width: 100%;
+		}
+		.stickman-2 {
+			display: none;
+		}
+		.titel {
+			width: 50%;
+			align-items: center;
+			margin-left: 250px;
+			margin-top: 100px;
+		}
+		.yellow {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		.dropdown {
+			width: fit-content;
+			margin: 50px auto; /* Center the dropdown horizontally */
+			cursor: pointer;
+			position: relative; /* Add relative positioning for absolute positioning of dropdownContent */
+		}
+
+		.dropdownContent {
+			z-index: 1;
+			position: absolute;
+			display: none;
+			color: white;
+			border: none;
+			cursor: pointer;
+			margin: 0%;
+			left: 50%; /* Center the dropdownContent horizontally */
+			transform: translateX(-50%); /* Center the dropdownContent horizontally */
+		}
+		.basispijlers p {
+			width: 700px;
+			text-align: center;
+			justify-content: center;
+			margin-left: 175px;
+		}
+		.maximumFactuur p {
+			margin-left: 175px;
+
+			width: 700px;
+			align-items: center;
+			justify-content: center;
+		}
+		.infrastructureText p {
+			margin-left: 175px;
+
+			width: 700px;
+			align-items: center;
+			justify-content: center;
+		}
 	}
-	[class^="tables"] {
-		flex-direction: column;
-	}
-	h1 {
-		font-size: 50px;
-	}
-	p {
-		width: 100%;
-	}
-	.leefregelimages {
-		width: 80%;
-	}
-	.firstYear,
-	.secondYear,
-	.thirdYear,
-	.fourthYear,
-	.fifthYearDS,
-	.fifthYearDF {
+	.caroussel {
 		width: 75%;
-		box-sizing: border-box;
-		margin: 0 auto;
 	}
-
-	.infrastructurePics img {
-		width: 100%;
-		aspect-ratio: 2/1;
-		object-fit: fill;
-	}
-	.waaromKiezen {
-		display: flex;
+	.instFaceBtn {
 		flex-direction: column;
-		align-items: center;
-		justify-content: space-between;
 	}
-	.waaromKiezen p {
-		width: 100%;
-	}
-	.basispijlers,
-	.maximumFactuur {
-		flex-direction: column;
-		width: 100%;
-	}
-	.stickman-2 {
-		display: none;
-	}
-	.titel {
-		width: 50%;
-		align-items: center;
-		margin-left: 250px;
-		margin-top: 100px;
-	}
-	.yellow {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-	}
-	.dropdown {
-		width: fit-content;
-		margin: 50px auto; /* Center the dropdown horizontally */
-		cursor: pointer;
-		position: relative; /* Add relative positioning for absolute positioning of dropdownContent */
-	}
-
-	.dropdownContent {
-		z-index: 1;
-		position: absolute;
-		display: none;
-		color: white;
-		border: none;
-		cursor: pointer;
-		margin: 0%;
-		left: 50%; /* Center the dropdownContent horizontally */
-		transform: translateX(-50%); /* Center the dropdownContent horizontally */
-	}
-	.basispijlers p {
-		width: 700px;
-		text-align: center;
-		justify-content: center;
-		margin-left: 175px;
-	}
-	.maximumFactuur p {
-		margin-left: 175px;
-
-		width: 700px;
-		align-items: center;
-		justify-content: center;
-	}
-	.infrastructureText p {
-		margin-left: 175px;
-
-		width: 700px;
-		align-items: center;
-		justify-content: center;
-	}
-}
-.caroussel {
-	width: 75%;
-}
-.instFaceBtn {
-	flex-direction: column;
-}
-.instFaceBtn a {
-	margin-bottom: 20px;
-}
-
-@media screen and (max-width: 1200px) {
-	.ContactInformation {
-		display: contents;
-	}
-	.textField {
-		margin: 0 auto;
-		margin-bottom: 20px;
-		padding: 20px;
-		width: 100%;
-		border-width: 1px;
-		border-radius: 2px;
-		border-color: rgb(64, 64, 64);
-	}
-	.sendUs input {
-		margin: 0 auto;
+	.instFaceBtn a {
 		margin-bottom: 20px;
 	}
-	.duck {
-		display: none;
-	}
-	.contactData {
-		display: contents;
-		margin: 0 auto;
-	}
-	.links {
-		margin: 0 auto;
 
+	@media screen and (max-width: 1200px) {
+		.ContactInformation {
+			display: contents;
+		}
+		.textField {
+			margin: 0 auto;
+			margin-bottom: 20px;
+			padding: 20px;
+			width: 100%;
+			border-width: 1px;
+			border-radius: 2px;
+			border-color: rgb(64, 64, 64);
+		}
+		.sendUs input {
+			margin: 0 auto;
+			margin-bottom: 20px;
+		}
+		.duck {
+			display: none;
+		}
+		.contactData {
+			display: contents;
+			margin: 0 auto;
+		}
+		.links {
+			margin: 0 auto;
+
+			text-align: center;
+		}
+		.Messege button {
+			margin: 0 auto;
+		}
+		.links p {
+			text-align: center;
+			margin: 0 auto;
+		}
+		.sendText {
+			margin: 0 auto;
+			text-align: center;
+			margin: 15px;
+		}
+		.staff {
+			margin: 0 auto;
+		}
+		#canvas {
+			display: none;
+		}
+		.error {
+			display: block;
+		}
+		#rabbitImage {
+			display: none;
+		}
+	}
+	#canvas {
+		width: 100%;
+		height: 100%;
+	}
+
+	@media screen and (min-width: 1200px) {
+		.error {
+			display: none;
+		}
+	}
+
+	.error {
+		margin: 0 auto;
+		position: relative;
 		text-align: center;
+		width: 100%;
 	}
-	.Messege button {
-		margin: 0 auto;
-	}
-	.links p {
-		text-align: center;
-		margin: 0 auto;
-	}
-	.sendText {
-		margin: 0 auto;
-		text-align: center;
-		margin: 15px;
-	}
-	.staff {
-		margin: 0 auto;
-	}
-	#canvas{display: none;}
-	.error{ display: block;}
-	#rabbitImage{display: none;}
-}
-#canvas {
-	width: 100%;
-	height: 100%;
-}
-
-@media screen and (min-width: 1200px){
-.error{display: none;}
-
-}
-
-.error { 
-	margin: 0 auto ;
-	position:relative;
-	text-align: center;
-	width: 100%;
-
 }
