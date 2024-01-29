@@ -710,51 +710,88 @@ main div {
 			width: 100%;
 			margin: 0 auto;
 		}
-
-		.infrastructurePics img {
-			width: 100%;
-			aspect-ratio: 2/1;
-			object-fit: fill;
-		}
-		.waaromKiezen {
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			justify-content: space-between;
-		}
-		.waaromKiezen p {
-			width: 100%;
-		}
-		.basispijlers,
-		.maximumFactuur {
-			flex-direction: column;
-			width: 100%;
-		}
-		.stickman-2 {
-			position: absolute;
-			float: right;
-
-			width: 125px;
-			left: 60dvw;
-			top: 400px;
-			margin-top: 300px;
-		}
-		.titel {
-			width: 50%;
-			align-items: center;
-			margin-left: 250px;
-			margin-top: 100px;
-		}
 	}
-	.caroussel {
-		width: 75%;
+
+	.infrastructurePics img {
+		width: 100%;
+		aspect-ratio: 2/1;
+		object-fit: fill;
 	}
-	.instFaceBtn {
+	.waaromKiezen {
+		display: flex;
 		flex-direction: column;
+		align-items: center;
+		justify-content: space-between;
 	}
-	.instFaceBtn a {
-		margin-bottom: 20px;
+	.waaromKiezen p {
+		width: 100%;
 	}
+	.basispijlers,
+	.maximumFactuur {
+		flex-direction: column;
+		width: 100%;
+	}
+	.stickman-2 {
+		display: none;
+	}
+	.titel {
+		width: 50%;
+		align-items: center;
+		margin-left: 250px;
+		margin-top: 100px;
+	}
+	.yellow {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	.dropdown {
+		width: fit-content;
+		margin: 50px auto; /* Center the dropdown horizontally */
+		cursor: pointer;
+		position: relative; /* Add relative positioning for absolute positioning of dropdownContent */
+	}
+
+	.dropdownContent {
+		z-index: 1;
+		position: absolute;
+		display: none;
+		color: white;
+		border: none;
+		cursor: pointer;
+		margin: 0%;
+		left: 50%; /* Center the dropdownContent horizontally */
+		transform: translateX(-50%); /* Center the dropdownContent horizontally */
+	}
+	.basispijlers p {
+		width: 700px;
+		text-align: center;
+		justify-content: center;
+		margin-left: 175px;
+	}
+	.maximumFactuur p {
+		margin-left: 175px;
+
+		width: 700px;
+		align-items: center;
+		justify-content: center;
+	}
+	.infrastructureText p {
+		margin-left: 175px;
+
+		width: 700px;
+		align-items: center;
+		justify-content: center;
+	}
+}
+.caroussel {
+	width: 75%;
+}
+.instFaceBtn {
+	flex-direction: column;
+}
+.instFaceBtn a {
+	margin-bottom: 20px;
 }
 
 @media screen and (max-width: 1200px) {
