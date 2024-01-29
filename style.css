@@ -876,6 +876,23 @@ main div {
 	.staff {
 		margin: 0 auto;
 	}
+	.departments {
+		flex-direction: column;
+	}
+	.buttonStaff {
+		margin-top: 5px;
+	}
+	.personnel {
+		overflow-y: scroll;
+		flex-direction: column;
+	}
+	.person {
+		margin: 10px;
+	}
+	.icons {
+		margin-left: 0px;
+	}
+
 	#canvas {
 		display: none;
 	}
