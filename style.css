@@ -403,7 +403,7 @@ main div {
 	font-family: "besides";
 } */
 .item {
-	min-width: 30%;
+	min-width: 300px;
 	height: 70vh;
 	background-color: rgba(255, 255, 255, 0.9);
 	text-align: center;
@@ -547,6 +547,15 @@ main div {
 .facebookbtn {
 	background: #316ff6;
 }
+.instFaceBtn {
+	display: flex;
+	flex-direction: row;
+	margin: 0 auto;
+	width: fit-content;
+}
+.instFaceBtn a {
+	margin: 0 20px;
+}
 
 .eventlist::-webkit-scrollbar-thumb {
 	background: #ff00bb;
@@ -671,6 +680,12 @@ main div {
 	.hamburger-menu:has(input:checked) + .sidebar {
 		translate: 0;
 	}
+	nav a {
+		text-decoration: underline 2px lime;
+		font-size: 14pt;
+		background-color: transparent;
+		color: white;
+	}
 }
 
 @media only screen and (max-width: 1400px) {
@@ -688,42 +703,102 @@ main div {
 	}
 
 	.infrastructurePics p {
+		h1 {
+			font-size: 50px;
+		}
+		p {
+			width: 100%;
+			margin: 0 auto;
+		}
+
+		.infrastructurePics img {
+			width: 100%;
+			aspect-ratio: 2/1;
+			object-fit: fill;
+		}
+		.waaromKiezen {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: space-between;
+		}
+		.waaromKiezen p {
+			width: 100%;
+		}
+		.basispijlers,
+		.maximumFactuur {
+			flex-direction: column;
+			width: 100%;
+		}
+		.stickman-2 {
+			position: absolute;
+			float: right;
+
+			width: 125px;
+			left: 60dvw;
+			top: 400px;
+			margin-top: 300px;
+		}
+		.titel {
+			width: 50%;
+			align-items: center;
+			margin-left: 250px;
+			margin-top: 100px;
+		}
+	}
+	.caroussel {
+		width: 75%;
+	}
+	.instFaceBtn {
+		flex-direction: column;
+	}
+	.instFaceBtn a {
+		margin-bottom: 20px;
+	}
+}
+
+@media screen and (max-width: 1200px) {
+	.ContactInformation {
+		display: contents;
+	}
+	.textField {
+		margin: 0 auto;
+		margin-bottom: 20px;
+		padding: 20px;
 		width: 100%;
+		border-width: 1px;
+		border-radius: 2px;
+		border-color: rgb(64, 64, 64);
+	}
+	.sendUs input {
+		margin: 0 auto;
+		margin-bottom: 20px;
+	}
+	.duck {
+		display: none;
+	}
+	.contactData {
+		display: contents;
 		margin: 0 auto;
 	}
+	.links {
+		margin: 0 auto;
 
-	.infrastructurePics img {
-		width: 100%;
-		aspect-ratio: 2/1;
-		object-fit: fill;
+		text-align: center;
 	}
-	.waaromKiezen {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: space-between;
+	.Messege button {
+		margin: 0 auto;
 	}
-	.waaromKiezen p {
-		width: 100%;
+	.links p {
+		text-align: center;
+		margin: 0 auto;
 	}
-	.basispijlers,
-	.maximumFactuur {
-		flex-direction: column;
-		width: 100%;
+	.sendText {
+		margin: 0 auto;
+		text-align: center;
+		margin: 15px;
 	}
-	.stickman-2 {
-		position: absolute;
-		float: right;
-
-		width: 125px;
-		left: 60dvw;
-		top: 400px;
-		margin-top: 300px;
-	}
-	.titel {
-		width: 50%;
-		align-items: center;
-		margin-left: 250px;
-		margin-top: 100px;
+	.staff {
+		margin: 0 auto;
 	}
 }
