@@ -805,8 +805,10 @@ main div {
 
 }
 
-.error { margin: 0 auto ;
+.error { 
+	margin: 0 auto ;
 	position:relative;
 	text-align: center;
+	width: 100%;
 
 }
