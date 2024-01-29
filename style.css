@@ -286,6 +286,8 @@ td {
 
 .hiddenDiv {
 	display: none;
+	align-items: center;
+	text-align: left;
 }
 main div {
 	margin-bottom: 50px;
@@ -686,65 +688,48 @@ main div {
 		background-color: transparent;
 		color: white;
 	}
-}
 
-@media only screen and (max-width: 1400px) {
-	.infrastructure {
-		margin-top: 50px;
-		display: flex;
+	.wrapper {
+		margin-top: 100px;
+	}
+	.portrait {
+		display: none;
+	}
+
+	.buttons {
 		flex-direction: column;
-		align-items: center; /* Center the items horizontally */
 	}
+	.buttonGrade {
+		padding: 20px 0px;
+		width: 50vw;
+		margin-bottom: 10px;
 
-	.infrastructurePics {
-		text-align: center;
-		width: 300px;
-		margin-bottom: 20px;
+		align-self: center;
 	}
-
-	.infrastructurePics p {
-		h1 {
-			font-size: 50px;
-		}
-		p {
-			width: 100%;
-			margin: 0 auto;
-		}
-
-		.infrastructurePics img {
-			width: 100%;
-			aspect-ratio: 2/1;
-			object-fit: fill;
-		}
-		.waaromKiezen {
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			justify-content: space-between;
-		}
-		.waaromKiezen p {
-			width: 100%;
-		}
-		.basispijlers,
-		.maximumFactuur {
-			flex-direction: column;
-			width: 100%;
-		}
-		.stickman-2 {
-			position: absolute;
-			float: right;
-
-			width: 125px;
-			left: 60dvw;
-			top: 400px;
-			margin-top: 300px;
-		}
-		.titel {
-			width: 50%;
-			align-items: center;
-			margin-left: 250px;
-			margin-top: 100px;
-		}
+	.doubbleText {
+		flex-direction: column;
+	}
+	[class^="tables"] {
+		flex-direction: column;
+	}
+	h1 {
+		font-size: 50px;
+	}
+	p {
+		width: 100%;
+	}
+	.leefregelimages {
+		width: 80%;
+	}
+	.firstYear,
+	.secondYear,
+	.thirdYear,
+	.fourthYear,
+	.fifthYearDS,
+	.fifthYearDF {
+		width: 75%;
+		box-sizing: border-box;
+		margin: 0 auto;
 	}
 	.caroussel {
 		width: 75%;
@@ -754,51 +739,5 @@ main div {
 	}
 	.instFaceBtn a {
 		margin-bottom: 20px;
-	}
-}
-
-@media screen and (max-width: 1200px) {
-	.ContactInformation {
-		display: contents;
-	}
-	.textField {
-		margin: 0 auto;
-		margin-bottom: 20px;
-		padding: 20px;
-		width: 100%;
-		border-width: 1px;
-		border-radius: 2px;
-		border-color: rgb(64, 64, 64);
-	}
-	.sendUs input {
-		margin: 0 auto;
-		margin-bottom: 20px;
-	}
-	.duck {
-		display: none;
-	}
-	.contactData {
-		display: contents;
-		margin: 0 auto;
-	}
-	.links {
-		margin: 0 auto;
-
-		text-align: center;
-	}
-	.Messege button {
-		margin: 0 auto;
-	}
-	.links p {
-		text-align: center;
-		margin: 0 auto;
-	}
-	.sendText {
-		margin: 0 auto;
-		text-align: center;
-		margin: 15px;
-	}
-	.staff {
-		margin: 0 auto;
 	}
 }
