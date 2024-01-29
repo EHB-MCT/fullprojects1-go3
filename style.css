@@ -689,10 +689,11 @@ main div {
 		color: white;
 	}
 
-	.wrapper {
-		margin-top: 100px;
-	}
-
+	.wrapper{margin-top: 100px;}
+	.portrait{display: none;}
+	
+}
+@media screen and (max-width: 1400px) {
 	.buttons {
 		flex-direction: column;
 	}
