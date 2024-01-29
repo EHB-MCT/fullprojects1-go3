@@ -11,6 +11,7 @@ body {
 	background-image: url(./images/background\ image.svg);
 	background-repeat: repeat-y;
 	background-size: 100%;
+
 }
 .wrapper {
 	margin: 3.5%;
@@ -578,16 +579,15 @@ main div {
 	padding: 0px;
 	margin: 0px;
 }
-@media only screen and (min-width: 768px) {
-	.sidebar {
-		display: none;
-	}
-	.hamburger-menu {
-		display: none;
-	}
+@media only screen and (min-width: 1400px){
+	.sidebar{display: none;}
+	.hamburger-menu{display: none;}
+	
 }
-@media only screen and (max-width: 768px) {
-	.nav-links {
+@media only screen and (max-width: 1400px){
+	nav{ 
+		margin-top: 0px;}
+	.nav-links{
 		display: none;
 	}
 	:root {
@@ -655,19 +655,30 @@ main div {
 	.hamburger-menu input:checked {
 		opacity: 0;
 		width: 0;
-	}
-	.sidebar {
+	  }
+	  .sidebar {
+		position: fixed;
 		transition: translate var(--animation-timing);
-		translate: -200%;
-		padding: 0.5rem 1rem;
-		padding-top: calc(var(--hamburger-height) + var(--hamburger-margin) + 1rem);
+		translate: -100%;
 		background-color: var(--foreground);
 		color: var(--background);
-		min-height: 100%;
-	}
-	.hamburger-menu:has(input:checked) + .sidebar {
+		height: 100vh;
+		font-size: 20pt;
+		padding: 40px;
+		padding-top: 100px;
+		
+	  }
+	  .hamburger-menu:has(input:checked) + .sidebar {
 		translate: 0;
+	  }
+	  nav a {
+		text-decoration: underline 2px lime;
+		font-size: 14pt;
+		background-color: transparent;
+		color: white;
 	}
+
+	.wrapper{margin-top: 100px;}
 }
 @media screen and (max-width: 1400px) {
 	.buttons {
