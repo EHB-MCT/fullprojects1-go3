@@ -575,11 +575,11 @@ main div {
 	padding: 0px;
 	margin: 0px;
 }
-@media only screen and (min-width: 768px){
+@media only screen and (min-width: 1400px){
 	.sidebar{display: none;}
 	.hamburger-menu{display: none;}
 }
-@media only screen and (max-width: 768px){
+@media only screen and (max-width: 1400px){
 	.nav-links{
 		display: none;
 	}
