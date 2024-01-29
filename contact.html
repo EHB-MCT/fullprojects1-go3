@@ -25,7 +25,7 @@
 				</li>
 				<li>
 					<a class="nav-button blue" href="Inschrijvingen.html"
-						>Inschrijvingen</a
+						>Wat na hiel</a
 					>
 				</li>
 				<li><a class="nav-button orange" href="contact.html">Contact</a></li>
@@ -49,6 +49,241 @@
 				</div>
 			</div>
 
+			
+			<div class="staff">
+				<h1 class="orange">Wie is wie?</h1>
+
+				<div class="departments">
+					<input
+						type="checkbox"
+						id="buttonDirectie"
+						checked
+						onchange="toggleDiv('buttonDirectie','directie','begeleiding','coaches','taal','secretariaat','personeels','Vakgroepen')"
+						onclick="uncheckCheckbox('buttonBegeleiding','buttonCoaches','buttonTaal','buttonSecretariaat','buttonPersoneels','buttonVakgroepen')"
+					/>
+					<label for="buttonDirectie" class="buttonStaff">Directie</label>
+					<input
+						type="checkbox"
+						id="buttonBegeleiding"
+						onchange="toggleDiv('buttonBegeleiding','begeleiding','directie','coaches','taal','secretariaat','personeels','Vakgroepen')"
+						onclick="uncheckCheckbox('buttonDirectie','buttonCoaches','buttonTaal','buttonSecretariaat','buttonPersoneels','buttonVakgroepen')"
+					/>
+					<label for="buttonBegeleiding" class="buttonStaff"
+						>leerlingbegeleiding</label
+					>
+					<input
+						type="checkbox"
+						id="buttonCoaches"
+						onchange="toggleDiv('buttonCoaches','coaches','begeleiding','directie','taal','secretariaat','personeels','Vakgroepen')"
+						onclick="uncheckCheckbox('buttonDirectie','buttonBegeleiding','buttonDirectie','buttonTaal','buttonSecretariaat','buttonPersoneels','buttonVakgroepen')"
+					/>
+					<label for="buttonCoaches" class="buttonStaff"
+						>leerlingen coaches</label
+					>
+
+					<input
+						type="checkbox"
+						id="buttonTaal"
+						onchange="toggleDiv('buttonTaal','taal','coaches','begeleiding','directie','secretariaat','personeels','Vakgroepen')"
+						onclick="uncheckCheckbox('buttonCoaches','buttonBegeleiding','buttonDirectie','buttonSecretariaat','buttonPersoneels','buttonVakgroepen')"
+					/>
+					<label for="buttonTaal" class="buttonStaff"
+						>Taal en kwaliteitscoördinaten</label
+					>
+
+					<input
+						type="checkbox"
+						id="buttonSecretariaat"
+						onchange="toggleDiv('buttonSecretariaat','secretariaat','taal','coaches','begeleiding','directie','personeels','Vakgroepen')"
+						onclick="uncheckCheckbox('buttonCoaches','buttonBegeleiding','buttonDirectie','buttonTaal','buttonPersoneels','buttonVakgroepen')"
+					/>
+					<label for="buttonSecretariaat" class="buttonStaff"
+						>Leerlingen secretariaat</label
+					>
+					<input
+						type="checkbox"
+						id="buttonPersoneels"
+						onchange="toggleDiv('buttonPersoneels','personeels','taal','coaches','begeleiding','directie','secretariaat','Vakgroepen')"
+						onclick="uncheckCheckbox('buttonCoaches','buttonBegeleiding','buttonDirectie','buttonSecretariaat','buttonTaal','buttonVakgroepen')"
+					/>
+					<label for="buttonPersoneels" class="buttonStaff"
+						>Personeels zaken</label
+					>
+					<input
+						type="checkbox"
+						id="buttonVakgroepen"
+						onchange="toggleDiv('buttonVakgroepen','Vakgroepen','taal','coaches','begeleiding','directie','secretariaat','personeels')"
+						onclick="uncheckCheckbox('buttonCoaches','buttonBegeleiding','buttonDirectie','buttonSecretariaat','buttonPersoneels','buttonTaal')"
+					/>
+					<label for="buttonVakgroepen" class="buttonStaff">Vakgroepen</label>
+				</div>
+				<div id="directie">
+					<div class="personnel">
+						<div class="person">
+							<img class="portrait" src="images/persoon.png" alt="" />
+							<p>
+								Johan Schellemans <br />
+								Directeur
+							</p>
+						</div>
+						<div class="person">
+							<img class="portrait" src="images/persoon.png" alt="" />
+							<p>
+								Nele Van de Velde <br />
+								Adjunct-directeur
+							</p>
+						</div>
+					</div>
+				</div>
+				<div id="begeleiding" class="hiddenDiv">
+					<div class="personnel">
+						<div class="person">
+							<img class="portrait" src="images/persoon.png" alt="" />
+							<p>
+								Karen Vander Elst <br />
+								Leerlingbegeleiding
+							</p>
+						</div>
+						<div class="person">
+							<img class="portrait" src="images/persoon.png" alt="" />
+							<p>
+								Goele Eggers <br />
+								Leerlingbegeleiding
+							</p>
+						</div>
+						<div class="person">
+							<img class="portrait" src="images/persoon.png" alt="" />
+							<p>
+								Eva De Corte <br />
+								Leerlingbegeleiding
+							</p>
+						</div>
+						<div class="person">
+							<img class="portrait" src="images/persoon.png" alt="" />
+							<p>
+								Eva Oggiano <br />
+								Leerlingbegeleiding
+							</p>
+						</div>
+					</div>
+				</div>
+				<div id="coaches" class="hiddenDiv">
+					<div class="personnel">
+						<div class="person">
+							<img class="portrait" src="images/persoon.png" alt="" />
+							<p>
+								Dewi Bourguignon <br />
+								Leercoaches
+							</p>
+						</div>
+						<div class="person">
+							<img class="portrait" src="images/persoon.png" alt="" />
+							<p>
+								Katia Dennequin <br />
+								Leercoaches
+							</p>
+						</div>
+						<div class="person">
+							<img class="portrait" src="images/persoon.png" alt="" />
+							<p>
+								Belinda Daemen <br />
+								Leercoaches
+							</p>
+						</div>
+					</div>
+				</div>
+				<div id="taal" class="hiddenDiv">
+					<div class="personnel">
+						<div class="person">
+							<img class="portrait" src="images/persoon.png" alt="" />
+							<p>
+								Bjorn Dierickx <br />
+								Taal- & Kwaliteitscoördinator
+							</p>
+						</div>
+					</div>
+				</div>
+				<div id="secretariaat" class="hiddenDiv">
+					<div class="personnel">
+						<div class="person">
+							<img class="portrait" src="images/persoon.png" alt="" />
+							<p>
+								Sophie Lequeux <br />
+								Verantwoordelijke leerlingensecretariaat
+							</p>
+						</div>
+						<div class="person">
+							<img class="portrait" src="images/persoon.png" alt="" />
+							<p>
+								Francine Shimba <br />
+								Verantwoordelijke inschrijvingen &
+								Smartschoolverantwoordelijke
+							</p>
+						</div>
+						<div class="person">
+							<img class="portrait" src="images/persoon.png" alt="" />
+							<p>
+								Amaurie Van Eylen (1e graad) <br />
+								Opvoeders
+							</p>
+						</div>
+						<div class="person">
+							<img class="portrait" src="images/persoon.png" alt="" />
+							<p>
+								Jef Schellemans (2e graad) <br />
+								Opvoeders
+							</p>
+						</div>
+						<div class="person">
+							<img class="portrait" src="images/persoon.png" alt="" />
+							<p>
+								Sercan Desovali (3e graad) <br />
+								Opvoeders
+							</p>
+						</div>
+						<div class="person">
+							<img class="portrait" src="images/persoon.png" alt="" />
+							<p>
+								Erik Neven <br />
+								Preventie- en veiligheidmanager & IT:
+							</p>
+						</div>
+					</div>
+				</div>
+				<div id="personeels" class="hiddenDiv">
+					<div class="personnel">
+						<div class="person">
+							<img class="portrait" src="images/persoon.png" alt="" />
+							<p>
+								Catherine Lequeux <br />
+								Verantwoordelijke personeelszaken
+							</p>
+						</div>
+					</div>
+				</div>
+				<div id="Vakgroepen" class="hiddenDiv">
+					<div class="personnel">
+						<div class="person">
+							<p>Economie <br /></p>
+						</div>
+						<div class="person">
+							<p>Humane Wetenschappen <br /></p>
+						</div>
+						<div class="person">
+							<p>Moderne talen <br /></p>
+						</div>
+						<div class="person">
+							<p>Nederlands <br /></p>
+						</div>
+						<div class="person">
+							<p>Wiskunde-informatica <br /></p>
+						</div>
+						<div class="person">
+							<p>Wetenschappen <br /></p>
+						</div>
+					</div>
+				</div>
+			</div>
 			<div class="contactData">
 				<div class="links">
 					<h2 class="orange">Onze gegevens</h2>
@@ -72,7 +307,6 @@
 					</div>
 				</div>
 			</div>
-			
 			<img class="duck" src="./doodles/duck.svg" alt="" />
 		</div>
 	</body>
