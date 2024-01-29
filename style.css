@@ -676,5 +676,7 @@ main div {
 	}
 
 	.wrapper{margin-top: 100px;}
+	.portrait{display: none;}
+	
 }
 
