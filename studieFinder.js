@@ -17,7 +17,7 @@ window.onmousedown = mouseClickDown;
 window.onmouseup = mouseClickUp;
 
 setup();
-drawBackground();
+drawStartMenu();
 
 function setup() {
 	context.font = "24px Roboto";
