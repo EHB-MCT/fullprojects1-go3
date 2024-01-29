@@ -786,24 +786,47 @@ main div {
 	.staff {
 		margin: 0 auto;
 	}
-	#canvas{display: none;}
-	.error{ display: block;}
-	#rabbitImage{display: none;}
+	.departments {
+		flex-direction: column;
+	}
+	.buttonStaff {
+		margin-top: 5px;
+	}
+	.personnel {
+		overflow-y: scroll;
+		flex-direction: column;
+	}
+	.person {
+		margin: 10px;
+	}
+	.icons {
+		margin-left: 0px;
+	}
+
+	#canvas {
+		display: none;
+	}
+	.error {
+		display: block;
+	}
+	#rabbitImage {
+		display: none;
+	}
 }
 #canvas {
 	width: 100%;
 	height: 100%;
 }
 
-@media screen and (min-width: 1200px){
-.error{display: none;}
-
+@media screen and (min-width: 1200px) {
+	.error {
+		display: none;
+	}
 }
 
-.error { 
-	margin: 0 auto ;
-	position:relative;
+.error {
+	margin: 0 auto;
+	position: relative;
 	text-align: center;
 	width: 100%;
-
 }
