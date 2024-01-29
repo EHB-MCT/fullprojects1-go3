@@ -719,3 +719,47 @@ main div {
 		margin: 0 auto;
 	}
 }
+
+@media screen and (max-width: 1200px) {
+	.ContactInformation{display: contents;
+	}
+	.textField{
+		
+		margin: 0 auto;
+		margin-bottom: 20px;
+		padding: 20px;
+		width: 100%;
+		border-width: 1px;
+		border-radius: 2px;
+		border-color: rgb(64, 64, 64);
+		}
+	.sendUs input{
+		margin: 0 auto;
+		margin-bottom: 20px;
+	
+	}
+	.duck {
+		display: none;}
+	.contactData{
+		display: contents;
+		margin: 0 auto;
+	}
+	.links{
+		margin: 0 auto;
+
+		text-align: center;
+	}
+	.Messege button{margin: 0 auto;}
+	.links p {
+		text-align: center;
+		margin: 0 auto;
+	}
+	.sendText{
+		margin: 0 auto;
+		text-align: center;
+		margin: 15px;
+	}
+	.staff {
+		margin: 0 auto;
+	}
+}
