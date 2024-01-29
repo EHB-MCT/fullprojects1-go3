@@ -786,6 +786,9 @@ main div {
 	.staff {
 		margin: 0 auto;
 	}
+	#canvas{display: none;}
+	.error{ display: block;}
+	#rabbitImage{display: none;}
 }
 #canvas {
 	margin: 0 auto;
@@ -795,4 +798,15 @@ main div {
 	position: absolute;
 	left: 5%;
 	top: 10%;
+}
+
+@media screen and (min-width: 1200px){
+.error{display: none;}
+
+}
+
+.error { margin: 0 auto ;
+	position:relative;
+	text-align: center;
+
 }
