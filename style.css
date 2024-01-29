@@ -11,7 +11,6 @@ body {
 	background-image: url(./images/background\ image.svg);
 	background-repeat: repeat-y;
 	background-size: 100%;
-
 }
 .wrapper {
 	margin: 3.5%;
@@ -287,8 +286,6 @@ td {
 
 .hiddenDiv {
 	display: none;
-	align-items: center;
-	text-align: left;
 }
 main div {
 	margin-bottom: 50px;
@@ -579,15 +576,19 @@ main div {
 	padding: 0px;
 	margin: 0px;
 }
-@media only screen and (min-width: 1400px){
-	.sidebar{display: none;}
-	.hamburger-menu{display: none;}
-	
+@media only screen and (min-width: 1400px) {
+	.sidebar {
+		display: none;
+	}
+	.hamburger-menu {
+		display: none;
+	}
 }
-@media only screen and (max-width: 1400px){
-	nav{ 
-		margin-top: 0px;}
-	.nav-links{
+@media only screen and (max-width: 1400px) {
+	nav {
+		margin-top: 0px;
+	}
+	.nav-links {
 		display: none;
 	}
 	:root {
@@ -655,8 +656,8 @@ main div {
 	.hamburger-menu input:checked {
 		opacity: 0;
 		width: 0;
-	  }
-	  .sidebar {
+	}
+	.sidebar {
 		position: fixed;
 		transition: translate var(--animation-timing);
 		translate: -100%;
@@ -666,56 +667,63 @@ main div {
 		font-size: 20pt;
 		padding: 40px;
 		padding-top: 100px;
-		
-	  }
-	  .hamburger-menu:has(input:checked) + .sidebar {
+	}
+	.hamburger-menu:has(input:checked) + .sidebar {
 		translate: 0;
-	  }
-	  nav a {
-		text-decoration: underline 2px lime;
-		font-size: 14pt;
-		background-color: transparent;
-		color: white;
 	}
-
-	.wrapper{margin-top: 100px;}
-	.portrait{display: none;}
-	
 }
-@media screen and (max-width: 1400px) {
-	.buttons {
-		flex-direction: column;
-	}
-	.buttonGrade {
-		padding: 20px 0px;
-		width: 50vw;
-		margin-bottom: 10px;
 
-		align-self: center;
-	}
-	.doubbleText {
+@media only screen and (max-width: 1400px) {
+	.infrastructure {
+		margin-top: 50px;
+		display: flex;
 		flex-direction: column;
+		align-items: center; /* Center the items horizontally */
 	}
-	[class^="tables"] {
+
+	.infrastructurePics {
+		text-align: center;
+		width: 300px;
+		margin-bottom: 20px;
+	}
+
+	.infrastructurePics p {
+		width: 100%;
+		margin: 0 auto;
+	}
+
+	.infrastructurePics img {
+		width: 100%;
+		aspect-ratio: 2/1;
+		object-fit: fill;
+	}
+	.waaromKiezen {
+		display: flex;
 		flex-direction: column;
+		align-items: center;
+		justify-content: space-between;
 	}
-	h1{
-		font-size: 50px;
-	}
-	p {
+	.waaromKiezen p {
 		width: 100%;
 	}
-	.leefregelimages {
-		width: 80%;
+	.basispijlers,
+	.maximumFactuur {
+		flex-direction: column;
+		width: 100%;
 	}
-	.firstYear,
-	.secondYear,
-	.thirdYear,
-	.fourthYear,
-	.fifthYearDS,
-	.fifthYearDF {
-		width: 75%;
-		box-sizing: border-box;
-		margin: 0 auto;
+	.stickman-2 {
+		position: absolute;
+		float: right;
+
+		width: 125px;
+		left: 60dvw;
+		top: 400px;
+		margin-top: 300px;
+	}
+	.titel {
+		width: 50%;
+		align-items: center;
+		margin-left: 250px;
+		margin-top: 100px;
 	}
 }
