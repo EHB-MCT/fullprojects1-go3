@@ -737,6 +737,25 @@ main div {
 		margin: 0 auto;
 	}
 
+
+
+	.infrastructure {
+		margin-top: 50px;
+		display: flex;
+		flex-direction: column;
+		align-items: center; /* Center the items horizontally */
+	}
+
+	.infrastructurePics {
+		text-align: center;
+		width: 30%;
+		margin-bottom: 20px;
+	}
+
+	.infrastructurePics p {
+		margin: 0 auto;
+	}
+
 	.infrastructurePics img {
 		width: 100%;
 		aspect-ratio: 2/1;
@@ -760,10 +779,9 @@ main div {
 		display: none;
 	}
 	.titel {
+		margin: 0 auto;
 		width: 50%;
 		align-items: center;
-		margin-left: 250px;
-		margin-top: 100px;
 	}
 	.yellow {
 		display: flex;
@@ -788,62 +806,52 @@ main div {
 		left: 50%; /* Center the dropdownContent horizontally */
 		transform: translateX(-50%); /* Center the dropdownContent horizontally */
 	}
-	.basispijlers p {
-		width: 700px;
-		text-align: center;
-		justify-content: center;
-		margin-left: 175px;
-	}
-	.maximumFactuur p {
-		margin-left: 175px;
-
-		width: 700px;
-		align-items: center;
-		justify-content: center;
-	}
+	.basispijlers p,
+	.maximumFactuur p,
 	.infrastructureText p {
-		margin-left: 175px;
-
-		width: 700px;
+		text-align: center;
 		align-items: center;
-		justify-content: center;
+		width: 700px;
+		margin: 0 auto; /* Center the text horizontally */
 	}
-	.caroussel {
-		width: 75%;
+}
+
+.caroussel {
+	width: 75%;
+}
+.instFaceBtn {
+	flex-direction: column;
+}
+.instFaceBtn a {
+	margin-bottom: 20px;
+}
+
+@media screen and (max-width: 1200px) {
+	.ContactInformation {
+		display: contents;
 	}
-	.instFaceBtn {
-		flex-direction: column;
+	.textField {
+		margin: 0 auto;
+		margin-bottom: 20px;
+		padding: 20px;
+		width: 100%;
+		border-width: 1px;
+		border-radius: 2px;
+		border-color: rgb(64, 64, 64);
 	}
-	.instFaceBtn a {
+	.sendUs input {
+		margin: 0 auto;
 		margin-bottom: 20px;
 	}
-
-	@media screen and (max-width: 1200px) {
-		.ContactInformation {
-			display: contents;
-		}
-		.textField {
-			margin: 0 auto;
-			margin-bottom: 20px;
-			padding: 20px;
-			width: 100%;
-			border-width: 1px;
-			border-radius: 2px;
-			border-color: rgb(64, 64, 64);
-		}
-		.sendUs input {
-			margin: 0 auto;
-			margin-bottom: 20px;
-		}
-		.duck {
-			display: none;
-		}
-		.contactData {
-			display: contents;
-			margin: 0 auto;
-		}
-		.links {
-			margin: 0 auto;
+	.duck {
+		display: none;
+	}
+	.contactData {
+		display: contents;
+		margin: 0 auto;
+	}
+	.links {
+		margin: 0 auto;
 
 			text-align: center;
 		}
@@ -894,16 +902,15 @@ main div {
 		height: 100%;
 	}
 
-	@media screen and (min-width: 1200px) {
-		.error {
-			display: none;
-		}
-	}
-
+@media screen and (min-width: 1200px) {
 	.error {
-		margin: 0 auto;
-		position: relative;
-		text-align: center;
-		width: 100%;
+		display: none;
 	}
+}
+
+.error {
+	margin: 0 auto;
+	position: relative;
+	text-align: center;
+	width: 100%;
 }
