@@ -111,7 +111,7 @@ function drawStartMenu() {
 	context.fill();
 	context.fillStyle = "black";
 	context.font = "50px besides";
-	context.fillText("Wat ga ik doen?", (width * 1) / 16, height / 2 - 60);
+	context.fillText("Wat ga ik doen?", (width * 1) / 16, (height * 6) / 14);
 
 	//rabit image
 	rabbitDoodle.style.position = "absolute";
