@@ -75,8 +75,8 @@ function drawStartMenu() {
 	context.fill();
 	context.font = "50px besides";
 	context.fillStyle = "black";
-	context.fillText("Wat zie ik in mijn", 910, 450);
-	context.fillText("richting?", 1051, 500);
+	context.fillText("Wat zie ik in mijn", width*5/8, 450);
+	context.fillText("richting?", width*11/16, 500);
 
 	//Welke richting is voor mij?
 	context.fillStyle = "#00E5FF";
@@ -112,7 +112,7 @@ function drawStartMenu() {
 	context.fill();
 	context.fillStyle = "black";
 	context.font = "50px besides";
-	context.fillText("Wat ga ik doen?", width / 2 - 666, height / 2 - 60);
+	context.fillText("Wat ga ik doen?", width / 30, height / 2 - 60);
 
 	//rabit image
 	rabbitDoodle.style.position = "absolute";
