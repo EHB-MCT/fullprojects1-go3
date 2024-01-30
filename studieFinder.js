@@ -3,8 +3,8 @@ import * as utils from "./utils.js";
 
 let width = window.innerWidth;
 let height = window.innerHeight;
-let mouseXPos = 0;
-let mouseYpos = 0;
+let mouseX = 0;
+let mouseY = 0;
 let choices = [];
 let stage = 0;
 let mouseIsDown = false;
@@ -21,13 +21,7 @@ function setup() {
 }
 draw();
 function draw() {
-	drawBackground();
-	choiceButton();
 	phase();
-
-	drawCircle();
-
-	drawStraw(mouseXPos, mouseYpos);
 
 	requestAnimationFrame(draw);
 }
@@ -77,7 +71,6 @@ function drawStartMenu() {
 
 	//Wat ga ik doen?
 	highlight("#43FF00", (width * 3) / 64, (height * 12) / 32, 550);
-	// context.fill();
 	context.fillStyle = "black";
 	context.font = "50px besides";
 	context.fillText("Wat ga ik doen?", (width * 1) / 16, (height * 6) / 14);
@@ -179,19 +172,39 @@ function decision62() {
 	//question 20
 	context.strokeText("text", width / 2 + 100, height / 2 - 100);
 }
-function mouseClickDown(eventData) {
-	console.log(eventData);
+function mouseClickDown(event) {
+	const rect = context.canvas.getBoundingClientRect();
+	const scaleX = context.canvas.width / rect.width;
+	const scaleY = context.canvas.height / rect.height;
+
+	const mouseX = (event.clientX - rect.left) * scaleX;
+	const mouseY = (event.clientY - rect.top) * scaleY;
+
+	// utils.fillCircle(mouseX, mouseY, 10);
 	if (
 		stage == 0 &&
-		mouseYpos > height / 2 - 25 &&
-		mouseYpos < height / 2 + 25
+		mouseY > height / 2 - 25 &&
+		mouseY < height / 2 + 25 &&
+		mouseX > width / 2 - 80 &&
+		mouseX < width + 80
 	) {
 		stage++;
 	}
 }
-function mousePos(eventdata) {
-	mouseXPos = eventdata.pageX;
-	mouseYpos = eventdata.pageY;
+// function mousePos(eventdata) {
+// 	// console.log(window.innerHeight * 0.05);
+// 	mouseXPos = eventdata.pageX - 60;
+// 	mouseYpos = eventdata.pageY - 140;
+// 	console.log("yPos " + mouseYpos + "; x pos " + mouseXPos);
+// }
+function mousePos(event) {
+	const rect = context.canvas.getBoundingClientRect();
+	const scaleX = context.canvas.width / rect.width;
+	const scaleY = context.canvas.height / rect.height;
+
+	const mouseX = (event.clientX - rect.left) * scaleX;
+	const mouseY = (event.clientY - rect.top) * scaleY;
+	return { mouseX: mouseX, mouseY: mouseY };
 }
 function drawBackground() {
 	rabbitDoodle.style.display = "none";
