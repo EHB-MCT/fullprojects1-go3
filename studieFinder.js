@@ -93,7 +93,7 @@ function drawStartMenu() {
 	context.fillText("Welke richting is", 800, 120);
 	context.fillText("voor mij?", 916, 170);
 
-	//buttone
+	//button
 	context.fillStyle = "#9A00FF";
 	context.fillRect(width / 2 - 80, height / 2 - 25, 160, 50);
 	context.font = "30px Roboto";
