@@ -38,7 +38,7 @@ h1 {
 h2 {
 	font-size: 30px;
 }
-.nav-links img{
+.nav-links img {
 	width: 8%;
 }
 p,
@@ -63,17 +63,16 @@ a {
 
 .logo {
 	height: 70px;
-	margin-left: 40px; 
+	margin-left: 40px;
 	margin-top: 10px;
 }
 
-.nav-links{
+.nav-links {
 	display: flex;
 	justify-content: space-between;
 	margin: 0px;
 }
 .nav-links li {
-	
 	padding: 0px;
 	display: inline;
 	margin: 0px;
@@ -92,7 +91,11 @@ a {
 }
 .departments {
 	display: flex;
-	justify-content: space-between;
+	padding-top: 10px;
+	padding-bottom: 5px;
+	background-color: #9a00ff;
+	flex-wrap: wrap;
+	justify-content: center;
 }
 .buttonStaff,
 .buttonGrade,
@@ -116,8 +119,14 @@ a {
 }
 .staff {
 	margin: 0 auto;
+	text-align: center;
 	width: 60%;
 }
+.buttonStaff {
+	margin-right: 20px;
+	margin-bottom: 5px;
+}
+
 .departments [id^="button"]:checked + label.buttonStaff,
 .buttonStaff:hover,
 .buttons [id^="button"]:checked + label.buttonGrade,
@@ -599,7 +608,7 @@ main div {
 	}
 }
 @media only screen and (max-width: 1400px) {
-	.logo{ 
+	.logo {
 		margin-left: 70%;
 		margin-top: 10px;
 		width: 20%;
