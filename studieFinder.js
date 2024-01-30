@@ -81,10 +81,10 @@ function drawStartMenu() {
 	//Welke richting is voor mij?
 	context.fillStyle = "#00E5FF";
 	context.beginPath();
-	context.moveTo(800, 50);
-	context.lineTo(1400, 75);
-	context.lineTo(1390, 150);
-	context.lineTo(790, 125);
+	context.moveTo(width / 2 - 100, height / 2 - 405);
+	context.lineTo(width / 2 + 500, height / 2 - 395);
+	context.lineTo(width / 2 + 500, height / 2 - 335);
+	context.lineTo(width / 2 - 100, height / 2 - 345);
 	context.closePath();
 	context.stroke();
 	context.fill();
@@ -102,17 +102,17 @@ function drawStartMenu() {
 
 	//Wat ga ik doen?
 	context.beginPath();
-	context.moveTo(100, 200);
-	context.lineTo(600, 250);
-	context.lineTo(588, 350);
-	context.lineTo(90, 300);
+	context.moveTo(width / 2 - 666, height / 2 - 150);
+	context.lineTo(width / 2 - 166, height / 2 - 100);
+	context.lineTo(width / 2 - 180, height / 2);
+	context.lineTo(width / 2 - 676, height / 2 - 50);
 	context.closePath();
 	context.stroke();
 	context.fillStyle = "#43FF00";
 	context.fill();
 	context.fillStyle = "black";
 	context.font = "50px besides";
-	context.fillText("Wat ga ik doen?", 100, 300);
+	context.fillText("Wat ga ik doen?", width / 2 - 666, height / 2 - 60);
 
 	//rabit image
 	rabbitDoodle.style.position = "absolute";
@@ -121,7 +121,6 @@ function drawStartMenu() {
 	rabbitDoodle.style.left = "277px";
 	rabbitDoodle.style.transform = "rotate(28deg)";
 }
-
 function phase() {
 	if (stage == 0) {
 		startMenu();
@@ -135,7 +134,6 @@ function phase() {
 		decision4();
 	}
 }
-
 function decision1() {
 	//question 1
 	context.fillText("Ik heb interesse", width / 2 - 150, height / 2 - 165);
