@@ -61,6 +61,7 @@ function drawStartMenu() {
 	context.lineTo(788, 420);
 	context.stroke();
 
+
 	// Wat zie ik in mijn richting?
 	context.fillStyle = "#FF00BB";
 	context.strokeStyle = "white";
