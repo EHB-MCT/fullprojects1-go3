@@ -19,9 +19,15 @@ draw();
 function setup() {
 	context.font = "24px Roboto";
 }
-
+draw();
 function draw() {
+	drawBackground();
+	choiceButton();
 	phase();
+
+	drawCircle();
+
+	drawStraw(mouseXPos, mouseYpos);
 
 	requestAnimationFrame(draw);
 }
@@ -49,16 +55,6 @@ function drawStartMenu() {
 	context.stroke();
 
 	// Wat zie ik in mijn richting?
-	context.fillStyle = "#FF00BB";
-	// context.strokeStyle = "white";
-	// context.beginPath();
-	// context.moveTo((width * 78) / 120, (height * 40) / 98);
-	// context.lineTo(width, (height * 20) / 50);
-	// context.lineTo(width, (height * 24) / 50);
-	// context.lineTo((width * 79) / 120, (height * 24) / 50);
-	// context.closePath();
-	// context.stroke();
-	// context.fill();
 	highlight("#FF00BB", (width * 13) / 20, (height * 20) / 49, 600);
 	context.font = "50px besides";
 	context.fillStyle = "black";
@@ -66,15 +62,6 @@ function drawStartMenu() {
 	context.fillText("richting?", (width * 22) / 30, (height * 53) / 100);
 
 	//Welke richting is voor mij?
-	context.fillStyle = "#00E5FF";
-	// context.beginPath();
-	// context.moveTo((width * 22) / 50, (height * 2) / 32);
-	// context.lineTo((width * 38) / 50, (height * 2) / 32);
-	// context.lineTo((width * 38) / 50, (height * 9) / 64);
-	// context.lineTo((width * 22) / 50, (height * 9) / 64);
-	// context.closePath();
-	// context.stroke();
-	// context.fill();
 	highlight("#00E5FF", (width * 22) / 50, (height * 3) / 32, 600);
 	context.font = "50px besides";
 	context.fillStyle = "black";
@@ -89,14 +76,6 @@ function drawStartMenu() {
 	context.fillText("Druk hier", width / 2 - 60, height / 2 + 8);
 
 	//Wat ga ik doen?
-	// context.beginPath();
-	// context.moveTo((width * 3) / 64, (height * 11) / 32);
-	// context.lineTo((width * 22) / 64, (height * 12) / 32);
-	// context.lineTo((width * 22) / 64, (height * 15) / 32);
-	// context.lineTo((width * 3) / 64, (height * 14) / 32);
-	// context.closePath();
-	// context.stroke();
-	context.fillStyle = "#43FF00";
 	highlight("#43FF00", (width * 3) / 64, (height * 12) / 32, 550);
 	// context.fill();
 	context.fillStyle = "black";
