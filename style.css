@@ -916,6 +916,9 @@ main div {
 	.error {
 		display: block;
 	}
+	.error img {
+		width: 100%;
+	}
 	#rabbitImage {
 		display: none;
 	}
