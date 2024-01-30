@@ -14,6 +14,7 @@ var rabbitDoodle = document.getElementById("rabbitImage");
 window.onmousemove = mousePos;
 window.onclick = mouseClickDown;
 
+
 setup();
 draw();
 
@@ -51,15 +52,16 @@ function drawStartMenu() {
 
 	// Wat zie ik in mijn richting?
 	context.fillStyle = "#FF00BB";
-	context.strokeStyle = "white";
-	context.beginPath();
-	context.moveTo((width * 78) / 120, (height * 40) / 98);
-	context.lineTo(width, (height * 20) / 50);
-	context.lineTo(width, (height * 24) / 50);
-	context.lineTo((width * 79) / 120, (height * 24) / 50);
-	context.closePath();
-	context.stroke();
-	context.fill();
+	// context.strokeStyle = "white";
+	// context.beginPath();
+	// context.moveTo((width * 78) / 120, (height * 40) / 98);
+	// context.lineTo(width, (height * 20) / 50);
+	// context.lineTo(width, (height * 24) / 50);
+	// context.lineTo((width * 79) / 120, (height * 24) / 50);
+	// context.closePath();
+	// context.stroke();
+	// context.fill();
+	highlight("#FF00BB", (width * 13) / 20, (height * 20) / 49, 600);
 	context.font = "50px besides";
 	context.fillStyle = "black";
 	context.fillText("Wat zie ik in mijn", (width * 20) / 30, (height * 23) / 50);
@@ -67,14 +69,15 @@ function drawStartMenu() {
 
 	//Welke richting is voor mij?
 	context.fillStyle = "#00E5FF";
-	context.beginPath();
-	context.moveTo((width * 22) / 50, (height * 2) / 32);
-	context.lineTo((width * 38) / 50, (height * 2) / 32);
-	context.lineTo((width * 38) / 50, (height * 9) / 64);
-	context.lineTo((width * 22) / 50, (height * 9) / 64);
-	context.closePath();
-	context.stroke();
-	context.fill();
+	// context.beginPath();
+	// context.moveTo((width * 22) / 50, (height * 2) / 32);
+	// context.lineTo((width * 38) / 50, (height * 2) / 32);
+	// context.lineTo((width * 38) / 50, (height * 9) / 64);
+	// context.lineTo((width * 22) / 50, (height * 9) / 64);
+	// context.closePath();
+	// context.stroke();
+	// context.fill();
+	highlight("#00E5FF", (width * 22) / 50,(height * 3) / 32, 600);
 	context.font = "50px besides";
 	context.fillStyle = "black";
 	context.fillText("Welke richting is", (width * 22) / 48, (height * 4) / 32);
@@ -88,15 +91,16 @@ function drawStartMenu() {
 	context.fillText("Druk hier", width / 2 - 60, height / 2 + 8);
 
 	//Wat ga ik doen?
-	context.beginPath();
-	context.moveTo((width * 3) / 64, (height * 11) / 32);
-	context.lineTo((width * 22) / 64, (height * 12) / 32);
-	context.lineTo((width * 22) / 64, (height * 15) / 32);
-	context.lineTo((width * 3) / 64, (height * 14) / 32);
-	context.closePath();
-	context.stroke();
+	// context.beginPath();
+	// context.moveTo((width * 3) / 64, (height * 11) / 32);
+	// context.lineTo((width * 22) / 64, (height * 12) / 32);
+	// context.lineTo((width * 22) / 64, (height * 15) / 32);
+	// context.lineTo((width * 3) / 64, (height * 14) / 32);
+	// context.closePath();
+	// context.stroke();
 	context.fillStyle = "#43FF00";
-	context.fill();
+	highlight("#43FF00",(width * 3) / 64,(height * 12) / 32, 550);
+	// context.fill();
 	context.fillStyle = "black";
 	context.font = "50px besides";
 	context.fillText("Wat ga ik doen?", (width * 1) / 16, (height * 6) / 14);
@@ -226,4 +230,13 @@ function drawBackground() {
 	context.lineTo(width - 80, height - 100);
 	context.lineTo(width - 90, height - 120);
 	context.stroke();
+}
+
+function highlight(colour, x, y, w) {
+	context.save();
+	context.fillStyle = colour;
+	context.translate(x, y);
+	context.rotate((-2 * Math.PI) / 180);
+	context.fillRect(0, 0, w, 80);
+	context.restore();
 }

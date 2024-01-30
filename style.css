@@ -38,13 +38,16 @@ h1 {
 h2 {
 	font-size: 30px;
 }
-
+.nav-links img {
+	width: 8%;
+}
 p,
 li {
 	font-family: "Roboto", sans-serif;
 	width: 40%;
 }
 nav a {
+	margin: 0 auto;
 	text-decoration: underline 6px lime;
 	font-size: 10pt;
 	background-color: transparent;
@@ -60,20 +63,21 @@ a {
 }
 
 .logo {
-	width: 80px;
-	height: 80px;
+	height: 70px;
+	margin-left: 3.5%;
 }
 
-nav {
-	margin-top: 30px;
+.nav-links {
+	text-align: center;
 	display: flex;
 	justify-content: space-between;
+	margin: 0px;
+	margin-bottom: 10px;
 }
-
 .nav-links li {
-	padding: 40px;
+	padding: 0px;
 	display: inline;
-	margin: 20px;
+	margin: 0px;
 }
 .person {
 	margin: 30px 60px;
@@ -89,7 +93,11 @@ nav {
 }
 .departments {
 	display: flex;
-	justify-content: space-between;
+	padding-top: 10px;
+	padding-bottom: 5px;
+	background-color: #9a00ff;
+	flex-wrap: wrap;
+	justify-content: center;
 }
 .buttonStaff,
 .buttonGrade,
@@ -113,8 +121,14 @@ nav {
 }
 .staff {
 	margin: 0 auto;
+	text-align: center;
 	width: 60%;
 }
+.buttonStaff {
+	margin-right: 20px;
+	margin-bottom: 5px;
+}
+
 .departments [id^="button"]:checked + label.buttonStaff,
 .buttonStaff:hover,
 .buttons [id^="button"]:checked + label.buttonGrade,
@@ -596,6 +610,12 @@ main div {
 	}
 }
 @media only screen and (max-width: 1400px) {
+	.logo {
+		margin-left: 70%;
+		margin-top: 10px;
+		width: 20%;
+		height: 100%;
+	}
 	nav {
 		margin-top: 0px;
 	}
@@ -618,7 +638,7 @@ main div {
 		flex-direction: column;
 		gap: var(--hamburger-gap);
 		width: max-content;
-		position: absolute;
+		position: absolute; /*change menu position*/
 		top: var(--hamburger-margin);
 		left: var(--hamburger-margin);
 		z-index: 2;
@@ -677,8 +697,9 @@ main div {
 		height: 100vh;
 		font-size: 20pt;
 		padding: 40px;
-		padding-top: 100px;
+		padding-top: 120px;
 		order: -1;
+		margin-top: -15%;
 	}
 	.hamburger-menu:has(input:checked) + .sidebar {
 		translate: 0;
@@ -866,6 +887,9 @@ main div {
 		text-align: center;
 		margin: 15px;
 	}
+	.departments {
+		background-color: transparent;
+	}
 	.staff {
 		margin: 0 auto;
 	}
@@ -891,6 +915,9 @@ main div {
 	}
 	.error {
 		display: block;
+	}
+	.error img {
+		width: 100%;
 	}
 	#rabbitImage {
 		display: none;
