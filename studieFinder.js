@@ -5,7 +5,6 @@ let width = window.innerWidth;
 let height = window.innerHeight;
 let mouseXPos = 0;
 let mouseYpos = 0;
-let choiceXPos = 0;
 let choices = [];
 let stage = 0;
 let mouseIsDown = false;
@@ -202,6 +201,7 @@ function decision62() {
 	context.strokeText("text", width / 2 + 100, height / 2 - 100);
 }
 function mouseClickDown(eventData) {
+	console.log(eventData);
 	if (
 		stage == 0 &&
 		mouseYpos > height / 2 - 25 &&
@@ -211,8 +211,8 @@ function mouseClickDown(eventData) {
 	}
 }
 function mousePos(eventdata) {
-	mouseXPos = eventdata.clientX;
-	mouseYpos = eventdata.clientY;
+	mouseXPos = eventdata.pageX;
+	mouseYpos = eventdata.pageY;
 }
 function drawBackground() {
 	rabbitDoodle.style.display = "none";
