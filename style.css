@@ -678,6 +678,7 @@ main div {
 		font-size: 20pt;
 		padding: 40px;
 		padding-top: 100px;
+		order: -1;
 	}
 	.hamburger-menu:has(input:checked) + .sidebar {
 		translate: 0;
@@ -904,7 +905,6 @@ main div {
 
 .error {
 	margin: 0 auto;
-	position: relative;
 	text-align: center;
 	width: 100%;
 }
