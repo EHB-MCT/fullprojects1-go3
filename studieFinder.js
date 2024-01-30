@@ -65,32 +65,32 @@ function drawStartMenu() {
 	context.fillStyle = "#FF00BB";
 	context.strokeStyle = "white";
 	context.beginPath();
-	context.moveTo(900, 395);
-	context.lineTo(width, 375);
-	context.lineTo(width, 450);
-	context.lineTo(900, 470);
+	context.moveTo((width * 78) / 120, (height * 40) / 98);
+	context.lineTo(width, (height * 20) / 50);
+	context.lineTo(width, (height * 24) / 50);
+	context.lineTo((width * 79) / 120, (height * 24) / 50);
 	context.closePath();
 	context.stroke();
 	context.fill();
 	context.font = "50px besides";
 	context.fillStyle = "black";
-	context.fillText("Wat zie ik in mijn", 910, 450);
-	context.fillText("richting?", 1051, 500);
+	context.fillText("Wat zie ik in mijn", (width * 20) / 30, (height * 23) / 50);
+	context.fillText("richting?", (width * 22) / 30, (height * 53) / 100);
 
 	//Welke richting is voor mij?
 	context.fillStyle = "#00E5FF";
 	context.beginPath();
-	context.moveTo(width / 2 - 100, height / 2 - 405);
-	context.lineTo(width / 2 + 500, height / 2 - 395);
-	context.lineTo(width / 2 + 500, height / 2 - 335);
-	context.lineTo(width / 2 - 100, height / 2 - 345);
+	context.moveTo((width * 22) / 50, (height * 2) / 32);
+	context.lineTo((width * 38) / 50, (height * 2) / 32);
+	context.lineTo((width * 38) / 50, (height * 9) / 64);
+	context.lineTo((width * 22) / 50, (height * 9) / 64);
 	context.closePath();
 	context.stroke();
 	context.fill();
 	context.font = "50px besides";
 	context.fillStyle = "black";
-	context.fillText("Welke richting is", 800, 120);
-	context.fillText("voor mij?", 916, 170);
+	context.fillText("Welke richting is", (width * 22) / 48, (height * 4) / 32);
+	context.fillText("voor mij?", (width * 26) / 50, (height * 9) / 50);
 
 	//button
 	context.fillStyle = "#9A00FF";
@@ -101,10 +101,10 @@ function drawStartMenu() {
 
 	//Wat ga ik doen?
 	context.beginPath();
-	context.moveTo(width / 2 - 666, height / 2 - 150);
-	context.lineTo(width / 2 - 166, height / 2 - 100);
-	context.lineTo(width / 2 - 180, height / 2);
-	context.lineTo(width / 2 - 676, height / 2 - 50);
+	context.moveTo((width * 3) / 64, (height * 11) / 32);
+	context.lineTo((width * 22) / 64, (height * 12) / 32);
+	context.lineTo((width * 22) / 64, (height * 15) / 32);
+	context.lineTo((width * 3) / 64, (height * 14) / 32);
 	context.closePath();
 	context.stroke();
 	context.fillStyle = "#43FF00";
