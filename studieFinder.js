@@ -64,14 +64,15 @@ function drawStartMenu() {
 	// Wat zie ik in mijn richting?
 	context.fillStyle = "#FF00BB";
 	context.strokeStyle = "white";
-	context.beginPath();
-	context.moveTo(900, 395);
-	context.lineTo(width, 375);
-	context.lineTo(width, 450);
-	context.lineTo(900, 470);
-	context.closePath();
-	context.stroke();
-	context.fill();
+	// context.beginPath();
+	// context.moveTo(900, 395);
+	// context.lineTo(width, 375);
+	// context.lineTo(width, 450);
+	// context.lineTo(900, 470);
+	// context.closePath();
+	// context.stroke();
+	// context.fill();
+	highlight("red", 910, 450, 600);
 	context.font = "50px besides";
 	context.fillStyle = "black";
 	context.fillText("Wat zie ik in mijn", 910, 450);
@@ -251,4 +252,13 @@ function drawBackground() {
 	context.lineTo(width - 80, height - 100);
 	context.lineTo(width - 90, height - 120);
 	context.stroke();
+}
+
+function highlight(colour, x, y, w) {
+	context.save();
+	context.fillStyle = colour;
+	context.translate(x, y);
+	context.rotate((-10 * Math.PI) / 180);
+	context.fillRect(0, 0, w, 80);
+	context.restore();
 }
