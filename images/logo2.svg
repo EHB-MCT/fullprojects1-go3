@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 78.78 76.65">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#linear-gradient);
+      }
+
+      .cls-1, .cls-2 {
+        stroke-width: 0px;
+      }
+
+      .cls-2 {
+        fill: none;
+      }
+
+      .cls-3 {
+        fill: #fff;
+        font-family: Insaniburger, Insaniburger;
+        font-size: 32px;
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="-4.59" y1="178.34" x2="99.25" y2="44.08" gradientTransform="translate(0 159.8) scale(1 -1)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#feff2a"/>
+      <stop offset=".99" stop-color="#00d7ff"/>
+    </linearGradient>
+  </defs>
+  <path class="cls-1" d="M78.78,0v65.27c0,6.28-5.1,11.38-11.38,11.38H0V20.44C0,9.15,9.16,0,20.45,0h58.33Z"/>
+  <rect class="cls-2" x="33.47" y="17.46" width="31.13" height="36.36"/>
+  <text class="cls-3" transform="translate(11.86 49.21)"><tspan x="0" y="0">GO!</tspan></text>
+</svg>
