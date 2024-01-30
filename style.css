@@ -709,41 +709,33 @@ main div {
 	}
 
 	.infrastructurePics p {
-		h1 {
-			font-size: 50px;
-		}
-		p {
-			width: 100%;
-			margin: 0 auto;
-		}
-		.doubbleText {
-			flex-direction: column;
-		}
-		[class^="tables"] {
-			flex-direction: column;
-		}
-		h1 {
-			font-size: 50px;
-		}
-		p {
-			width: 100%;
-		}
-		.leefregelimages {
-			width: 80%;
-		}
-		.firstYear,
-		.secondYear,
-		.thirdYear,
-		.fourthYear,
-		.fifthYearDS,
-		.fifthYearDF {
-			width: 75%;
-			box-sizing: border-box;
-			margin: 0 auto;
-		}
+		width: 100%;
+		margin: 0 auto;
 	}
-
-	@media only screen and (max-width: 1400px) {
+	.doubbleText {
+		flex-direction: column;
+	}
+	[class^="tables"] {
+		flex-direction: column;
+	}
+	h1 {
+		font-size: 50px;
+	}
+	p {
+		width: 100%;
+	}
+	.leefregelimages {
+		width: 80%;
+	}
+	.firstYear,
+	.secondYear,
+	.thirdYear,
+	.fourthYear,
+	.fifthYearDS,
+	.fifthYearDF {
+		width: 75%;
+		box-sizing: border-box;
+		margin: 0 auto;
 	}
 
 	.infrastructure {
@@ -757,10 +749,6 @@ main div {
 		text-align: center;
 		width: 30%;
 		margin-bottom: 20px;
-	}
-
-	.infrastructurePics p {
-		margin: 0 auto;
 	}
 
 	.infrastructurePics img {
@@ -821,16 +809,16 @@ main div {
 		width: 700px;
 		margin: 0 auto; /* Center the text horizontally */
 	}
-}
 
-.caroussel {
-	width: 75%;
-}
-.instFaceBtn {
-	flex-direction: column;
-}
-.instFaceBtn a {
-	margin-bottom: 20px;
+	.caroussel {
+		width: 75%;
+	}
+	.instFaceBtn {
+		flex-direction: column;
+	}
+	.instFaceBtn a {
+		margin-bottom: 20px;
+	}
 }
 
 @media screen and (max-width: 1200px) {
