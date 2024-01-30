@@ -6,37 +6,25 @@ let height = window.innerHeight;
 let mouseXPos = 0;
 let mouseYpos = 0;
 let choiceXPos = 0;
-let choiceYpos = 0;
 let choices = [];
-let stage = 1;
+let stage = 0;
 let mouseIsDown = false;
 var rabbitDoodle = document.getElementById("rabbitImage");
 
 window.onmousemove = mousePos;
-window.onmousedown = mouseClickDown;
-window.onmouseup = mouseClickUp;
+window.onclick = mouseClickDown;
 
 setup();
-drawStartMenu();
+draw();
 
 function setup() {
 	context.font = "24px Roboto";
 }
 
 function draw() {
-	drawBackground();
-	choiceButton();
 	phase();
 
-	drawCircle();
-
-	drawStraw(mouseXPos, mouseYpos);
-
 	requestAnimationFrame(draw);
-}
-function drawCircle() {
-	context.fillStyle = "white";
-	utils.fillCircle(choiceXPos, choiceYpos, 20);
 }
 function drawStartMenu() {
 	//arrows
@@ -119,12 +107,10 @@ function drawStartMenu() {
 	rabbitDoodle.style.bottom = "50px";
 	rabbitDoodle.style.left = "277px";
 	rabbitDoodle.style.transform = "rotate(28deg)";
-	
 }
-
 function phase() {
 	if (stage == 0) {
-		startMenu();
+		drawStartMenu();
 	} else if (stage == 1) {
 		decision1();
 	} else if (stage == 2) {
@@ -136,6 +122,7 @@ function phase() {
 	}
 }
 function decision1() {
+	drawBackground();
 	//question 1
 	context.fillText("Ik heb interesse", width / 2 - 150, height / 2 - 165);
 	context.fillText("in de latijnse taal", width / 2 - 150, height / 2 - 125);
@@ -211,31 +198,14 @@ function decision62() {
 	//question 20
 	context.strokeText("text", width / 2 + 100, height / 2 - 100);
 }
-function choiceButton() {
-	context.fillStyle = "orange";
-	context.fillRect(width - 200, height - 100, 200, 100);
-
-	context.fillStyle = "black";
-	context.strokeText("press", width - 180, height - 50);
-
+function mouseClickDown(eventData) {
 	if (
-		choiceXPos != 0 &&
-		mouseXPos > width - 200 &&
-		mouseYpos > height - 100 &&
-		mouseIsDown == true
+		stage == 0 &&
+		mouseYpos > height / 2 - 25 &&
+		mouseYpos < height / 2 + 25
 	) {
-		choiceXPos = 0;
-		choiceYpos = 0;
 		stage++;
 	}
-}
-function mouseClickDown(eventData) {
-	mouseIsDown = true;
-	choiceXPos = eventData.pageX;
-	choiceYpos = eventData.pageY;
-}
-function mouseClickUp(eventData) {
-	mouseIsDown = false;
 }
 function mousePos(eventdata) {
 	mouseXPos = eventdata.clientX;
@@ -243,6 +213,9 @@ function mousePos(eventdata) {
 }
 function drawBackground() {
 	rabbitDoodle.style.display = "none";
+
+	context.fillStyle = "white";
+	context.fillRect(0, 0, width, height);
 
 	context.strokeRect(90, 60, width - 180, height - 180);
 	context.strokeRect(100, 70, width - 200, height - 200);
