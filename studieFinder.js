@@ -119,7 +119,9 @@ function drawStartMenu() {
 	rabbitDoodle.style.bottom = "50px";
 	rabbitDoodle.style.left = "277px";
 	rabbitDoodle.style.transform = "rotate(28deg)";
+	
 }
+
 function phase() {
 	if (stage == 0) {
 		startMenu();
