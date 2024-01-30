@@ -817,7 +817,7 @@ main div {
 	.infrastructureText p {
 		text-align: center;
 		align-items: center;
-		width: 700px;
+		width: 75%;
 		margin: 0 auto; /* Center the text horizontally */
 	}
 }
