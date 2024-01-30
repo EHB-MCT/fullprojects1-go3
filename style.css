@@ -825,6 +825,10 @@ main div {
 	.ContactInformation {
 		display: contents;
 	}
+	.slogan {
+		font-size: 50px;
+		margin: 0;
+	}
 	.textField {
 		margin: 0 auto;
 		margin-bottom: 20px;
