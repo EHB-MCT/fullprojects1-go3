@@ -14,7 +14,6 @@ var rabbitDoodle = document.getElementById("rabbitImage");
 window.onmousemove = mousePos;
 window.onclick = mouseClickDown;
 
-
 setup();
 draw();
 
@@ -77,7 +76,7 @@ function drawStartMenu() {
 	// context.closePath();
 	// context.stroke();
 	// context.fill();
-	highlight("#00E5FF", (width * 22) / 50,(height * 3) / 32, 600);
+	highlight("#00E5FF", (width * 22) / 50, (height * 3) / 32, 600);
 	context.font = "50px besides";
 	context.fillStyle = "black";
 	context.fillText("Welke richting is", (width * 22) / 48, (height * 4) / 32);
@@ -99,7 +98,7 @@ function drawStartMenu() {
 	// context.closePath();
 	// context.stroke();
 	context.fillStyle = "#43FF00";
-	highlight("#43FF00",(width * 3) / 64,(height * 12) / 32, 550);
+	highlight("#43FF00", (width * 3) / 64, (height * 12) / 32, 550);
 	// context.fill();
 	context.fillStyle = "black";
 	context.font = "50px besides";
