@@ -19,7 +19,7 @@ draw();
 function setup() {
 	context.font = "24px Roboto";
 }
-draw();
+// draw();
 function draw() {
 	phase();
 
@@ -27,52 +27,52 @@ function draw() {
 }
 function drawStartMenu() {
 	//arrows
-	context.beginPath();
-	context.arc(666, 300, 50, 0, -2, true);
-	context.moveTo(686, 275);
-	context.lineTo(716, 300);
-	context.lineTo(738, 275);
-	context.stroke();
+	// context.beginPath();
+	// context.arc(666, 300, 50, 0, -2, true);
+	// context.moveTo(686, 275);
+	// context.lineTo(716, 300);
+	// context.lineTo(738, 275);
+	// context.stroke();
 
-	context.beginPath();
-	context.arc(700, 50, 350, 0.4, (Math.PI * 5) / 16);
-	context.moveTo(910, 300);
-	context.lineTo(895, 341);
-	context.lineTo(930, 352);
-	context.stroke();
+	// context.beginPath();
+	// context.arc(700, 50, 350, 0.4, (Math.PI * 5) / 16);
+	// context.moveTo(910, 300);
+	// context.lineTo(895, 341);
+	// context.lineTo(930, 352);
+	// context.stroke();
 
-	context.beginPath();
-	context.arc(910, 300, 150, 1.79, 2.4);
-	context.moveTo(830, 415);
-	context.lineTo(800, 401);
-	context.lineTo(788, 420);
-	context.stroke();
+	// context.beginPath();
+	// context.arc(910, 300, 150, 1.79, 2.4);
+	// context.moveTo(830, 415);
+	// context.lineTo(800, 401);
+	// context.lineTo(788, 420);
+	// context.stroke();
 
 	// Wat zie ik in mijn richting?
 	highlight("#FF00BB", (width * 13) / 20, (height * 20) / 49, 600);
-	context.font = "50px besides";
+	// context.font = "50px besides";
 	context.fillStyle = "black";
 	context.fillText("Wat zie ik in mijn", (width * 20) / 30, (height * 23) / 50);
 	context.fillText("richting?", (width * 22) / 30, (height * 53) / 100);
 
 	//Welke richting is voor mij?
 	highlight("#00E5FF", (width * 22) / 50, (height * 3) / 32, 600);
-	context.font = "50px besides";
+	// context.font = "50px besides";
 	context.fillStyle = "black";
 	context.fillText("Welke richting is", (width * 22) / 48, (height * 4) / 32);
 	context.fillText("voor mij?", (width * 26) / 50, (height * 9) / 50);
 
 	//button
-	context.fillStyle = "#9A00FF";
-	context.fillRect(width / 2 - 80, height / 2 - 25, 160, 50);
-	context.font = "30px Roboto";
-	context.fillStyle = "white";
-	context.fillText("Druk hier", width / 2 - 60, height / 2 + 8);
+	// context.fillStyle = "#9A00FF";
+	// context.fillRect(width / 2 - 80, height / 2 - 25, 160, 50);
+	// // context.font = "30px Roboto";
+	// context.fillStyle = "white";
+	// context.fillText("Druk hier", width / 2 - 60, height / 2 + 8);
 
 	//Wat ga ik doen?
 	highlight("#43FF00", (width * 3) / 64, (height * 12) / 32, 550);
 	context.fillStyle = "black";
-	context.font = "50px besides";
+	// context.font = "50px besides";
 	context.fillText("Wat ga ik doen?", (width * 1) / 16, (height * 6) / 14);
 
 	//rabit image
@@ -180,7 +180,7 @@ function mouseClickDown(event) {
 	const mouseX = (event.clientX - rect.left) * scaleX;
 	const mouseY = (event.clientY - rect.top) * scaleY;
 
-	// utils.fillCircle(mouseX, mouseY, 10);
+	utils.fillCircle(mouseX, mouseY, 10);
 	if (
 		stage == 0 &&
 		mouseY > height / 2 - 25 &&
@@ -206,6 +206,20 @@ function mousePos(event) {
 	const mouseY = (event.clientY - rect.top) * scaleY;
 	return { mouseX: mouseX, mouseY: mouseY };
 }
+// function mousePos(event) {
+// 	const rect = canvas.getBoundingClientRect();
+// 	const scaleX = canvas.width / rect.width;
+// 	const scaleY = canvas.height / rect.height;
+
+// 	// Adjust for the container's margin
+// 	const marginX = container.getBoundingClientRect().left - rect.left;
+// 	const marginY = container.getBoundingClientRect().top - rect.top;
+
+// 	const mouseX = (event.clientX - rect.left - marginX) * scaleX;
+// 	const mouseY = (event.clientY - rect.top - marginY) * scaleY;
+
+// 	console.log(mouseX, mouseY);
+// }
 function drawBackground() {
 	rabbitDoodle.style.display = "none";
 
