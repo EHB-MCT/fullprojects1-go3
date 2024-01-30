@@ -38,7 +38,9 @@ h1 {
 h2 {
 	font-size: 30px;
 }
-
+.nav-links img{
+	width: 8%;
+}
 p,
 li {
 	font-family: "Roboto", sans-serif;
@@ -60,20 +62,21 @@ a {
 }
 
 .logo {
-	width: 80px;
-	height: 80px;
+	height: 70px;
+	margin-left: 40px; 
+	margin-top: 10px;
 }
 
-nav {
-	margin-top: 30px;
+.nav-links{
 	display: flex;
 	justify-content: space-between;
+	margin: 0px;
 }
-
 .nav-links li {
-	padding: 40px;
+	
+	padding: 0px;
 	display: inline;
-	margin: 20px;
+	margin: 0px;
 }
 .person {
 	margin: 30px 60px;
@@ -596,6 +599,12 @@ main div {
 	}
 }
 @media only screen and (max-width: 1400px) {
+	.logo{ 
+		margin-left: 70%;
+		margin-top: 10px;
+		width: 20%;
+		height: 100%;
+	}
 	nav {
 		margin-top: 0px;
 	}
