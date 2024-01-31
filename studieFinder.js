@@ -7,7 +7,8 @@ let mouseX = 0;
 let mouseY = 0;
 let choices = [];
 let stage = 0;
-var rabbitDoodle = document.getElementById("rabbitImage");
+let rabbitDoodle = document.getElementById("rabbitImage");
+let backBtn = document.getElementById("backButton");
 
 window.onmousemove = mousePos;
 window.onclick = mouseClickDown;
@@ -22,7 +23,7 @@ function setup() {
 
 function draw() {
 	phase();
-	guide();
+	// guide();
 	backButton();
 	requestAnimationFrame(draw);
 }
@@ -124,7 +125,7 @@ function drawStartMenu() {
 	context.font = "50px besides";
 	context.fillText("Wat ga ik doen?", (width * 1) / 16, (height * 6) / 14);
 
-	//rabit image
+	//rabbit image
 	rabbitDoodle.style.position = "absolute";
 	rabbitDoodle.style.width = "220px";
 	rabbitDoodle.style.bottom = "50px";
@@ -162,7 +163,14 @@ function textSelect(mouseX, mouseY, optionA, optionB) {
 	}
 }
 function backButton() {
-	context.fillRect(0, (height * 9) / 10, width / 10, height);
+	backBtn.style.display = "initial";
+	context.strokeStyle = "black";
+	context.lineWidth = 6;
+	backBtn.style.position = "absolute";
+	backBtn.style.width = "220px";
+	backBtn.style.bottom = "50px";
+	backBtn.style.left = "277px";
+	// context.fillRect(0, (height * 9) / 10, width / 10, height);
 }
 function textSelect2(mouseX, mouseY, optionA, optionB, optionC) {
 	if (
@@ -416,6 +424,8 @@ function mousePos(event) {
 }
 function drawBackground() {
 	rabbitDoodle.style.display = "none";
+	backButton();
+	context.lineWidth = 1;
 
 	context.fillStyle = "white";
 	context.fillRect(0, 0, width, height);

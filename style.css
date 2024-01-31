@@ -601,6 +601,9 @@ main div {
 	padding: 0px;
 	margin: 0px;
 }
+.quizDoodles img {
+	display: none;
+}
 @media only screen and (min-width: 1400px) {
 	.sidebar {
 		display: none;
