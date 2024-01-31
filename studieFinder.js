@@ -18,8 +18,9 @@ draw();
 
 function setup() {
 	context.font = "24px Roboto";
+	drawStartMenu();
 }
-// draw();
+
 function draw() {
 	phase();
 
@@ -50,29 +51,29 @@ function drawStartMenu() {
 
 	// Wat zie ik in mijn richting?
 	highlight("#FF00BB", (width * 13) / 20, (height * 20) / 49, 600);
-	// context.font = "50px besides";
 	context.fillStyle = "black";
+	context.font = "50px besides";
 	context.fillText("Wat zie ik in mijn", (width * 20) / 30, (height * 23) / 50);
 	context.fillText("richting?", (width * 22) / 30, (height * 53) / 100);
 
 	//Welke richting is voor mij?
 	highlight("#00E5FF", (width * 22) / 50, (height * 3) / 32, 600);
-	// context.font = "50px besides";
 	context.fillStyle = "black";
+	context.font = "50px besides";
 	context.fillText("Welke richting is", (width * 22) / 48, (height * 4) / 32);
 	context.fillText("voor mij?", (width * 26) / 50, (height * 9) / 50);
 
 	//button
-	// context.fillStyle = "#9A00FF";
-	// context.fillRect(width / 2 - 80, height / 2 - 25, 160, 50);
-	// // context.font = "30px Roboto";
-	// context.fillStyle = "white";
-	// context.fillText("Druk hier", width / 2 - 60, height / 2 + 8);
+	context.fillStyle = "#9A00FF";
+	context.fillRect(width / 2 - 80, height / 2 - 25, 160, 50);
+	context.font = "30px Roboto";
+	context.fillStyle = "white";
+	context.fillText("Druk hier", width / 2 - 60, height / 2 + 8);
 
 	//Wat ga ik doen?
 	highlight("#43FF00", (width * 3) / 64, (height * 12) / 32, 550);
 	context.fillStyle = "black";
-	// context.font = "50px besides";
+	context.font = "50px besides";
 	context.fillText("Wat ga ik doen?", (width * 1) / 16, (height * 6) / 14);
 
 	//rabit image
@@ -83,9 +84,7 @@ function drawStartMenu() {
 	rabbitDoodle.style.transform = "rotate(28deg)";
 }
 function phase() {
-	if (stage == 0) {
-		drawStartMenu();
-	} else if (stage == 1) {
+	if (stage == 1) {
 		decision1();
 	} else if (stage == 2) {
 		decision2();
@@ -95,42 +94,104 @@ function phase() {
 		decision4();
 	}
 }
-function decision1() {
-	drawBackground();
-	//question 1
-	context.fillText("Ik heb interesse", width / 2 - 150, height / 2 - 165);
-	context.fillText("in de latijnse taal", width / 2 - 150, height / 2 - 125);
-	context.fillText("en geschiedenis", width / 2 - 150, height / 2 - 85);
-	//question 2
-	context.fillText("TEST22", width / 2 + 100, height / 2 - 100);
-
-	if (choiceXPos < width / 2 && mouseIsDown == true) {
-		choices.push("1");
-	} else if (choiceXPos > width / 2 && mouseIsDown == true) {
-		choices.push("2");
+function textSelect(mouseX, mouseY, optionA, optionB) {
+	if (
+		mouseX > width / 8 &&
+		mouseX < width / 2 &&
+		mouseY > height / 4 &&
+		mouseY < (height * 3) / 5
+	) {
+		return optionA;
+	} else if (
+		mouseX < width &&
+		mouseX > width / 2 &&
+		mouseY > height / 4 &&
+		mouseY < (height * 3) / 5
+	) {
+		return optionB;
 	}
 }
+
+function textSelect2(mouseX, mouseY, optionA, optionB, optionC) {
+	if (
+		mouseX > (width * 3) / 19 &&
+		mouseX < (width * 3) / 19 + 510 &&
+		mouseY > (height * 2) / 9 &&
+		mouseY < (height * 2) / 9 + 25
+	) {
+		return optionA;
+	} else if (
+		mouseX > (width * 47) / 80 &&
+		mouseX < width / 2 &&
+		mouseY > (height * 4) / 14 &&
+		mouseY < (height * 3) / 5
+	) {
+		return optionB;
+	} else if (
+		mouseX > (width * 2) / 7 &&
+		mouseX < (width * 5) / 7 &&
+		mouseY > (height * 4) / 7 &&
+		mouseY < (height * 5) / 7
+	) {
+		return optionC;
+	}
+}
+function textSelect3(mouseX, mouseY, optionA, optionB, optionC, optionD) {
+	if (
+		mouseX > width / 8 &&
+		mouseX < width / 2 &&
+		mouseY > (height * 2) / 9 &&
+		mouseY < (height * 4) / 9
+	) {
+		return optionA;
+	} else if (
+		mouseX < width &&
+		mouseX > width / 2 &&
+		mouseY > (height * 2) / 9 &&
+		mouseY < (height * 4) / 9
+	) {
+		return optionB;
+	}
+	if (
+		mouseX > width / 8 &&
+		mouseX < width / 2 &&
+		mouseY > (height * 6) / 9 &&
+		mouseY < (height * 8) / 9
+	) {
+		return optionC;
+	} else if (
+		mouseX < width &&
+		mouseX > width / 2 &&
+		mouseY > (height * 6) / 9 &&
+		mouseY < (height * 8) / 9
+	) {
+		return optionD;
+	}
+}
+function decision1() {
+	drawBackground();
+	context.fillStyle = "black";
+
+	//question 1
+	context.fillText("Ik heb interesse", width / 8, height / 2 - 165);
+	context.fillText("in de latijnse taal", width / 8, height / 2 - 125);
+	context.fillText("en geschiedenis", width / 8, height / 2 - 85);
+	//question 2
+	context.fillText("TEST22", width / 2 + 100, height / 2 - 100);
+}
 function decision2() {
+	drawBackground();
+	context.fillStyle = "black";
 	//question 3
 	context.fillText("IDK", width / 2 - 150, height / 2 - 100);
 	//question 4
 	context.fillText("WHAT THE FUCK", width / 2 + 100, height / 2 - 100);
 	//question 5
 	context.fillText("text", width / 2, height / 2 - 100);
-
-	if (choiceXPos < (width * 1) / 3 && mouseIsDown == true) {
-		choices.push("1");
-	} else if (
-		choiceXPos > (width * 1) / 3 &&
-		choiceXPos < (width * 2) / 3 &&
-		mouseIsDown == true
-	) {
-		choices.push("2");
-	} else if (choiceXPos > (width * 2) / 3 && mouseIsDown == true) {
-		choices.push("3");
-	}
 }
 function decision3() {
+	drawBackground();
+	context.fillStyle = "black";
 	//question 6
 	context.fillText("this is question 3", width / 2 - 150, height / 2 - 100);
 	//question 7
@@ -141,6 +202,8 @@ function decision3() {
 	context.fillText("text", width / 2 + 100, height / 2 - 100);
 }
 function decision4() {
+	drawBackground();
+	context.fillStyle = "black";
 	//question 10
 	context.fillText("text", width / 2 - 150, height / 2 - 100);
 	//question 11
@@ -180,23 +243,49 @@ function mouseClickDown(event) {
 	const mouseX = (event.clientX - rect.left) * scaleX;
 	const mouseY = (event.clientY - rect.top) * scaleY;
 
-	utils.fillCircle(mouseX, mouseY, 10);
+	// utils.fillCircle(mouseX, mouseY, 10);
 	if (
 		stage == 0 &&
 		mouseY > height / 2 - 25 &&
 		mouseY < height / 2 + 25 &&
 		mouseX > width / 2 - 80 &&
-		mouseX < width + 80
+		mouseX < width / 2 + 80
 	) {
 		stage++;
 	}
+	//context.fillRect(width / 8, height / 4, (width * 3) / 8, height / 3);
+	else if (stage == 1) {
+		let result = textSelect(mouseX, mouseY, "a", "b");
+		choices.push(result);
+		console.log(choices);
+		stage++;
+	} else if (stage == 2) {
+		let result = textSelect2(mouseX, mouseY, "c", "d", "e");
+		choices.push(result);
+		console.log(choices);
+		stage++;
+	} else if (stage == 3) {
+		let result = textSelect3(mouseX, mouseY, "f", "g", "h", "i");
+		choices.push(result);
+		console.log(choices);
+		stage++;
+	} else if (stage == 4) {
+		let result = textSelect(mouseX, mouseY, "j", "k");
+		choices.push(result);
+		console.log(choices);
+		stage++;
+	} else if (stage == 5) {
+		let result = textSelect(mouseX, mouseY, "l", "m");
+		choices.push(result);
+		console.log(choices);
+		stage++;
+	} else if (stage == 6) {
+		let result = textSelect(mouseX, mouseY, "n", "o");
+		choices.push(result);
+		console.log(choices);
+		stage++;
+	}
 }
-// function mousePos(eventdata) {
-// 	// console.log(window.innerHeight * 0.05);
-// 	mouseXPos = eventdata.pageX - 60;
-// 	mouseYpos = eventdata.pageY - 140;
-// 	console.log("yPos " + mouseYpos + "; x pos " + mouseXPos);
-// }
 function mousePos(event) {
 	const rect = context.canvas.getBoundingClientRect();
 	const scaleX = context.canvas.width / rect.width;
@@ -206,20 +295,6 @@ function mousePos(event) {
 	const mouseY = (event.clientY - rect.top) * scaleY;
 	return { mouseX: mouseX, mouseY: mouseY };
 }
-// function mousePos(event) {
-// 	const rect = canvas.getBoundingClientRect();
-// 	const scaleX = canvas.width / rect.width;
-// 	const scaleY = canvas.height / rect.height;
-
-// 	// Adjust for the container's margin
-// 	const marginX = container.getBoundingClientRect().left - rect.left;
-// 	const marginY = container.getBoundingClientRect().top - rect.top;
-
-// 	const mouseX = (event.clientX - rect.left - marginX) * scaleX;
-// 	const mouseY = (event.clientY - rect.top - marginY) * scaleY;
-
-// 	console.log(mouseX, mouseY);
-// }
 function drawBackground() {
 	rabbitDoodle.style.display = "none";
 
