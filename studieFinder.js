@@ -7,14 +7,13 @@ let mouseX = 0;
 let mouseY = 0;
 let choices = [];
 let stage = 0;
-let mouseIsDown = false;
 var rabbitDoodle = document.getElementById("rabbitImage");
 
 window.onmousemove = mousePos;
 window.onclick = mouseClickDown;
 
 setup();
-draw();
+decision3();
 
 function setup() {
 	context.font = "24px Roboto";
@@ -98,41 +97,99 @@ function phase() {
 function decision1() {
 	drawBackground();
 	//question 1
-	context.fillText("Ik heb interesse", width / 2 - 150, height / 2 - 165);
-	context.fillText("in de latijnse taal", width / 2 - 150, height / 2 - 125);
-	context.fillText("en geschiedenis", width / 2 - 150, height / 2 - 85);
-	//question 2
-	context.fillText("TEST22", width / 2 + 100, height / 2 - 100);
+	context.fillStyle = "#00E5FF";
+	context.fillRect((width * 3) / 19, height / 2.6, 480, 30);
 
-	if (choiceXPos < width / 2 && mouseIsDown == true) {
-		choices.push("1");
-	} else if (choiceXPos > width / 2 && mouseIsDown == true) {
-		choices.push("2");
-	}
+	context.fillStyle = "black";
+	context.font = "32px Roboto";
+	context.fillText("Ik heb interesse in de", width / 5, (height * 18) / 56);
+	context.fillText(
+		"in de latijnse taal en geschiedenis",
+		(width * 3) / 19,
+		(height * 6) / 16
+	);
+
+	//question 2
+	context.fillStyle = "#43FF00";
+	context.fillRect((width * 10) / 16, height / 2.6, 425, 30);
+
+	context.fillStyle = "black";
+	context.font = "32px Roboto";
+	context.fillText("Ik heb interesse in", (width * 2) / 3, (height * 15) / 56);
+	context.fillText("het ontdekken", (width * 17) / 25, (height * 18) / 56);
+	context.fillText(
+		"van hedendaagse problemen.",
+		(width * 10) / 16,
+		(height * 6) / 16
+	);
 }
 function decision2() {
-	//question 3
-	context.fillText("IDK", width / 2 - 150, height / 2 - 100);
-	//question 4
-	context.fillText("WHAT THE FUCK", width / 2 + 100, height / 2 - 100);
-	//question 5
-	context.fillText("text", width / 2, height / 2 - 100);
+	drawBackground();
 
-	if (choiceXPos < (width * 1) / 3 && mouseIsDown == true) {
-		choices.push("1");
-	} else if (
-		choiceXPos > (width * 1) / 3 &&
-		choiceXPos < (width * 2) / 3 &&
-		mouseIsDown == true
-	) {
-		choices.push("2");
-	} else if (choiceXPos > (width * 2) / 3 && mouseIsDown == true) {
-		choices.push("3");
-	}
+	//question 3
+	context.fillStyle = "#FF8901";
+	context.fillRect((width * 3) / 19, (height * 22) / 60, 510, 25);
+	context.fillStyle = "black";
+	context.font = "32px Roboto";
+	context.fillText(
+		"Ik heb interesse in de griekse taal,",
+		(width * 3) / 19,
+		(height * 2) / 9
+	);
+	context.fillText(
+		"latijnse taal en cultuur,",
+		(width * 4) / 20,
+		(height * 4) / 14
+	);
+	context.fillText(
+		"en de hedendaagse impact hiervan.",
+		(width * 3) / 19,
+		(height * 7) / 20
+	);
+	//question 4
+	context.fillStyle = "#FF00BB";
+	context.fillRect((width * 3) / 5, (height * 22) / 60, 510, 25);
+
+	context.fillStyle = "black";
+	context.font = "32px Roboto";
+	context.fillText(
+		"Ik ben geinteresseerd in de bussiness",
+		(width * 47) / 80,
+		(height * 4) / 14
+	);
+	context.fillText(
+		"en economie in onze samenleving",
+		(width * 3) / 5,
+		(height * 7) / 20
+	);
+	//question 5
+	context.fillStyle = "#43FF00";
+	context.fillRect((width * 5) / 13, (height * 37) / 60, 495, 25);
+
+	context.fillStyle = "black";
+	context.font = "32px Roboto";
+	context.fillText(
+		"Ik ben geïnteresseerd in business",
+		(width * 5) / 13,
+		(height * 8) / 15
+	);
+	context.fillText(
+		"en economie in onze samenleving.",
+		(width * 5) / 13,
+		(height * 9) / 15
+	);
 }
 function decision3() {
+	drawBackground();
 	//question 6
-	context.fillText("this is question 3", width / 2 - 150, height / 2 - 100);
+	context.fillStyle = "black";
+	context.font = "32px Roboto";
+	context.fillText("Ik vraag me af", (width * 1) / 7, (height * 2) / 7);
+	context.fillText(
+		"wat economie allemaal inhoudt.",
+		width / 2 - 150,
+		height / 2 - 100
+	);
 	//question 7
 	context.fillText("text", width / 2 + 100, height / 2 - 100);
 	//question 8
