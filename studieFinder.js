@@ -6,7 +6,7 @@ let height = window.innerHeight;
 let mouseX = 0;
 let mouseY = 0;
 let choices = [];
-let stage = 0;
+let stage = 3;
 let rabbitDoodle = document.getElementById("rabbitImage");
 let backBtn = document.getElementById("backButton");
 
@@ -23,8 +23,7 @@ function setup() {
 
 function draw() {
 	phase();
-	// guide();
-	backButton();
+	guide();
 	requestAnimationFrame(draw);
 }
 function guide() {
@@ -32,7 +31,7 @@ function guide() {
 	let maxH = 40;
 	for (let i = 0; i <= max; i++) {
 		for (let j = 0; j <= maxH; j++) {
-			if (i == 6 || i == 19 || j == 7 || j == 16 || i == 25 || i == 37) {
+			if (i == 23 || i == 37 || j == 11 || j == 16) {
 				context.strokeStyle = "red";
 			} else {
 				context.strokeStyle = "black";
@@ -133,6 +132,12 @@ function drawStartMenu() {
 	rabbitDoodle.style.transform = "rotate(28deg)";
 }
 function phase() {
+	if (stage == 0) {
+		context.fillStyle = "white";
+		context.fillRect(0, 0, width, height);
+		drawStartMenu();
+		backBtn.style.display = "none";
+	}
 	if (stage == 1) {
 		decision1();
 	} else if (stage == 2) {
@@ -167,33 +172,33 @@ function backButton() {
 	context.strokeStyle = "black";
 	context.lineWidth = 6;
 	backBtn.style.position = "absolute";
-	backBtn.style.width = "220px";
-	backBtn.style.bottom = "50px";
-	backBtn.style.left = "277px";
-	// context.fillRect(0, (height * 9) / 10, width / 10, height);
+	backBtn.style.width = "100px";
+	backBtn.style.bottom = "5%";
+	backBtn.style.left = "10vw";
+	context.fillRect(0, (height * 9) / 10, width / 10, height);
 }
 function textSelect2(mouseX, mouseY, optionA, optionB, optionC) {
 	if (
-		mouseX > (width * 3) / 19 &&
-		mouseX < (width * 3) / 19 + 510 &&
-		mouseY > (height * 2) / 9 &&
-		mouseY < (height * 2) / 9 + 25
+		mouseX > (width * 6) / 40 &&
+		mouseX < (width * 20) / 40 &&
+		mouseY > (height * 8) / 40 &&
+		mouseY < (height * 16) / 40
 	) {
 		stage++;
 		choices.push(optionA);
 	} else if (
-		mouseX > (width * 47) / 80 &&
-		mouseX < width / 2 &&
-		mouseY > (height * 4) / 14 &&
-		mouseY < (height * 3) / 5
+		mouseX > (width * 23) / 40 &&
+		mouseX < (width * 38) / 40 &&
+		mouseY > (height * 8) / 40 &&
+		mouseY < (height * 17) / 40
 	) {
 		stage++;
 		choices.push(optionB);
 	} else if (
-		mouseX > (width * 2) / 7 &&
-		mouseX < (width * 5) / 7 &&
-		mouseY > (height * 4) / 7 &&
-		mouseY < (height * 5) / 7
+		mouseX > (width * 15) / 40 &&
+		mouseX < (width * 29) / 40 &&
+		mouseY > (height * 20) / 40 &&
+		mouseY < (height * 26) / 40
 	) {
 		stage++;
 		choices.push(optionC);
@@ -201,35 +206,35 @@ function textSelect2(mouseX, mouseY, optionA, optionB, optionC) {
 }
 function textSelect3(mouseX, mouseY, optionA, optionB, optionC, optionD) {
 	if (
-		mouseX > width / 8 &&
-		mouseX < width / 2 &&
-		mouseY > (height * 2) / 9 &&
-		mouseY < (height * 4) / 9
+		mouseX > (width * 5) / 40 &&
+		mouseX < (width * 20) / 40 &&
+		mouseY > (height * 11) / 40 &&
+		mouseY < (height * 16) / 40
 	) {
 		stage++;
 		choices.push(optionA);
 	} else if (
-		mouseX < width &&
-		mouseX > width / 2 &&
-		mouseY > (height * 2) / 9 &&
-		mouseY < (height * 4) / 9
+		mouseX > (width * 23) / 40 &&
+		mouseX < (width * 37) / 40 &&
+		mouseY > (height * 11) / 40 &&
+		mouseY < (height * 16) / 40
 	) {
 		stage++;
 		choices.push(optionB);
 	}
 	if (
-		mouseX > width / 8 &&
-		mouseX < width / 2 &&
-		mouseY > (height * 6) / 9 &&
-		mouseY < (height * 8) / 9
+		mouseX > (width * 5) / 40 &&
+		mouseX < (width * 20) / 40 &&
+		mouseY > (height * 23) / 40 &&
+		mouseY < (height * 29) / 40
 	) {
 		stage++;
 		choices.push(optionC);
 	} else if (
-		mouseX < width &&
-		mouseX > width / 2 &&
-		mouseY > (height * 6) / 9 &&
-		mouseY < (height * 8) / 9
+		mouseX > (width * 23) / 40 &&
+		mouseX < (width * 37) / 40 &&
+		mouseY > (height * 23) / 40 &&
+		mouseY < (height * 29) / 40
 	) {
 		stage++;
 		choices.push(optionD);
@@ -546,7 +551,6 @@ function mouseClickDown(event) {
 	const mouseX = (event.clientX - rect.left) * scaleX;
 	const mouseY = (event.clientY - rect.top) * scaleY;
 
-	// utils.fillCircle(mouseX, mouseY, 10);
 	if (
 		stage == 0 &&
 		mouseY > height / 2 - 25 &&
@@ -561,19 +565,21 @@ function mouseClickDown(event) {
 		textSelect2(mouseX, mouseY, "c", "d", "e");
 	} else if (stage == 3) {
 		textSelect3(mouseX, mouseY, "f", "g", "h", "i");
-
-		// } else if (stage == 4) {
-		// 	let result = textSelect(mouseX, mouseY, "j", "k");
-		// 	choices.push(result);
-		// 	stage++;
-		// } else if (stage == 5) {
-		// 	let result = textSelect(mouseX, mouseY, "l", "m");
-		// 	choices.push(result);
-		// 	stage++;
-		// } else if (stage == 6) {
-		// 	let result = textSelect(mouseX, mouseY, "n", "o");
-		// 	choices.push(result);
-		// 	stage++;
+	} else if (stage == 4) {
+		textSelect(mouseX, mouseY, "j", "k");
+	} else if (stage == 5) {
+		textSelect(mouseX, mouseY, "l", "m");
+	} else if (stage == 6) {
+		textSelect(mouseX, mouseY, "n", "o");
+	}
+	if (
+		mouseY > (height * 31) / 40 &&
+		mouseY < (height * 34) / 40 &&
+		mouseX > (width * 3) / 40 &&
+		mouseX < (width * 5) / 40
+	) {
+		choices.pop();
+		stage--;
 	}
 	console.log(choices);
 }
@@ -613,26 +619,3 @@ function highlight(colour, x, y, w) {
 	context.fillRect(0, 0, w, 80);
 	context.restore();
 }
-
-function drawMultilineText(text, x, y, maxWidth) {
-	var words = text.split(" ");
-	var currentLine = "";
-	var lineHeight = 50; // Adjust as needed
-
-	for (var i = 0; i < words.length; i++) {
-		var testLine = currentLine + words[i] + " ";
-		var metrics = context.measureText(testLine);
-		var testWidth = metrics.width;
-
-		if (testWidth > maxWidth && i > 0) {
-			context.fillText(currentLine, x, y);
-			currentLine = words[i] + " ";
-			y += lineHeight;
-		} else {
-			currentLine = testLine;
-		}
-	}
-
-	context.fillText(currentLine, x, y);
-}
-function result1() {}
