@@ -13,7 +13,7 @@ window.onmousemove = mousePos;
 window.onclick = mouseClickDown;
 
 setup();
-decision3();
+draw();
 
 function setup() {
 	context.font = "24px Roboto";
@@ -22,9 +22,48 @@ function setup() {
 
 function draw() {
 	phase();
-
+	guide();
+	backButton();
 	requestAnimationFrame(draw);
 }
+function guide() {
+	let max = 40;
+	let maxH = 40;
+	for (let i = 0; i <= max; i++) {
+		for (let j = 0; j <= maxH; j++) {
+			if (i == 6 || i == 19 || j == 7 || j == 16 || i == 25 || i == 37) {
+				context.strokeStyle = "red";
+			} else {
+				context.strokeStyle = "black";
+			}
+			utils.drawLine((width * i) / max, 0, (width * i) / max, height);
+			utils.drawLine(0, (height * j) / maxH, width, (height * j) / maxH);
+		}
+	}
+}
+
+function drawMultilineText(text, x, y, maxWidth) {
+	let words = text.split(" ");
+	let currentLine = "";
+	let lineHeight = 50; // Adjust as needed
+
+	for (let i = 0; i < words.length; i++) {
+		let testLine = currentLine + words[i] + " ";
+		let metrics = context.measureText(testLine);
+		let testWidth = metrics.width;
+
+		if (testWidth > maxWidth && i > 0) {
+			context.fillText(currentLine, x, y);
+			currentLine = words[i] + " ";
+			y += lineHeight;
+		} else {
+			currentLine = testLine;
+		}
+	}
+
+	context.fillText(currentLine, x, y);
+}
+
 function drawStartMenu() {
 	//arrows
 	// context.beginPath();
@@ -52,15 +91,25 @@ function drawStartMenu() {
 	highlight("#FF00BB", (width * 13) / 20, (height * 20) / 49, 600);
 	context.fillStyle = "black";
 	context.font = "50px besides";
-	context.fillText("Wat zie ik in mijn", (width * 20) / 30, (height * 23) / 50);
-	context.fillText("richting?", (width * 22) / 30, (height * 53) / 100);
+	drawMultilineText(
+		"Wat zie ik in mijn richting?",
+		(width * 19) / 30,
+		(height * 23) / 50,
+		(width * 3) / 10
+	);
+	// context.fillText("richting?", (width * 22) / 30, (height * 53) / 100);
 
 	//Welke richting is voor mij?
-	highlight("#00E5FF", (width * 22) / 50, (height * 3) / 32, 600);
+	highlight("#00E5FF", (width * 19) / 48, (height * 3) / 32, 600);
 	context.fillStyle = "black";
 	context.font = "50px besides";
-	context.fillText("Welke richting is", (width * 22) / 48, (height * 4) / 32);
-	context.fillText("voor mij?", (width * 26) / 50, (height * 9) / 50);
+	drawMultilineText(
+		"Welke richting is voor mij",
+		(width * 20) / 48,
+		(height * 4) / 32,
+		(width * 4) / 10
+	);
+	// context.fillText("voor mij?", (width * 26) / 50, (height * 9) / 50);
 
 	//button
 	context.fillStyle = "#9A00FF";
@@ -95,22 +144,26 @@ function phase() {
 }
 function textSelect(mouseX, mouseY, optionA, optionB) {
 	if (
-		mouseX > width / 8 &&
-		mouseX < width / 2 &&
-		mouseY > height / 4 &&
-		mouseY < (height * 3) / 5
+		mouseX > (width * 6) / 40 &&
+		mouseX < (width * 19) / 40 &&
+		mouseY > (height * 9) / 40 &&
+		mouseY < (height * 17) / 40
 	) {
-		return optionA;
+		stage++;
+		choices.push(optionA);
 	} else if (
-		mouseX < width &&
-		mouseX > width / 2 &&
-		mouseY > height / 4 &&
-		mouseY < (height * 3) / 5
+		mouseX > (width * 25) / 40 &&
+		mouseX < (width * 37) / 40 &&
+		mouseY > (height * 9) / 40 &&
+		mouseY < (height * 17) / 40
 	) {
-		return optionB;
+		stage++;
+		choices.push(optionB);
 	}
 }
-
+function backButton() {
+	context.fillRect(0, (height * 9) / 10, width / 10, height);
+}
 function textSelect2(mouseX, mouseY, optionA, optionB, optionC) {
 	if (
 		mouseX > (width * 3) / 19 &&
@@ -118,21 +171,24 @@ function textSelect2(mouseX, mouseY, optionA, optionB, optionC) {
 		mouseY > (height * 2) / 9 &&
 		mouseY < (height * 2) / 9 + 25
 	) {
-		return optionA;
+		stage++;
+		choices.push(optionA);
 	} else if (
 		mouseX > (width * 47) / 80 &&
 		mouseX < width / 2 &&
 		mouseY > (height * 4) / 14 &&
 		mouseY < (height * 3) / 5
 	) {
-		return optionB;
+		stage++;
+		choices.push(optionB);
 	} else if (
 		mouseX > (width * 2) / 7 &&
 		mouseX < (width * 5) / 7 &&
 		mouseY > (height * 4) / 7 &&
 		mouseY < (height * 5) / 7
 	) {
-		return optionC;
+		stage++;
+		choices.push(optionC);
 	}
 }
 function textSelect3(mouseX, mouseY, optionA, optionB, optionC, optionD) {
@@ -142,14 +198,16 @@ function textSelect3(mouseX, mouseY, optionA, optionB, optionC, optionD) {
 		mouseY > (height * 2) / 9 &&
 		mouseY < (height * 4) / 9
 	) {
-		return optionA;
+		stage++;
+		choices.push(optionA);
 	} else if (
 		mouseX < width &&
 		mouseX > width / 2 &&
 		mouseY > (height * 2) / 9 &&
 		mouseY < (height * 4) / 9
 	) {
-		return optionB;
+		stage++;
+		choices.push(optionB);
 	}
 	if (
 		mouseX > width / 8 &&
@@ -157,14 +215,16 @@ function textSelect3(mouseX, mouseY, optionA, optionB, optionC, optionD) {
 		mouseY > (height * 6) / 9 &&
 		mouseY < (height * 8) / 9
 	) {
-		return optionC;
+		stage++;
+		choices.push(optionC);
 	} else if (
 		mouseX < width &&
 		mouseX > width / 2 &&
 		mouseY > (height * 6) / 9 &&
 		mouseY < (height * 8) / 9
 	) {
-		return optionD;
+		stage++;
+		choices.push(optionD);
 	}
 }
 function decision1() {
@@ -323,38 +383,27 @@ function mouseClickDown(event) {
 		mouseX < width / 2 + 80
 	) {
 		stage++;
-	}
-	else if (stage == 1) {
-		let result = textSelect(mouseX, mouseY, "a", "b");
-		choices.push(result);
-		console.log(choices);
-		stage++;
+	} else if (stage == 1) {
+		textSelect(mouseX, mouseY, "a", "b");
 	} else if (stage == 2) {
-		let result = textSelect2(mouseX, mouseY, "c", "d", "e");
-		choices.push(result);
-		console.log(choices);
-		stage++;
+		textSelect2(mouseX, mouseY, "c", "d", "e");
 	} else if (stage == 3) {
-		let result = textSelect3(mouseX, mouseY, "f", "g", "h", "i");
-		choices.push(result);
-		console.log(choices);
-		stage++;
-	} else if (stage == 4) {
-		let result = textSelect(mouseX, mouseY, "j", "k");
-		choices.push(result);
-		console.log(choices);
-		stage++;
-	} else if (stage == 5) {
-		let result = textSelect(mouseX, mouseY, "l", "m");
-		choices.push(result);
-		console.log(choices);
-		stage++;
-	} else if (stage == 6) {
-		let result = textSelect(mouseX, mouseY, "n", "o");
-		choices.push(result);
-		console.log(choices);
-		stage++;
+		textSelect3(mouseX, mouseY, "f", "g", "h", "i");
+
+		// } else if (stage == 4) {
+		// 	let result = textSelect(mouseX, mouseY, "j", "k");
+		// 	choices.push(result);
+		// 	stage++;
+		// } else if (stage == 5) {
+		// 	let result = textSelect(mouseX, mouseY, "l", "m");
+		// 	choices.push(result);
+		// 	stage++;
+		// } else if (stage == 6) {
+		// 	let result = textSelect(mouseX, mouseY, "n", "o");
+		// 	choices.push(result);
+		// 	stage++;
 	}
+	console.log(choices);
 }
 function mousePos(event) {
 	const rect = context.canvas.getBoundingClientRect();
