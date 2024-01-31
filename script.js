@@ -76,3 +76,4 @@ document.addEventListener("DOMContentLoaded", function () {
 		.querySelector(".arrowRight")
 		.addEventListener("click", () => handleArrowClick("right"));
 });
+
