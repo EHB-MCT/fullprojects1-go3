@@ -23,7 +23,7 @@ function setup() {
 
 function draw() {
 	phase();
-	// guide();
+	//guide();
 	requestAnimationFrame(draw);
 }
 function guide() {
@@ -31,7 +31,7 @@ function guide() {
 	let maxH = 40;
 	for (let i = 0; i <= max; i++) {
 		for (let j = 0; j <= maxH; j++) {
-			if (i == 23 || i == 37 || j == 11 || j == 16) {
+			if (i == 3 || i == 6 || j == 29 || j == 34) {
 				context.strokeStyle = "red";
 			} else {
 				context.strokeStyle = "black";
@@ -123,6 +123,7 @@ function drawStartMenu() {
 	context.fillText("Wat ga ik doen?", (width * 1) / 16, (height * 6) / 14);
 
 	//rabbit image
+	rabbitDoodle.style.display = "initial";
 	rabbitDoodle.style.position = "absolute";
 	rabbitDoodle.style.width = "220px";
 	rabbitDoodle.style.bottom = "50px";
@@ -131,8 +132,7 @@ function drawStartMenu() {
 }
 function phase() {
 	if (stage == 0) {
-		context.fillStyle = "white";
-		context.fillRect(0, 0, width, height);
+		context.clearRect(0, 0, width, height);
 		drawStartMenu();
 		backBtn.style.display = "none";
 	}
@@ -173,7 +173,6 @@ function backButton() {
 	backBtn.style.width = "100px";
 	backBtn.style.bottom = "5%";
 	backBtn.style.left = "10vw";
-	context.fillRect(0, (height * 9) / 10, width / 10, height);
 }
 function textSelect2(mouseX, mouseY, optionA, optionB, optionC) {
 	if (
@@ -524,6 +523,7 @@ function mouseClickDown(event) {
 	const mouseX = (event.clientX - rect.left) * scaleX;
 	const mouseY = (event.clientY - rect.top) * scaleY;
 
+	// start button
 	if (
 		stage == 0 &&
 		mouseY > height / 2 - 25 &&
@@ -532,7 +532,9 @@ function mouseClickDown(event) {
 		mouseX < width / 2 + 80
 	) {
 		stage++;
-	} else if (stage == 1) {
+	}
+	// stages
+	else if (stage == 1) {
 		textSelect(mouseX, mouseY, "a", "b");
 	} else if (stage == 2) {
 		textSelect2(mouseX, mouseY, "c", "d", "e");
@@ -545,11 +547,13 @@ function mouseClickDown(event) {
 	} else if (stage == 6) {
 		textSelect(mouseX, mouseY, "n", "o");
 	}
+	//back button
 	if (
-		mouseY > (height * 31) / 40 &&
+		stage != 0 &&
+		mouseY > (height * 29) / 40 &&
 		mouseY < (height * 34) / 40 &&
 		mouseX > (width * 3) / 40 &&
-		mouseX < (width * 5) / 40
+		mouseX < (width * 6) / 40
 	) {
 		choices.pop();
 		stage--;
@@ -567,14 +571,16 @@ function mousePos(event) {
 }
 function drawBackground() {
 	rabbitDoodle.style.display = "none";
+	context.clearRect(0, 0, width, height);
 	backButton();
 	context.lineWidth = 1;
 
 	context.fillStyle = "white";
-	context.fillRect(0, 0, width, height);
+	context.fillRect(100, 70, width - 200, height - 200);
 
 	context.strokeRect(90, 60, width - 180, height - 180);
 	context.strokeRect(100, 70, width - 200, height - 200);
+
 	context.strokeStyle = "black";
 	context.beginPath();
 	context.moveTo(90, height - 120);
