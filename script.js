@@ -77,3 +77,13 @@ document.addEventListener("DOMContentLoaded", function () {
 		.addEventListener("click", () => handleArrowClick("right"));
 });
 
+window.addEventListener("DOMContentLoaded", (event) => {
+	const paragraphs = document.querySelectorAll(".item p");
+
+	paragraphs.forEach((paragraph) => {
+		// Check if the content doesn't overflows
+		if (paragraph.scrollHeight <= paragraph.clientHeight) {
+			paragraph.classList.add("hide-scrollbar");
+		}
+	});
+});
