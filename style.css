@@ -88,6 +88,40 @@ a {
 	text-decoration: none;
 }
 
+.eventText a {
+	position: relative;
+	overflow: hidden;
+	margin-top: 20px;
+	padding: 12px;
+	background-color: #9a00ff;
+	font-family: "besides";
+	color: rgb(255, 255, 255);
+	text-decoration: none;
+}
+
+.eventText a::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 0;
+	height: 100%;
+	background: black;
+	z-index: -1;
+	transition: width 0.3s ease-in-out;
+	border-radius: 0; /* Removed border-radius */
+}
+
+.eventText a:hover::before {
+	width: 100%;
+}
+
+.eventText a:hover {
+	background: none;
+}
+.eventText p {
+	margin-bottom: 3%;
+}
 .logo {
 	height: 70px;
 	margin-left: 3.5%;
@@ -135,6 +169,7 @@ a {
 	font-family: "besides";
 	color: rgb(255, 255, 255);
 }
+
 .buttonFactuur {
 	margin-bottom: 0;
 }
@@ -251,11 +286,32 @@ textarea::placeholder {
 	text-decoration: none;
 	border: 0px;
 }
-.Messege button:hover {
-	background-color: black;
-	text-decoration: underline;
-	cursor: pointer;
+.Messege button {
+	position: relative;
+	overflow: hidden;
 }
+
+.Messege button::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 0;
+	height: 100%;
+	background: black;
+	z-index: -1;
+	transition: width 0.3s ease-in-out;
+	border-radius: 0; /* Removed border-radius */
+}
+
+.Messege button:hover::before {
+	width: 100%;
+}
+
+.Messege button:hover {
+	background: none;
+}
+
 .textField {
 	text-align: left;
 	vertical-align: top;
@@ -323,7 +379,7 @@ td {
 .buttons [id^="button"] {
 	display: none;
 }
-.courseText{
+.courseText {
 	margin-left: 6.5%;
 }
 .hiddenDiv {
@@ -380,6 +436,7 @@ main div {
 }
 .eventText {
 	margin-left: 100px;
+	z-index: 1;
 }
 
 .eventText h2 {
@@ -436,18 +493,6 @@ main div {
 	flex-direction: column;
 	width: 40%;
 }
-/* .download {
-	display: flex;
-	justify-content: center;
-} */
-
-/* .ssh {
-	display: flex;
-	text-align: center;
-}
-.ssh p {
-	font-family: "besides";
-} */
 .item {
 	min-width: 300px;
 	height: 70vh;
@@ -457,6 +502,7 @@ main div {
 	padding: 25px;
 	display: flex;
 	flex-direction: column;
+	z-index: 1;
 }
 .item img {
 	width: 100%;
@@ -471,7 +517,12 @@ main div {
 	height: 30%;
 	overflow-y: scroll;
 	margin-bottom: 30px;
+	
 }
+.hide-scrollbar {
+    overflow-y: hidden !important; /* Important to override the initial styling */
+}
+
 .instaContainer {
 	margin-top: auto;
 }
@@ -553,8 +604,37 @@ main div {
 	text-align: left;
 }
 .rules a {
-	margin-top: 100px;
+	position: relative;
+	overflow: hidden;
+	margin-top: 20px;
+	padding: 12px;
+	background-color: #9a00ff;
+	font-family: "besides";
+	color: rgb(255, 255, 255);
+	text-decoration: none;
 }
+
+.rules a::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 0;
+	height: 100%;
+	background: black;
+	z-index: -1;
+	transition: width 0.3s ease-in-out;
+	border-radius: 0; /* Removed border-radius */
+}
+
+.rules a:hover::before {
+	width: 100%;
+}
+
+.rules a:hover {
+	background: none;
+}
+
 .GO p {
 	text-align: left;
 	width: 75%;
@@ -589,10 +669,56 @@ main div {
 		rgba(150, 47, 191, 1) 93%,
 		rgba(79, 91, 213, 1) 100%
 	);
+
+	position: relative;
+	overflow: hidden;
+}
+
+.instagrambtn::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 0;
+	height: 100%;
+	background: rgb(0, 0, 0);
+	z-index: -1;
+	transition: width 0.3s ease-in-out;
+	border-radius: 0; /* Removed border-radius */
+}
+
+.instagrambtn:hover::before {
+	width: 100%;
+}
+
+.instagrambtn:hover {
+	background: none;
 }
 .facebookbtn {
 	background: #316ff6;
+	position: relative;
+	overflow: hidden;
 }
+.facebookbtn::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 0;
+	height: 100%;
+	background: black;
+	z-index: -1;
+	transition: width 0.3s ease-in-out;
+	border-radius: 0; /* Removed border-radius */
+}
+.facebookbtn:hover::before {
+	width: 100%;
+}
+
+.facebookbtn:hover {
+	background: none;
+}
+
 .instFaceBtn {
 	display: flex;
 	flex-direction: row;
@@ -603,19 +729,27 @@ main div {
 	margin: 0 20px;
 }
 
-.eventlist::-webkit-scrollbar-thumb {
+.eventlist::-webkit-scrollbar-thumb,
+.item p::-webkit-scrollbar-thumb {
 	background: #ff00bb;
 	border-radius: 10px;
+	
 }
-.eventlist::-webkit-scrollbar {
+.eventlist::-webkit-scrollbar,
+.item p::-webkit-scrollbar {
 	width: 10px;
+	
 }
-.eventlist::-webkit-scrollbar-track {
+.eventlist::-webkit-scrollbar-track,
+.item p::-webkit-scrollbar-track {
 	box-shadow: inset 0 0 5px grey;
 	border-radius: 10px;
+	
 }
-.eventlist::-webkit-scrollbar-thumb:hover {
+.eventlist::-webkit-scrollbar-thumb:hover,
+.item p::-webkit-scrollbar-thumb:hover {
 	background: #ca259e;
+
 }
 
 .icons {
@@ -643,8 +777,12 @@ main div {
 	}
 }
 @media only screen and (max-width: 1400px) {
-	.hiddenDiv{margin-left: 12%;}
-	.courseText{margin-left: 12%;}
+	.hiddenDiv {
+		margin-left: 12%;
+	}
+	.courseText {
+		margin-left: 12%;
+	}
 	.logo {
 		margin-left: 70%;
 		margin-top: 10px;
@@ -927,12 +1065,10 @@ main div {
 	}
 	.departments {
 		background-color: transparent;
+		flex-direction: column;
 	}
 	.staff {
 		margin: 0 auto;
-	}
-	.departments {
-		flex-direction: column;
 	}
 	.buttonStaff {
 		margin-top: 5px;
@@ -977,4 +1113,3 @@ main div {
 	text-align: center;
 	width: 100%;
 }
-
