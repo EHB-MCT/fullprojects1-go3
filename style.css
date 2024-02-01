@@ -600,7 +600,23 @@ main div {
 .doubbleText {
 	display: flex;
 }
+.article{ 
+	text-align: center;
 
+}
+.article img{
+	width: 80%;
+	height:400px;
+	aspect-ratio: 1/1;
+	object-fit: cover; 
+}
+.article h1{margin-bottom: 20px;}
+.article p{
+	margin: 0 auto;
+	margin-top: 40px;
+	margin-bottom: 40px;
+	width: 75%;
+}
 .GO,
 .rules {
 	flex: 1;
