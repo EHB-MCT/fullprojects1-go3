@@ -15,6 +15,7 @@ window.onclick = mouseClickDown;
 
 setup();
 draw();
+draw();
 
 function setup() {
 	context.font = "24px Roboto";
@@ -41,7 +42,6 @@ function guide() {
 		}
 	}
 }
-
 function drawMultilineText(text, x, y, maxWidth) {
 	let words = text.split(" ");
 	let currentLine = "";
@@ -60,7 +60,6 @@ function drawMultilineText(text, x, y, maxWidth) {
 			currentLine = testLine;
 		}
 	}
-
 	context.fillText(currentLine, x, y);
 }
 
@@ -255,15 +254,16 @@ function decision1() {
 
 	//question 1
 	context.fillStyle = "#00E5FF";
-	context.fillRect((width * 3) / 19, (height * 5) / 13, 480, 30);
+	context.fillRect((width * 3) / 20, (height * 5) / 13, 480, 30);
 
 	context.fillStyle = "black";
 	context.font = "32px Roboto";
-	context.fillText("Ik heb interesse in de", width / 5, (height * 18) / 56);
-	context.fillText(
-		"in de latijnse taal en geschiedenis",
-		(width * 3) / 19,
-		(height * 6) / 16
+
+	drawMultilineText(
+		"Ik heb interesse in de in de latijnse taal en geschiedenis",
+		(width * 3) / 20,
+		(height * 15) / 56,
+		width / 5
 	);
 
 	//question 2
@@ -272,12 +272,11 @@ function decision1() {
 
 	context.fillStyle = "black";
 	context.font = "32px Roboto";
-	context.fillText("Ik heb interesse in", (width * 2) / 3, (height * 15) / 56);
-	context.fillText("het ontdekken", (width * 17) / 25, (height * 18) / 56);
-	context.fillText(
-		"van hedendaagse problemen.",
+	drawMultilineText(
+		"Ik heb interesse in het ontdekken van hedendaagse problemen.",
 		(width * 10) / 16,
-		(height * 6) / 16
+		(height * 15) / 56,
+		width / 5
 	);
 }
 function decision2() {
@@ -285,146 +284,121 @@ function decision2() {
 
 	//question 3
 	context.fillStyle = "#FF8901";
-	context.fillRect((width * 3) / 19, (height * 22) / 60, 510, 25);
+	context.fillRect((width * 3) / 19, (height * 22) / 60, width / 5, 25);
 	context.fillStyle = "black";
 	context.font = "32px Roboto";
-	context.fillText(
-		"Ik heb interesse in de griekse taal,",
+	drawMultilineText(
+		"Ik heb interesse in de griekse taal, latijnse taal en cultuur, en de hedendaagse impact hiervan.",
 		(width * 3) / 19,
-		(height * 2) / 9
+		(height * 5) / 36,
+		width / 5
 	);
-	context.fillText(
-		"latijnse taal en cultuur,",
-		(width * 4) / 20,
-		(height * 4) / 14
-	);
-	context.fillText(
-		"en de hedendaagse impact hiervan.",
-		(width * 3) / 19,
-		(height * 7) / 20
-	);
+
 	//question 4
 	context.fillStyle = "#FF00BB";
-	context.fillRect((width * 3) / 5, (height * 22) / 60, 510, 25);
+	context.fillRect((width * 3) / 5, (height * 22) / 60, width / 5, 25);
 
 	context.fillStyle = "black";
 	context.font = "32px Roboto";
-	context.fillText(
-		"Ik ben geinteresseerd in de bussiness",
-		(width * 47) / 80,
-		(height * 4) / 14
+	drawMultilineText(
+		"Ik ben geinteresseerd in de bussiness en economie in onze samenleving",
+		(width * 48) / 80,
+		(height * 7) / 36,
+		width / 5
 	);
-	context.fillText(
-		"en economie in onze samenleving",
-		(width * 3) / 5,
-		(height * 7) / 20
-	);
+
 	//question 5
 	context.fillStyle = "#43FF00";
-	context.fillRect((width * 5) / 13, (height * 37) / 60, 495, 25);
+	context.fillRect((width * 5) / 13, (height * 43) / 60, width / 5, 25);
 
 	context.fillStyle = "black";
 	context.font = "32px Roboto";
-	context.fillText(
-		"Ik ben geïnteresseerd in business",
+	drawMultilineText(
+		"Ik ben geïnteresseerd in business en economie in onze samenleving.",
 		(width * 5) / 13,
-		(height * 8) / 15
-	);
-	context.fillText(
-		"en economie in onze samenleving.",
-		(width * 5) / 13,
-		(height * 9) / 15
+		(height * 9) / 15,
+		width / 5
 	);
 }
 function decision3() {
 	drawBackground();
 	//question 6
 	context.fillStyle = "#00E5FF";
-	context.fillRect((width * 1) / 7, (height * 22) / 60, 460, 25);
+	context.fillRect((width * 1) / 7, (height * 22) / 60, width / 5, 25);
 
 	context.fillStyle = "black";
 	context.font = "32px Roboto";
-	context.fillText("Ik vraag me af", (width * 2) / 10, (height * 6) / 20);
-	context.fillText(
-		"wat economie allemaal inhoudt.",
+	drawMultilineText(
+		"Ik vraag me af wat economie allemaal inhoudt.",
 		(width * 1) / 7,
-		(height * 7) / 20
+		(height * 5) / 20,
+		(width * 1) / 5
 	);
 	//question 7
 	context.fillStyle = "#FF00BB";
-	context.fillRect((width * 24) / 38, (height * 22) / 60, 350, 25);
+	context.fillRect((width * 25) / 39, (height * 22) / 60, width / 5, 25);
 
 	context.fillStyle = "black";
 	context.font = "32px Roboto";
-	context.fillText("Ik heb interesse", (width * 25) / 38, (height * 6) / 20);
-	context.fillText(
-		"in hoe een bedrijf werkt.",
-		(width * 24) / 38,
-		(height * 7) / 20
+	drawMultilineText(
+		"Ik heb interesse in hoe een bedrijf werkt.",
+		(width * 25) / 39,
+		(height * 6) / 20,
+		(width * 1) / 5
 	);
+
 	//question 8
 	context.fillStyle = "#43FF00";
-	context.fillRect((width * 1) / 7, (height * 68) / 100, 500, 25);
+	context.fillRect((width * 1) / 7, (height * 68) / 100, (width * 1) / 5, 25);
 
 	context.fillStyle = "black";
 	context.font = "32px Roboto";
 
-	context.fillText(
-		"Ik heb belangstelling",
-		(width * 4) / 21,
-		(height * 61) / 100
-	);
-	context.fillText(
-		"voor de mens en onze samenleving",
+	drawMultilineText(
+		"Ik heb belangstelling voor de mens en onze samenleving.",
 		(width * 1) / 7,
-		(height * 2) / 3
+		(height * 56) / 100,
+		(width * 1) / 5
 	);
-
 	//question 9
 	context.fillStyle = "#FF8901";
-	context.fillRect((width * 11) / 19, (height * 68) / 100, 510, 25);
+	context.fillRect((width * 25) / 39, (height * 68) / 100, width / 5, 25);
 
 	context.fillStyle = "black";
 	context.font = "32px Roboto";
-	context.fillText(
-		"ik heb interesse in",
+	drawMultilineText(
+		"Ik heb interesse in biologie, chemie en/of natuurkunde.",
 		(width * 25) / 39,
-		(height * 61) / 100
-	);
-	context.fillText(
-		"biologie, chemie en/of natuurkunde.",
-		(width * 11) / 19,
-		(height * 2) / 3
+		(height * 56) / 100,
+		(width * 1) / 5
 	);
 }
 function decision4() {
 	drawBackground();
 	//question 10
 	context.fillStyle = "#00E5FF";
-	context.fillRect((width * 3) / 19, height / 2.6, 350, 30);
+	context.fillRect((width * 7) / 40, height / 2.6, 370, 30);
 
 	context.fillStyle = "black";
 	context.font = "32px Roboto";
-	context.fillText(
-		"Ik ben nog niet zeker",
+	drawMultilineText(
+		"Ik ben nog niet zeker of ik wil verder studeren.",
 		(width * 7) / 40,
-		(height * 18) / 56
+		(height * 18) / 56,
+		(width * 1) / 5
 	);
-	context.fillText(
-		"of ik wil verder studeren.",
-		(width * 3) / 19,
-		(height * 6) / 16
-	);
+
 	//question 11
 	context.fillStyle = "#FF00BB";
 	context.fillRect((width * 10) / 16, (height * 5) / 13, 390, 30);
 
 	context.fillStyle = "black";
 	context.font = "32px Roboto";
-	context.fillText(
+	drawMultilineText(
 		"Ik wil graag verder studeren",
 		(width * 10) / 16,
-		(height * 6) / 16
+		(height * 6) / 16,
+		(width * 2) / 5
 	);
 }
 function decision51() {
