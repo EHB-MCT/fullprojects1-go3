@@ -297,7 +297,7 @@ td {
 .buttons [id^="button"] {
 	display: none;
 }
-.courseText{
+.courseText {
 	margin-left: 6.5%;
 }
 .hiddenDiv {
@@ -617,8 +617,12 @@ main div {
 	}
 }
 @media only screen and (max-width: 1400px) {
-	.hiddenDiv{margin-left: 12%;}
-	.courseText{margin-left: 12%;}
+	.hiddenDiv {
+		margin-left: 12%;
+	}
+	.courseText {
+		margin-left: 12%;
+	}
 	.logo {
 		margin-left: 70%;
 		margin-top: 10px;
@@ -898,12 +902,10 @@ main div {
 	}
 	.departments {
 		background-color: transparent;
+		flex-direction: column;
 	}
 	.staff {
 		margin: 0 auto;
-	}
-	.departments {
-		flex-direction: column;
 	}
 	.buttonStaff {
 		margin-top: 5px;
@@ -948,4 +950,3 @@ main div {
 	text-align: center;
 	width: 100%;
 }
-

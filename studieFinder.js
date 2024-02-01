@@ -6,7 +6,7 @@ let height = window.innerHeight;
 let mouseX = 0;
 let mouseY = 0;
 let choices = [];
-let stage = 3;
+let stage = 0;
 let rabbitDoodle = document.getElementById("rabbitImage");
 let backBtn = document.getElementById("backButton");
 
@@ -23,7 +23,7 @@ function setup() {
 
 function draw() {
 	phase();
-	guide();
+	// guide();
 	requestAnimationFrame(draw);
 }
 function guide() {
