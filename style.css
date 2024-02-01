@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Delius+Unicase&family=Roboto&display=swap");
 
 @font-face {
-	font-family: "besides",sans-serif;
+	font-family: "besides", sans-serif;
 	src: url("./font/Besides-2Om9K.ttf") format("opentype");
 	font-weight: normal;
 	font-style: normal;
@@ -53,12 +53,12 @@ body {
 }
 h1,
 h2 {
-	font-family: "besides",sans-serif;
+	font-family: "besides", sans-serif;
 	text-decoration: underline;
 	text-decoration-color: lime;
 }
 h3 {
-	font-family: "besides",sans-serif;
+	font-family: "besides", sans-serif;
 }
 h1 {
 	text-align: center;
@@ -88,7 +88,7 @@ a {
 	margin-top: 20px;
 	padding: 12px;
 	background-color: #9a00ff;
-	font-family: "besides",sans-serif;
+	font-family: "besides", sans-serif;
 	color: rgb(255, 255, 255);
 	text-decoration: none;
 }
@@ -99,7 +99,7 @@ a {
 	margin-top: 20px;
 	padding: 12px;
 	background-color: #9a00ff;
-	font-family: "besides",sans-serif;
+	font-family: "besides", sans-serif;
 	color: rgb(255, 255, 255);
 	text-decoration: none;
 }
@@ -171,9 +171,8 @@ a {
 .buttonFactuur {
 	text-align: center;
 	padding: 20px;
-	padding: 12px;
 	background-color: #9a00ff;
-	font-family: "besides",sans-serif;
+	font-family: "besides", sans-serif;
 	color: rgb(255, 255, 255);
 }
 
@@ -181,8 +180,7 @@ a {
 	margin-bottom: 0;
 }
 .buttonGrade {
-	padding-left: 160px;
-	padding-right: 160px;
+	padding: 20px 140px;
 }
 .departments [id^="button"] {
 	display: none;
@@ -276,7 +274,7 @@ a:hover {
 }
 input::placeholder,
 textarea::placeholder {
-	font-family: "besides",sans-serif;
+	font-family: "besides", sans-serif;
 	padding: 10px;
 }
 .Messege {
@@ -288,7 +286,7 @@ textarea::placeholder {
 	padding: 12px;
 	width: fit-content;
 	background-color: #9a00ff;
-	font-family: "besides",sans-serif;
+	font-family: "besides", sans-serif;
 	color: rgb(255, 255, 255);
 	text-decoration: none;
 	border: 0px;
@@ -352,12 +350,11 @@ textarea::placeholder {
 table {
 	font-family: "Roboto", sans-serif;
 	text-align: center;
-	
 }
 caption {
 	margin-top: 15px;
 	padding: 2px;
-	font-family: "besides",sans-serif;
+	font-family: "besides", sans-serif;
 }
 
 th {
@@ -393,7 +390,7 @@ tr:nth-child(even) {
 
 .buttons {
 	display: flex;
-	justify-content: space-around;
+	justify-content: space-between;
 }
 
 .buttons [id^="button"] {
@@ -406,7 +403,9 @@ tr:nth-child(even) {
 	display: none;
 	align-items: center;
 	text-align: left;
-	margin-left: 6.5%;
+}
+.courses {
+	margin: 0 6.5%;
 }
 
 main div {
@@ -645,7 +644,7 @@ main div {
 	margin-top: 20px;
 	padding: 12px;
 	background-color: #9a00ff;
-	font-family: "besides",sans-serif;
+	font-family: "besides", sans-serif;
 	color: rgb(255, 255, 255);
 	text-decoration: none;
 }
