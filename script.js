@@ -86,4 +86,12 @@ window.addEventListener("DOMContentLoaded", (event) => {
 			paragraph.classList.add("hide-scrollbar");
 		}
 	});
+
+	const container = document.getElementById("container");
+
+	// Check if the container element exists
+	if (container) {
+		// Scroll to the container
+		container.scrollIntoView({ behavior: "smooth", block: "center" });
+	}
 });
