@@ -14,11 +14,11 @@ window.onmousemove = mousePos;
 window.onclick = mouseClickDown;
 
 setup();
-draw();
+//draw();
 
 function setup() {
 	context.font = "24px Roboto";
-	drawStartMenu();
+	result16();
 }
 
 function draw() {
@@ -624,4 +624,494 @@ function highlight(colour, x, y, w) {
 	context.rotate((-2 * Math.PI) / 180);
 	context.fillRect(0, 0, w, 80);
 	context.restore();
+}
+
+function result1() {
+	rabbitDoodle.style.display = "none";
+
+	context.font = "40pt besides";
+	highlight("#43FF00", (width * 1) / 16, (height * 1) / 24, 240);
+	context.fillText("Latijn", width / 14, (height * 5) / 48);
+
+	context.font = "32pt Roboto";
+	context.fillText("Wat houdt dit in?", (width * 6) / 14, (height * 2) / 8);
+
+	context.font = "22pt Roboto";
+	drawMultilineText(
+		"Je maakt kennis met de Latijnse taal en wordt ondergedompeld in de Grieks-Romeinse wereld.",
+		(width * 1) / 14,
+		(height * 3) / 8,
+		(width * 2) / 3
+	);
+}
+
+function result2() {
+	rabbitDoodle.style.display = "none";
+
+	context.font = "40pt besides";
+	highlight("#43FF00", (width * 1) / 16, (height * 5) / 98, (width * 12) / 20);
+	context.fillText("Moderne Wetenschappen", width / 14, (height * 5) / 48);
+
+	context.font = "32pt Roboto";
+	context.fillText("Wat houdt dit in?", (width * 6) / 14, (height * 2) / 8);
+
+	context.font = "22pt Roboto";
+	drawMultilineText(
+		"Je krijgt een dieper inzicht in het functioneren en het leven van mensen in gezinnen, bedrijven, gemeenten, landen of staten.",
+		(width * 1) / 14,
+		(height * 3) / 8,
+		(width * 2) / 3
+	);
+	drawMultilineText(
+		"Wat is inkomen en hoe besteed je het? Hoe ontstaat de prijs van een product of dienst?",
+		(width * 1) / 14,
+		(height * 9) / 16,
+		(width * 2) / 3
+	);
+	drawMultilineText(
+		"Je leert de basisvormen van fysica.",
+		(width * 1) / 14,
+		(height * 12) / 16,
+		(width * 2) / 3
+	);
+}
+
+function result3() {
+	rabbitDoodle.style.display = "none";
+
+	context.font = "40pt besides";
+	highlight("#CCFF00", (width * 1) / 16, (height * 5) / 98, (width * 7) / 20);
+	context.fillText("Klassieke talen", width / 14, (height * 5) / 48);
+
+	context.font = "32pt Roboto";
+	context.fillText("Wat houdt dit in?", (width * 6) / 14, (height * 2) / 8);
+
+	context.font = "22pt Roboto";
+	drawMultilineText(
+		"Je leert de Latijnse en/of Griekse teksten te begrijpen. Je onderzoekt zowel de taal als de cultuur.",
+		(width * 1) / 14,
+		(height * 3) / 8,
+		(width * 2) / 3
+	);
+	drawMultilineText(
+		"Je krijgt inzicht in de invloed van de Grieken en de Romeinen op hedendaagse culturen.",
+		(width * 1) / 14,
+		(height * 9) / 16,
+		(width * 2) / 3
+	);
+}
+
+function result4() {
+	rabbitDoodle.style.display = "none";
+
+	context.font = "40pt besides";
+	highlight("#CCFF00", (width * 1) / 16, (height * 5) / 98, (width * 7) / 20);
+	context.fillText(
+		"Moderne talen en wetenschappen",
+		width / 14,
+		(height * 5) / 48
+	);
+
+	context.font = "32pt Roboto";
+	context.fillText("Wat houdt dit in?", (width * 6) / 14, (height * 2) / 8);
+
+	context.font = "22pt Roboto";
+	drawMultilineText(
+		"Je onderzoekt hoe mensen door hun taal tot een groep of cultuur behoren.",
+		(width * 1) / 14,
+		(height * 3) / 8,
+		(width * 2) / 3
+	);
+	drawMultilineText(
+		"Je leert communiceren in het Nederlands, Frans en/of Engels.",
+		(width * 1) / 14,
+		(height * 17) / 32,
+		(width * 2) / 3
+	);
+
+	drawMultilineText(
+		"Je leert over literatuur, verhalen en gedichten.",
+		(width * 1) / 14,
+		(height * 22) / 32,
+		(width * 2) / 3
+	);
+
+	drawMultilineText(
+		"Je onderzoekt wetenschappelijke verschijnselen en ideeën.",
+		(width * 1) / 14,
+		(height * 27) / 32,
+		(width * 2) / 3
+	);
+}
+
+function result5() {
+	rabbitDoodle.style.display = "none";
+
+	context.font = "40pt besides";
+	highlight("#CCFF00", (width * 1) / 16, (height * 4) / 98, (width * 12) / 20);
+	context.fillText("Economie en organisatie", width / 14, (height * 5) / 48);
+
+	context.font = "32pt Roboto";
+	context.fillText("Wat houdt dit in?", (width * 6) / 14, (height * 2) / 8);
+
+	context.font = "22pt Roboto";
+	drawMultilineText(
+		"Je leert over de sociaal-economische realiteit en actualiteit, vanuit het perspectief van de consument, de bedrijven en de overheid.",
+		(width * 1) / 14,
+		(height * 3) / 8,
+		(width * 2) / 3
+	);
+	drawMultilineText(
+		"Je leert ICT toepassen.",
+		(width * 1) / 14,
+		(height * 19) / 32,
+		(width * 2) / 3
+	);
+
+	drawMultilineText(
+		"Je leert kritisch kijken naar marketing en reclame.",
+		(width * 1) / 14,
+		(height * 24) / 32,
+		(width * 2) / 3
+	);
+
+	drawMultilineText(
+		"Je verwerft inzicht in betaalmiddelen, budgetbeheer, duurzaamheid, en verwante onderwerpen.",
+		(width * 1) / 14,
+		(height * 29) / 32,
+		(width * 2) / 3
+	);
+}
+
+function result6() {
+	rabbitDoodle.style.display = "none";
+
+	context.font = "40pt besides";
+	highlight("#FF00BB", (width * 1) / 16, (height * 5) / 98, (width * 14) / 20);
+	context.fillText("Economische wetenschappen", width / 14, (height * 5) / 48);
+
+	context.font = "32pt Roboto";
+	context.fillText("Wat houdt dit in?", (width * 6) / 14, (height * 2) / 8);
+
+	context.font = "22pt Roboto";
+	drawMultilineText(
+		"Je leert over accounting, recht en internationale handel.",
+		(width * 1) / 14,
+		(height * 3) / 8,
+		(width * 2) / 3
+	);
+	drawMultilineText(
+		"Je krijgt een verdiepte vorm van Engels, Frans, Nederlands en geschiedenis.",
+		(width * 1) / 14,
+		(height * 18) / 32,
+		(width * 2) / 3
+	);
+}
+function result7() {
+	rabbitDoodle.style.display = "none";
+
+	context.font = "40pt besides";
+	highlight("#FF00BB", (width * 1) / 16, (height * 4) / 98, (width * 12) / 20);
+	context.fillText("Humane wetenschappen", width / 14, (height * 5) / 48);
+
+	context.font = "32pt Roboto";
+	context.fillText("Wat houdt dit in?", (width * 6) / 14, (height * 2) / 8);
+
+	context.font = "22pt Roboto";
+	drawMultilineText(
+		"Je krijgt kennis van de wetenschappelijke benadering van de mens en de maatschappij.",
+		(width * 1) / 14,
+		(height * 3) / 8,
+		(width * 2) / 3
+	);
+	drawMultilineText(
+		"Je leert vanuit een gedragswetenschappelijke invalshoek naar het individu en de samenleving te kijken.",
+		(width * 1) / 14,
+		(height * 20) / 32,
+		(width * 2) / 3
+	);
+	drawMultilineText(
+		"Je leert kritische vragen stellen en omgaan met informatie.",
+		(width * 1) / 14,
+		(height * 28) / 32,
+		(width * 2) / 3
+	);
+}
+function result8() {
+	rabbitDoodle.style.display = "none";
+
+	context.font = "40pt besides";
+	highlight("#FF00BB", (width * 1) / 16, (height * 4) / 98, (width * 11) / 20);
+	context.fillText("Bedrijfswetenschappen", width / 14, (height * 5) / 48);
+
+	context.font = "32pt Roboto";
+	context.fillText("Wat houdt dit in?", (width * 6) / 14, (height * 2) / 8);
+
+	context.font = "22pt Roboto";
+	drawMultilineText(
+		"Je leert over algemene economie en bedrijfswetenschappen",
+		(width * 1) / 14,
+		(height * 3) / 8,
+		(width * 2) / 3
+	);
+	drawMultilineText(
+		"Daarnaast gaat er veel aandacht naar vlotte communicatie zowel mondeling als schriftelijk in eigen taal maar ook andere.",
+		(width * 1) / 14,
+		(height * 18) / 32,
+		(width * 2) / 3
+	);
+	drawMultilineText(
+		"Je wordt eveneens geïntroduceerd in de vakgebieden van human resources, verkoop, logistiek, en andere relevante terreinen.",
+		(width * 1) / 14,
+		(height * 25) / 32,
+		(width * 2) / 3
+	);
+}
+
+function result9() {
+	rabbitDoodle.style.display = "none";
+
+	context.font = "40pt besides";
+	highlight("#FF00BB", (width * 1) / 16, (height * 4) / 98, (width * 11) / 20);
+	context.fillText("Natuurwetenschappen", width / 14, (height * 5) / 48);
+
+	context.font = "32pt Roboto";
+	context.fillText("Wat houdt dit in?", (width * 6) / 14, (height * 2) / 8);
+
+	context.font = "22pt Roboto";
+	drawMultilineText(
+		"Je krijgt een uitgebreide vorming biologie,chemie en fysica.",
+		(width * 1) / 14,
+		(height * 3) / 8,
+		(width * 2) / 3
+	);
+	drawMultilineText(
+		"Je ontwikkelt vaardigheden in wetenschappelijk denken en voert tevens praktische experimenten uit tijdens practica.",
+		(width * 1) / 14,
+		(height * 17) / 32,
+		(width * 2) / 3
+	);
+}
+
+function result10() {
+	rabbitDoodle.style.display = "none";
+
+	context.font = "40pt besides";
+	highlight("#00E5FF", (width * 1) / 16, (height * 4) / 98, (width * 12) / 20);
+	context.fillText("Economie-moderne talen", width / 14, (height * 5) / 48);
+
+	context.font = "32pt Roboto";
+	context.fillText("Wat houdt dit in?", (width * 6) / 14, (height * 2) / 8);
+
+	context.font = "22pt Roboto";
+	drawMultilineText(
+		"Je wordt klaargestoomd voor de hogeschool.",
+		(width * 1) / 14,
+		(height * 3) / 8,
+		(width * 2) / 3
+	);
+	drawMultilineText(
+		"Je bestudeert de menselijke relaties binnen een land en tussen landen wereldwijd.",
+		(width * 1) / 14,
+		(height * 17) / 32,
+		(width * 2) / 3
+	);
+	drawMultilineText(
+		"Je behandelt de problemen en relaties die verband houden met het bedrijfsbeleid.",
+		(width * 1) / 14,
+		(height * 24) / 32,
+		(width * 2) / 3
+	);
+	drawMultilineText(
+		"Je leert communicatieve vaardigheden te ontwikkelen.",
+		(width * 1) / 14,
+		(height * 31) / 32,
+		(width * 2) / 3
+	);
+}
+function result11() {
+	rabbitDoodle.style.display = "none";
+
+	context.font = "40pt besides";
+	highlight("#00E5FF", (width * 1) / 16, (height * 4) / 98, (width * 12) / 20);
+	context.fillText("Economie-wiskunde", width / 14, (height * 5) / 48);
+
+	context.font = "32pt Roboto";
+	context.fillText("Wat houdt dit in?", (width * 6) / 14, (height * 2) / 8);
+
+	context.font = "22pt Roboto";
+	drawMultilineText(
+		"Je wordt klaargestoomd voor de hogeschool.",
+		(width * 1) / 14,
+		(height * 3) / 8,
+		(width * 2) / 3
+	);
+	drawMultilineText(
+		"Je bestudeert de menselijke relaties binnen een land en tussen landen wereldwijd.",
+		(width * 1) / 14,
+		(height * 17) / 32,
+		(width * 2) / 3
+	);
+	drawMultilineText(
+		"Je verdiept je in de wiskunde met 7 uur wiskunde per week.",
+		(width * 1) / 14,
+		(height * 24) / 32,
+		(width * 2) / 3
+	);
+}
+function result12() {
+	rabbitDoodle.style.display = "none";
+
+	context.font = "40pt besides";
+	highlight("#00E5FF", (width * 1) / 16, (height * 4) / 98, (width * 11) / 20);
+	context.fillText("Bedrijfswetenschappen", width / 14, (height * 5) / 48);
+
+	context.font = "32pt Roboto";
+	context.fillText("Wat houdt dit in?", (width * 6) / 14, (height * 2) / 8);
+
+	context.font = "22pt Roboto";
+	drawMultilineText(
+		"Je wordt klaargestoomd voor de hogeschool.",
+		(width * 1) / 14,
+		(height * 3) / 8,
+		(width * 2) / 3
+	);
+	drawMultilineText(
+		"Je leert de werking van ondernemingen begrijpen.",
+		(width * 1) / 14,
+		(height * 17) / 32,
+		(width * 2) / 3
+	);
+	drawMultilineText(
+		"Je leert kritisch economische begrippen en hun onderlinge verbanden begrijpen.",
+		(width * 1) / 14,
+		(height * 23) / 32,
+		(width * 2) / 3
+	);
+	drawMultilineText(
+		"Je ontwikkelt inzicht in micro- en macro-economische aspecten.",
+		(width * 1) / 14,
+		(height * 30) / 32,
+		(width * 2) / 3
+	);
+}
+function result13() {
+	rabbitDoodle.style.display = "none";
+
+	context.font = "40pt besides";
+	highlight("#00E5FF", (width * 1) / 16, (height * 4) / 98, (width * 9) / 20);
+	context.fillText("Bedrijfsorganisatie", width / 14, (height * 5) / 48);
+
+	context.font = "32pt Roboto";
+	context.fillText("Wat houdt dit in?", (width * 6) / 14, (height * 2) / 8);
+
+	context.font = "22pt Roboto";
+	drawMultilineText(
+		"Je wordt klaargestoomd voor de hogeschool, maar je hebt ook de mogelijkheid om direct aan het werk te gaan.",
+		(width * 1) / 14,
+		(height * 3) / 8,
+		(width * 2) / 3
+	);
+	drawMultilineText(
+		"Je ontwikkelt inzicht in micro- en macro-economische aspecten.",
+		(width * 1) / 14,
+		(height * 19) / 32,
+		(width * 2) / 3
+	);
+	drawMultilineText(
+		"Je leert kritisch economische begrippen en hun onderlinge verbanden begrijpen.",
+		(width * 1) / 14,
+		(height * 24) / 32,
+		(width * 2) / 3
+	);
+	drawMultilineText(
+		"Je ontwikkelt inzicht in micro- en macro-economische aspecten.",
+		(width * 1) / 14,
+		(height * 31) / 32,
+		(width * 2) / 3
+	);
+}
+function result14() {
+	rabbitDoodle.style.display = "none";
+
+	context.font = "40pt besides";
+	highlight("#00E5FF", (width * 1) / 16, (height * 4) / 98, (width * 13) / 20);
+	context.fillText("Wetenschappen-wiskunde", width / 14, (height * 5) / 48);
+
+	context.font = "32pt Roboto";
+	context.fillText("Wat houdt dit in?", (width * 6) / 14, (height * 2) / 8);
+
+	context.font = "22pt Roboto";
+	drawMultilineText(
+		"Je wordt klaargestoomd voor de hogeschool.",
+		(width * 1) / 14,
+		(height * 3) / 8,
+		(width * 2) / 3
+	);
+	drawMultilineText(
+		"Je verdiept je in wiskunde met 7 uur per week.",
+		(width * 1) / 14,
+		(height * 17) / 32,
+		(width * 2) / 3
+	);
+	drawMultilineText(
+		"Je krijgt vakken zoals aardrijkskunde, biologie, chemie en fysica, waar je feitenmateriaal kritisch gaat analyseren.",
+		(width * 1) / 14,
+		(height * 24) / 32,
+		(width * 2) / 3
+	);
+}
+function result15() {
+	rabbitDoodle.style.display = "none";
+
+	context.font = "40pt besides";
+	highlight("#00E5FF", (width * 1) / 16, (height * 4) / 98, (width * 11) / 20);
+	context.fillText("Humane wetenschappen", width / 14, (height * 5) / 48);
+
+	context.font = "32pt Roboto";
+	context.fillText("Wat houdt dit in?", (width * 6) / 14, (height * 2) / 8);
+
+	context.font = "22pt Roboto";
+	drawMultilineText(
+		"Je wordt klaargestoomd voor de hogeschool.",
+		(width * 1) / 14,
+		(height * 3) / 8,
+		(width * 2) / 3
+	);
+	drawMultilineText(
+		"Je krijgt menswetenschappelijke vakken zoals cultuurwetenschappen en gedragswetenschappen.",
+		(width * 1) / 14,
+		(height * 17) / 32,
+		(width * 2) / 3
+	);
+}
+function result16() {
+	rabbitDoodle.style.display = "none";
+
+	context.font = "40pt besides";
+	highlight("#00E5FF", (width * 1) / 16, (height * 4) / 98, (width * 10) / 20);
+	context.fillText("Taal & communicatie", width / 14, (height * 5) / 48);
+
+	context.font = "32pt Roboto";
+	context.fillText("Wat houdt dit in?", (width * 6) / 14, (height * 2) / 8);
+
+	context.font = "22pt Roboto";
+	drawMultilineText(
+		"Je wordt klaargestoomd voor de hogeschool, maar je hebt ook de mogelijkheid om direct aan het werk te gaan.",
+		(width * 1) / 14,
+		(height * 3) / 8,
+		(width * 2) / 3
+	);
+	drawMultilineText(
+		"Je verdiept je in taalcommunicatievaardigheden in het Duits, Engels, Frans en Nederlands.",
+		(width * 1) / 14,
+		(height * 19) / 32,
+		(width * 2) / 3
+	);
+	drawMultilineText(
+		"Je wordt uitgedaagd op het vlak van de communicatiewetenschappen.",
+		(width * 1) / 14,
+		(height * 26) / 32,
+		(width * 2) / 3
+	);
 }
