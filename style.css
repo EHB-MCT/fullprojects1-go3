@@ -16,37 +16,41 @@ body {
 	margin: 3.5%;
 }
 .slogan {
-	
 	margin: 100px;
 	font-size: 80px;
 	text-align: center;
-
+	margin-bottom: 13.5%;
 }
-.selected-lime{
+.selected-lime {
 	background-color: lime;
-	padding:0 25px;
-	clip-path: polygon(5% 0, 100% 0, 90% 110%, 0% 100%); }
-.selected-yellow{
+	padding: 0 25px;
+	clip-path: polygon(5% 0, 100% 0, 90% 110%, 0% 100%);
+}
+.selected-yellow {
 	background-color: #ccff00;
 	text-decoration: #ccff00;
-	padding:0 55px;
-	clip-path: polygon(5% 0, 100% 0, 90% 110%, 0% 100%); }
-.selected-pink{
+	padding: 0 55px;
+	clip-path: polygon(5% 0, 100% 0, 90% 110%, 0% 100%);
+}
+.selected-pink {
 	background-color: #ff00bb;
 	text-decoration: #ff00bb;
 	color: black;
-	padding:0 35px;
-	clip-path: polygon(5% 0, 100% 0, 90% 110%, 0% 100%); }
-.selected-blue{
+	padding: 0 35px;
+	clip-path: polygon(5% 0, 100% 0, 90% 110%, 0% 100%);
+}
+.selected-blue {
 	background-color: #00e5ff;
 	text-decoration: #00e5ff;
-	padding:0 25px;
-	clip-path: polygon(5% 0, 100% 0, 90% 110%, 0% 100%); }
-.selected-orange{
+	padding: 0 25px;
+	clip-path: polygon(5% 0, 100% 0, 90% 110%, 0% 100%);
+}
+.selected-orange {
 	background-color: orange;
 	text-decoration: orange;
-	padding:0 25px;
-	clip-path: polygon(5% 0, 100% 0, 90% 110%, 0% 100%); }
+	padding: 0 25px;
+	clip-path: polygon(5% 0, 100% 0, 90% 110%, 0% 100%);
+}
 h1,
 h2 {
 	font-family: "besides";
@@ -60,6 +64,7 @@ h1 {
 	text-align: center;
 	font-size: 65px;
 	hyphens: auto;
+	margin-bottom: 7.5%;
 }
 h2 {
 	font-size: 30px;
@@ -124,7 +129,9 @@ a {
 }
 .logo {
 	height: 70px;
+	margin-top: 1.5%;
 	margin-left: 3.5%;
+	margin-bottom: 3.5%;
 }
 
 .nav-links {
@@ -438,6 +445,9 @@ main div {
 	margin-left: 100px;
 	z-index: 1;
 }
+.eventText p {
+	margin-bottom: 3.5%;
+}
 
 .eventText h2 {
 	margin: 0px;
@@ -517,10 +527,9 @@ main div {
 	height: 30%;
 	overflow-y: scroll;
 	margin-bottom: 30px;
-	
 }
 .hide-scrollbar {
-    overflow-y: hidden !important; /* Important to override the initial styling */
+	overflow-y: hidden !important; /* Important to override the initial styling */
 }
 
 .instaContainer {
@@ -591,7 +600,23 @@ main div {
 .doubbleText {
 	display: flex;
 }
+.article{ 
+	text-align: center;
 
+}
+.article img{
+	width: 80%;
+	height:400px;
+	aspect-ratio: 1/1;
+	object-fit: cover; 
+}
+.article h1{margin-bottom: 20px;}
+.article p{
+	margin: 0 auto;
+	margin-top: 40px;
+	margin-bottom: 40px;
+	width: 75%;
+}
 .GO,
 .rules {
 	flex: 1;
@@ -643,6 +668,7 @@ main div {
 .liferules h1,
 .Inschrijvingen {
 	text-align: center;
+	margin-bottom: 12.5%;
 }
 
 .Inschrijvingen p {
@@ -652,6 +678,7 @@ main div {
 	text-decoration: none;
 	font-size: 20px;
 	margin-top: 30px;
+	margin-bottom: 2%;
 }
 .socialMedia {
 	text-align: center;
@@ -660,6 +687,7 @@ main div {
 .socialMedia h2 {
 	font-size: 20pt;
 	text-decoration: none;
+	margin-bottom: 3.5%;
 }
 .instagrambtn {
 	background: linear-gradient(
@@ -733,23 +761,19 @@ main div {
 .item p::-webkit-scrollbar-thumb {
 	background: #ff00bb;
 	border-radius: 10px;
-	
 }
 .eventlist::-webkit-scrollbar,
 .item p::-webkit-scrollbar {
 	width: 10px;
-	
 }
 .eventlist::-webkit-scrollbar-track,
 .item p::-webkit-scrollbar-track {
 	box-shadow: inset 0 0 5px grey;
 	border-radius: 10px;
-	
 }
 .eventlist::-webkit-scrollbar-thumb:hover,
 .item p::-webkit-scrollbar-thumb:hover {
 	background: #ca259e;
-
 }
 
 .icons {
@@ -1022,9 +1046,6 @@ main div {
 	.slogan {
 		font-size: 50px;
 		margin: 0;
-		
-		
-		  
 	}
 	.textField {
 		margin: 0 auto;
