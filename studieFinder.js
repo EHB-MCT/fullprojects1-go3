@@ -1,14 +1,12 @@
 import context from "./context.js";
-import * as utils from "./utils.js";
 
 let width = window.innerWidth;
 let height = window.innerHeight;
-let pageResult = 0;
 let choices = [];
 let stage = 0;
 let rabbitDoodle = document.getElementById("rabbitImage");
 let backBtn = document.getElementById("backButton");
-
+let widthUnderline = (width * 20) / 40 - (width * 6) / 40;
 window.onclick = mouseClickDown;
 
 setup();
@@ -20,23 +18,7 @@ function setup() {
 
 function draw() {
 	phase();
-	//guide();
 	requestAnimationFrame(draw);
-}
-function guide() {
-	let max = 40;
-	let maxH = 40;
-	for (let i = 0; i <= max; i++) {
-		for (let j = 0; j <= maxH; j++) {
-			if (i == 3 || i == 6 || j == 29 || j == 34) {
-				context.strokeStyle = "red";
-			} else {
-				context.strokeStyle = "black";
-			}
-			utils.drawLine((width * i) / max, 0, (width * i) / max, height);
-			utils.drawLine(0, (height * j) / maxH, width, (height * j) / maxH);
-		}
-	}
 }
 function drawMultilineText(text, x, y, maxWidth) {
 	let words = text.split(" ");
@@ -60,37 +42,15 @@ function drawMultilineText(text, x, y, maxWidth) {
 }
 
 function drawStartMenu() {
-	//arrows
-	// context.beginPath();
-	// context.arc(666, 300, 50, 0, -2, true);
-	// context.moveTo(686, 275);
-	// context.lineTo(716, 300);
-	// context.lineTo(738, 275);
-	// context.stroke();
-
-	// context.beginPath();
-	// context.arc(700, 50, 350, 0.4, (Math.PI * 5) / 16);
-	// context.moveTo(910, 300);
-	// context.lineTo(895, 341);
-	// context.lineTo(930, 352);
-	// context.stroke();
-
-	// context.beginPath();
-	// context.arc(910, 300, 150, 1.79, 2.4);
-	// context.moveTo(830, 415);
-	// context.lineTo(800, 401);
-	// context.lineTo(788, 420);
-	// context.stroke();
-
 	// Wat zie ik in mijn richting?
-	highlight("#FF00BB", (width * 13) / 20, (height * 20) / 49, 600);
+	highlight("#FF00BB", (width * 18) / 30, (height * 21) / 50, 600);
 	context.fillStyle = "black";
 	context.font = "50px besides";
 	drawMultilineText(
 		"Wat zie ik in mijn richting?",
 		(width * 19) / 30,
 		(height * 23) / 50,
-		(width * 3) / 10
+		(width * 4) / 10
 	);
 
 	//Welke richting is voor mij?
@@ -168,7 +128,7 @@ function textSelect(mouseX, mouseY, optionA, optionB, ...args) {
 			stage++;
 		}
 	} else if (
-		mouseX > (width * 25) / 40 &&
+		mouseX > (width * 22) / 40 &&
 		mouseX < (width * 37) / 40 &&
 		mouseY > (height * 9) / 40 &&
 		mouseY < (height * 17) / 40
@@ -190,9 +150,9 @@ function backButton() {
 	context.strokeStyle = "black";
 	context.lineWidth = 6;
 	backBtn.style.position = "absolute";
-	backBtn.style.width = "100px";
-	backBtn.style.bottom = "5%";
-	backBtn.style.left = "10vw";
+	backBtn.style.width = "80px";
+	backBtn.style.bottom = "1vh";
+	backBtn.style.left = "11vw";
 }
 function textSelect2(mouseX, mouseY, optionA, optionB, optionC, ...args) {
 	if (
@@ -274,8 +234,8 @@ function textSelect3(
 	} else if (
 		mouseX > (width * 5) / 40 &&
 		mouseX < (width * 20) / 40 &&
-		mouseY > (height * 23) / 40 &&
-		mouseY < (height * 29) / 40
+		mouseY > (height * 22) / 40 &&
+		mouseY < (height * 28) / 40
 	) {
 		if (args[0]) {
 			stage = "resultPage";
@@ -287,8 +247,8 @@ function textSelect3(
 	} else if (
 		mouseX > (width * 23) / 40 &&
 		mouseX < (width * 37) / 40 &&
-		mouseY > (height * 23) / 40 &&
-		mouseY < (height * 29) / 40
+		mouseY > (height * 22) / 40 &&
+		mouseY < (height * 28) / 40
 	) {
 		if (args[0]) {
 			stage = "resultPage";
@@ -305,12 +265,7 @@ function decision1() {
 
 	//question 1
 	context.fillStyle = "#00E5FF";
-	context.fillRect(
-		(width * 6) / 40,
-		(height * 17) / 40 - 30,
-		(width * 19) / 40 - (width * 6) / 40,
-		30
-	);
+	context.fillRect((width * 6) / 40, (height * 16) / 40, widthUnderline, 30);
 
 	context.fillStyle = "black";
 	context.font = "32px Roboto";
@@ -319,15 +274,16 @@ function decision1() {
 		"Ik heb interesse in de latijnse taal en geschiedenis",
 		(width * 6) / 40,
 		(height * 11) / 40 + 32,
-		(width * 19) / 40 - (width * 6) / 40
+		widthUnderline
 	);
 
 	//question 2
 	context.fillStyle = "#43FF00";
 	context.fillRect(
-		(width * 10) / 16,
-		(height * 5) / 13,
-		(width * 37) / 40 - (width * 25) / 40,
+		(width * 22) / 40,
+		(height * 16) / 40,
+		// (width * 37) / 40 - (width * 25) / 40,
+		widthUnderline,
 		30
 	);
 
@@ -335,9 +291,9 @@ function decision1() {
 	context.font = "32px Roboto";
 	drawMultilineText(
 		"Ik heb interesse in het ontdekken van hedendaagse problemen.",
-		(width * 25) / 40,
+		(width * 22) / 40,
 		(height * 11) / 40 + 32,
-		(width * 37) / 40 - (width * 25) / 40
+		widthUnderline
 	);
 }
 function decision2() {
@@ -345,100 +301,75 @@ function decision2() {
 
 	//question 3
 	context.fillStyle = "#FF8901";
-	context.fillRect(
-		(width * 6) / 40,
-		(height * 22) / 60,
-		(width * 20) / 40 - (width * 6) / 40,
-		25
-	);
+	context.fillRect((width * 6) / 40, (height * 22) / 60, widthUnderline, 25);
 	context.fillStyle = "black";
 	context.font = "32px Roboto";
 	drawMultilineText(
 		"Ik heb interesse in de griekse taal, latijnse taal en cultuur, en de hedendaagse impact hiervan.",
 		(width * 6) / 40,
-		(height * 12) / 40,
-		(width * 20) / 40 - (width * 6) / 40
+		(height * 9) / 40,
+		widthUnderline
 	);
 
 	//question 4
 	context.fillStyle = "#FF00BB";
-	context.fillRect(
-		(width * 23) / 40,
-		(height * 22) / 60,
-		(width * 38) / 40 - (width * 25) / 40,
-		25
-	);
+	context.fillRect((width * 23) / 40, (height * 22) / 60, widthUnderline, 25);
 
 	context.fillStyle = "black";
 	context.font = "32px Roboto";
 	drawMultilineText(
 		"Ik ben geinteresseerd in de bussiness en economie in onze samenleving",
 		(width * 23) / 40,
-		(height * 12) / 40,
-		(width * 38) / 40 - (width * 23) / 40
+		(height * 9) / 40,
+		widthUnderline
 	);
 
 	//question 5
 	context.fillStyle = "#43FF00";
-	context.fillRect(
-		(width * 15) / 40,
-		(height * 37) / 60,
-		(width * 29) / 40 - (width * 15) / 40,
-		25
-	);
+	context.fillRect((width * 13) / 40, (height * 38) / 60, widthUnderline, 25);
 
 	context.fillStyle = "black";
 	context.font = "32px Roboto";
 	drawMultilineText(
 		"Ik heb interesse in verschillende talen en culturen en/of een wetenschappelijke kijk in het leven.",
-		(width * 15) / 40,
+		(width * 13) / 40,
 		(height * 20) / 40,
-		(width * 29) / 40 - (width * 15) / 40
+		widthUnderline
 	);
 }
 function decision3() {
 	drawBackground();
 	//question 6
 	context.fillStyle = "#00E5FF";
-	context.fillRect(
-		(width * 5) / 40,
-		(height * 22) / 60,
-		(width * 20) / 40 - (width * 5) / 40,
-		25
-	);
+	context.fillRect((width * 5) / 40, (height * 22) / 60, widthUnderline, 25);
 
 	context.fillStyle = "black";
 	context.font = "32px Roboto";
 	drawMultilineText(
 		"Ik vraag me af wat economie allemaal inhoudt.",
 		(width * 5) / 40,
-		(height * 7) / 20,
-		(width * 20) / 40 - (width * 5) / 40
+		(height * 11) / 40,
+		widthUnderline
 	);
 	//question 7
 	context.fillStyle = "#FF00BB";
-	context.fillRect(
-		(width * 23) / 40,
-		(height * 22) / 60,
-		(width * 37) / 40 - (width * 23) / 40,
-		25
-	);
+	context.fillRect((width * 23) / 40, (height * 22) / 60, widthUnderline, 25);
 
 	context.fillStyle = "black";
 	context.font = "32px Roboto";
 	drawMultilineText(
 		"Ik heb interesse in hoe een bedrijf werkt.",
 		(width * 23) / 40,
-		(height * 14) / 40,
-		(width * 37) / 40 - (width * 23) / 40
+		(height * 11) / 40,
+		widthUnderline
 	);
 
 	//question 8
 	context.fillStyle = "#43FF00";
 	context.fillRect(
 		(width * 5) / 40,
-		(height * 29) / 40 - 25,
-		(width * 20) / 40 - (width * 5) / 40,
+		(height * 28) / 40 - 25,
+		widthUnderline,
 		25
 	);
 
@@ -448,15 +379,15 @@ function decision3() {
 	drawMultilineText(
 		"Ik heb belangstelling voor de mens en onze samenleving.",
 		(width * 5) / 40,
-		(height * 25) / 40,
-		(width * 20) / 40 - (width * 5) / 40
+		(height * 23) / 40,
+		widthUnderline
 	);
 	//question 9
 	context.fillStyle = "#FF8901";
 	context.fillRect(
 		(width * 23) / 40,
-		(height * 29) / 40 - 25,
-		(width * 37) / 40 - (width * 23) / 40,
+		(height * 28) / 40 - 25,
+		widthUnderline,
 		25
 	);
 
@@ -465,20 +396,15 @@ function decision3() {
 	drawMultilineText(
 		"Ik heb interesse in biologie, chemie en/of natuurkunde.",
 		(width * 23) / 40,
-		(height * 25) / 40,
-		(width * 37) / 40 - (width * 23) / 40
+		(height * 23) / 40,
+		widthUnderline
 	);
 }
 function decision4() {
 	drawBackground();
 	//question 10
 	context.fillStyle = "#00E5FF";
-	context.fillRect(
-		(width * 6) / 40,
-		(height * 17) / 40 - 30,
-		(width * 19) / 40 - (width * 6) / 40,
-		30
-	);
+	context.fillRect((width * 6) / 40, (height * 16) / 40, widthUnderline, 30);
 
 	context.fillStyle = "black";
 	context.font = "32px Roboto";
@@ -486,25 +412,20 @@ function decision4() {
 		"Ik ben nog niet zeker of ik wil verder studeren.",
 		(width * 6) / 40,
 		(height * 11) / 40 + 32,
-		(width * 19) / 40 - (width * 6) / 40
+		widthUnderline
 	);
 
 	//question 11
 	context.fillStyle = "#FF00BB";
-	context.fillRect(
-		(width * 10) / 16,
-		(height * 5) / 13,
-		(width * 37) / 40 - (width * 25) / 40,
-		30
-	);
+	context.fillRect((width * 23) / 40, (height * 16) / 40, widthUnderline, 30);
 
 	context.fillStyle = "black";
 	context.font = "32px Roboto";
 	drawMultilineText(
 		"Ik wil graag verder studeren.",
-		(width * 25) / 40,
+		(width * 23) / 40,
 		(height * 13) / 40 + 32,
-		(width * 37) / 40 - (width * 25) / 40
+		widthUnderline
 	);
 }
 function decision51() {
@@ -515,7 +436,7 @@ function decision51() {
 	context.fillRect(
 		(width * 6) / 40,
 		(height * 17) / 40 - 30,
-		(width * 19) / 40 - (width * 6) / 40,
+		widthUnderline,
 		30
 	);
 
@@ -525,73 +446,53 @@ function decision51() {
 		"Ik vraag me af hoe ondernemingen en bedrijven werken.",
 		(width * 6) / 40,
 		(height * 11) / 40 + 32,
-		(width * 19) / 40 - (width * 6) / 40
+		widthUnderline
 	);
 	//question 13
 	context.fillStyle = "#FF00BB";
-	context.fillRect(
-		(width * 10) / 16,
-		(height * 5) / 13,
-		(width * 37) / 40 - (width * 25) / 40,
-		30
-	);
+	context.fillRect((width * 23) / 40, (height * 5) / 13, widthUnderline, 30);
 
 	context.fillStyle = "black";
 	context.font = "32px Roboto";
 	drawMultilineText(
 		"Ik heb interesse in verschillende talen en wil me verdiepen in het Nederlands.",
-		(width * 25) / 40,
-		(height * 11) / 40 + 32,
-		(width * 37) / 40 - (width * 25) / 40
+		(width * 23) / 40,
+		(height * 9) / 40 + 32,
+		widthUnderline
 	);
 }
 function decision52() {
 	drawBackground();
 	//question 14
 	context.fillStyle = "#B54AE2";
-	context.fillRect(
-		(width * 6) / 40,
-		(height * 17) / 40 - 30,
-		(width * 19) / 40 - (width * 6) / 40,
-		30
-	);
+	context.fillRect((width * 6) / 40, (height * 16) / 40, widthUnderline, 30);
 
 	context.fillStyle = "black";
 	context.font = "32px Roboto";
 	drawMultilineText(
 		"Ik heb interesse in bussiness en economie",
 		(width * 6) / 40,
-		(height * 14) / 40 + 32,
-		(width * 19) / 40 - (width * 6) / 40
+		(height * 11) / 40 + 32,
+		widthUnderline
 	);
 	//question 15
 	context.fillStyle = "#00E5FF";
-	context.fillRect(
-		(width * 10) / 16,
-		(height * 5) / 13,
-		(width * 37) / 40 - (width * 25) / 40,
-		30
-	);
+	context.fillRect((width * 23) / 40, (height * 16) / 40, widthUnderline, 30);
 
 	context.fillStyle = "black";
 	context.font = "32px Roboto";
 	drawMultilineText(
 		"Mijn interesse ligt in het systematisch onderzoeken van diverse vakgebieden.",
-		(width * 25) / 40,
-		(height * 11) / 40 + 32,
-		(width * 37) / 40 - (width * 25) / 40
+		(width * 23) / 40,
+		(height * 9) / 40 + 32,
+		widthUnderline
 	);
 }
 function decision61() {
 	drawBackground();
 	//question 16
 	context.fillStyle = "#00E5FF";
-	context.fillRect(
-		(width * 6) / 40,
-		(height * 22) / 60,
-		(width * 20) / 40 - (width * 6) / 40,
-		25
-	);
+	context.fillRect((width * 6) / 40, (height * 22) / 60, widthUnderline, 25);
 
 	context.fillStyle = "black";
 	context.font = "32px Roboto";
@@ -599,16 +500,11 @@ function decision61() {
 		"Het bestuderen van de menselijke relaties tussen landen in de wereld.",
 		(width * 6) / 40,
 		(height * 12) / 40,
-		(width * 20) / 40 - (width * 6) / 40
+		widthUnderline
 	);
 	//question 17
 	context.fillStyle = "#FF00BB";
-	context.fillRect(
-		(width * 23) / 40,
-		(height * 22) / 60,
-		(width * 38) / 40 - (width * 25) / 40,
-		25
-	);
+	context.fillRect((width * 23) / 40, (height * 22) / 60, widthUnderline, 25);
 
 	context.fillStyle = "black";
 	context.font = "32px Roboto";
@@ -616,60 +512,45 @@ function decision61() {
 		"Ik vraag me af hoe ondernemingen en bedrijven werken.",
 		(width * 23) / 40,
 		(height * 12) / 40,
-		(width * 38) / 40 - (width * 23) / 40
+		widthUnderline
 	);
 	//question 18
 	context.fillStyle = "#FF8901";
-	context.fillRect(
-		(width * 15) / 40,
-		(height * 43) / 60,
-		(width * 29) / 40 - (width * 15) / 40,
-		25
-	);
+	context.fillRect((width * 15) / 40, (height * 38) / 60, widthUnderline, 25);
 
 	context.fillStyle = "black";
 	context.font = "32px Roboto";
 	drawMultilineText(
 		"Het verbeteren van mijn communicatieve vaardigheden.",
 		(width * 15) / 40,
-		(height * 26) / 40,
-		(width * 29) / 40 - (width * 15) / 40
+		(height * 22) / 40,
+		widthUnderline
 	);
 }
 function decision62() {
 	drawBackground();
 	//question 19
 	context.fillStyle = "#FF8901";
-	context.fillRect(
-		(width * 6) / 40,
-		(height * 17) / 40 - 30,
-		(width * 19) / 40 - (width * 6) / 40,
-		30
-	);
+	context.fillRect((width * 6) / 40, (height * 16) / 40, widthUnderline, 30);
 	context.fillStyle = "black";
 	context.font = "32px Roboto";
 	drawMultilineText(
 		"Ik ben niet afgeschrik van een paar uurtjes extra wiskunde.",
 		(width * 6) / 40,
 		(height * 11) / 40 + 32,
-		(width * 19) / 40 - (width * 6) / 40
+		widthUnderline
 	);
 	//question 20
 	context.fillStyle = "#FF00BB";
-	context.fillRect(
-		(width * 10) / 16,
-		(height * 5) / 13,
-		(width * 37) / 40 - (width * 25) / 40,
-		30
-	);
+	context.fillRect((width * 22) / 40, (height * 16) / 40, widthUnderline, 30);
 
 	context.fillStyle = "black";
 	context.font = "32px Roboto";
 	drawMultilineText(
 		"Ik vind het interessant hoe mensen zich gedragen en hoe onze samenleving werkt.",
-		(width * 25) / 40,
+		(width * 22) / 40,
 		(height * 9) / 40 + 32,
-		(width * 37) / 40 - (width * 25) / 40
+		widthUnderline
 	);
 }
 function mouseClickDown(event) {
@@ -716,7 +597,7 @@ function mouseClickDown(event) {
 	//back button
 	if (
 		stage != 0 &&
-		mouseY > (height * 29) / 40 &&
+		mouseY > (height * 27) / 40 &&
 		mouseY < (height * 34) / 40 &&
 		mouseX > (width * 3) / 40 &&
 		mouseX < (width * 6) / 40
