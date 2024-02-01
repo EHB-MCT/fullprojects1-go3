@@ -76,3 +76,22 @@ document.addEventListener("DOMContentLoaded", function () {
 		.querySelector(".arrowRight")
 		.addEventListener("click", () => handleArrowClick("right"));
 });
+
+window.addEventListener("DOMContentLoaded", (event) => {
+	const paragraphs = document.querySelectorAll(".item p");
+
+	paragraphs.forEach((paragraph) => {
+		// Check if the content doesn't overflows
+		if (paragraph.scrollHeight <= paragraph.clientHeight) {
+			paragraph.classList.add("hide-scrollbar");
+		}
+	});
+
+	const container = document.getElementById("container");
+
+	// Check if the container element exists
+	if (container) {
+		// Scroll to the container
+		container.scrollIntoView({ behavior: "smooth", block: "center" });
+	}
+});
