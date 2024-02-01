@@ -16,11 +16,37 @@ body {
 	margin: 3.5%;
 }
 .slogan {
+	
 	margin: 100px;
 	font-size: 80px;
 	text-align: center;
-}
 
+}
+.selected-lime{
+	background-color: lime;
+	padding:0 25px;
+	clip-path: polygon(5% 0, 100% 0, 90% 110%, 0% 100%); }
+.selected-yellow{
+	background-color: #ccff00;
+	text-decoration: #ccff00;
+	padding:0 55px;
+	clip-path: polygon(5% 0, 100% 0, 90% 110%, 0% 100%); }
+.selected-pink{
+	background-color: #ff00bb;
+	text-decoration: #ff00bb;
+	color: black;
+	padding:0 35px;
+	clip-path: polygon(5% 0, 100% 0, 90% 110%, 0% 100%); }
+.selected-blue{
+	background-color: #00e5ff;
+	text-decoration: #00e5ff;
+	padding:0 25px;
+	clip-path: polygon(5% 0, 100% 0, 90% 110%, 0% 100%); }
+.selected-orange{
+	background-color: orange;
+	text-decoration: orange;
+	padding:0 25px;
+	clip-path: polygon(5% 0, 100% 0, 90% 110%, 0% 100%); }
 h1,
 h2 {
 	font-family: "besides";
@@ -858,6 +884,9 @@ main div {
 	.slogan {
 		font-size: 50px;
 		margin: 0;
+		
+		
+		  
 	}
 	.textField {
 		margin: 0 auto;
