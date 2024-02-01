@@ -15,7 +15,6 @@ window.onclick = mouseClickDown;
 
 setup();
 draw();
-draw();
 
 function setup() {
 	context.font = "24px Roboto";
@@ -153,24 +152,33 @@ function phase() {
 		decision62();
 	}
 }
-function textSelect(mouseX, mouseY, optionA, optionB) {
+function textSelect(mouseX, mouseY, optionA, optionB, ...args) {
 	if (
 		mouseX > (width * 6) / 40 &&
 		mouseX < (width * 19) / 40 &&
 		mouseY > (height * 9) / 40 &&
 		mouseY < (height * 17) / 40
 	) {
-		stage++;
-		choices.push(optionA);
+		if (args[0]) {
+			console.log("show result");
+			stage = "resultPage";
+		} else {
+			stage++;
+			choices.push(optionA);
+		}
 	} else if (
 		mouseX > (width * 25) / 40 &&
 		mouseX < (width * 37) / 40 &&
 		mouseY > (height * 9) / 40 &&
 		mouseY < (height * 17) / 40
-	) {
-		stage++;
-		choices.push(optionB);
-	}
+	)
+		if (args[0]) {
+			console.log("show result");
+			stage = args[1];
+		} else {
+			stage++;
+			choices.push(optionB);
+		}
 }
 function backButton() {
 	backBtn.style.display = "initial";
@@ -546,21 +554,21 @@ function mouseClickDown(event) {
 	}
 	// stages
 	else if (stage == 1) {
-		textSelect(mouseX, mouseY, "Latijn", "Mw");
+		textSelect(mouseX, mouseY, result1, result2);
 	} else if (stage == 2) {
-		textSelect2(mouseX, mouseY, "KT", "MTW", "E&O");
+		textSelect2(mouseX, mouseY, result3, result4, result5);
 	} else if (stage == 3) {
-		textSelect3(mouseX, mouseY, "EW", "BW", "HW", "NW");
+		textSelect3(mouseX, mouseY, result6, result7, result8, result9);
 	} else if (stage == 4) {
 		textSelect(mouseX, mouseY, "verder", "nietVerder");
 	} else if (stage == 5) {
-		textSelect(mouseX, mouseY, "BO", "T&C");
+		textSelect(mouseX, mouseY, result10, result11, true, 0);
 	} else if (stage == 6) {
-		textSelect(mouseX, mouseY, "BusEco", "Science");
+		textSelect(mouseX, mouseY, "bussiness", "science");
 	} else if (stage == 7) {
-		textSelect2(mouseX, mouseY, "ET", "EW", "BW");
+		textSelect2(mouseX, mouseY, result12, result13, result14);
 	} else if (stage == 8) {
-		textSelect(mouseX, mouseY, "WW", "HW");
+		textSelect(mouseX, mouseY, result15, result16);
 	}
 	//back button
 	if (
@@ -573,7 +581,7 @@ function mouseClickDown(event) {
 		choices.pop();
 		stage--;
 	}
-	console.log(choices);
+	// console.log(choices);
 }
 function mousePos(event) {
 	const rect = context.canvas.getBoundingClientRect();
@@ -616,6 +624,8 @@ function highlight(colour, x, y, w) {
 
 function result1() {
 	rabbitDoodle.style.display = "none";
+	context.clearRect(0, 0, width, height);
+	console.log(1)
 
 	context.font = "40pt besides";
 	highlight("#43FF00", (width * 1) / 16, (height * 1) / 24, 240);
@@ -635,6 +645,8 @@ function result1() {
 
 function result2() {
 	rabbitDoodle.style.display = "none";
+	context.clearRect(0, 0, width, height);
+	console.log(2)
 
 	context.font = "40pt besides";
 	highlight("#43FF00", (width * 1) / 16, (height * 5) / 98, (width * 12) / 20);
@@ -666,6 +678,8 @@ function result2() {
 
 function result3() {
 	rabbitDoodle.style.display = "none";
+	context.clearRect(0, 0, width, height);
+	console.log(3)
 
 	context.font = "40pt besides";
 	highlight("#CCFF00", (width * 1) / 16, (height * 5) / 98, (width * 7) / 20);
@@ -691,6 +705,8 @@ function result3() {
 
 function result4() {
 	rabbitDoodle.style.display = "none";
+	context.clearRect(0, 0, width, height);
+	console.log(4)
 
 	context.font = "40pt besides";
 	highlight("#CCFF00", (width * 1) / 16, (height * 5) / 98, (width * 7) / 20);
@@ -734,6 +750,8 @@ function result4() {
 
 function result5() {
 	rabbitDoodle.style.display = "none";
+	context.clearRect(0, 0, width, height);
+	console.log(5)
 
 	context.font = "40pt besides";
 	highlight("#CCFF00", (width * 1) / 16, (height * 4) / 98, (width * 12) / 20);
@@ -773,6 +791,8 @@ function result5() {
 
 function result6() {
 	rabbitDoodle.style.display = "none";
+	context.clearRect(0, 0, width, height);
+	console.log(6)
 
 	context.font = "40pt besides";
 	highlight("#FF00BB", (width * 1) / 16, (height * 5) / 98, (width * 14) / 20);
@@ -797,6 +817,8 @@ function result6() {
 }
 function result7() {
 	rabbitDoodle.style.display = "none";
+	context.clearRect(0, 0, width, height);
+	console.log(7)
 
 	context.font = "40pt besides";
 	highlight("#FF00BB", (width * 1) / 16, (height * 4) / 98, (width * 12) / 20);
@@ -827,6 +849,8 @@ function result7() {
 }
 function result8() {
 	rabbitDoodle.style.display = "none";
+	context.clearRect(0, 0, width, height);
+	console.log(8)
 
 	context.font = "40pt besides";
 	highlight("#FF00BB", (width * 1) / 16, (height * 4) / 98, (width * 11) / 20);
@@ -858,6 +882,8 @@ function result8() {
 
 function result9() {
 	rabbitDoodle.style.display = "none";
+	context.clearRect(0, 0, width, height);
+	console.log(9)
 
 	context.font = "40pt besides";
 	highlight("#FF00BB", (width * 1) / 16, (height * 4) / 98, (width * 11) / 20);
@@ -883,6 +909,8 @@ function result9() {
 
 function result10() {
 	rabbitDoodle.style.display = "none";
+	context.clearRect(0, 0, width, height);
+	console.log(10)
 
 	context.font = "40pt besides";
 	highlight("#00E5FF", (width * 1) / 16, (height * 4) / 98, (width * 12) / 20);
@@ -919,6 +947,8 @@ function result10() {
 }
 function result11() {
 	rabbitDoodle.style.display = "none";
+	context.clearRect(0, 0, width, height);
+	console.log(11)
 
 	context.font = "40pt besides";
 	highlight("#00E5FF", (width * 1) / 16, (height * 4) / 98, (width * 12) / 20);
@@ -949,6 +979,8 @@ function result11() {
 }
 function result12() {
 	rabbitDoodle.style.display = "none";
+	context.clearRect(0, 0, width, height);
+	console.log(12)
 
 	context.font = "40pt besides";
 	highlight("#00E5FF", (width * 1) / 16, (height * 4) / 98, (width * 11) / 20);
@@ -985,6 +1017,8 @@ function result12() {
 }
 function result13() {
 	rabbitDoodle.style.display = "none";
+	context.clearRect(0, 0, width, height);
+	console.log(13)
 
 	context.font = "40pt besides";
 	highlight("#00E5FF", (width * 1) / 16, (height * 4) / 98, (width * 9) / 20);
@@ -1021,6 +1055,8 @@ function result13() {
 }
 function result14() {
 	rabbitDoodle.style.display = "none";
+	context.clearRect(0, 0, width, height);
+	console.log(14)
 
 	context.font = "40pt besides";
 	highlight("#00E5FF", (width * 1) / 16, (height * 4) / 98, (width * 13) / 20);
@@ -1051,6 +1087,8 @@ function result14() {
 }
 function result15() {
 	rabbitDoodle.style.display = "none";
+	context.clearRect(0, 0, width, height);
+	console.log(15)
 
 	context.font = "40pt besides";
 	highlight("#00E5FF", (width * 1) / 16, (height * 4) / 98, (width * 11) / 20);
@@ -1075,6 +1113,8 @@ function result15() {
 }
 function result16() {
 	rabbitDoodle.style.display = "none";
+	context.clearRect(0, 0, width, height);
+	console.log(16)
 
 	context.font = "40pt besides";
 	highlight("#00E5FF", (width * 1) / 16, (height * 4) / 98, (width * 10) / 20);
