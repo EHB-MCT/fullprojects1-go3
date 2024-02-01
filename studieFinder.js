@@ -14,10 +14,11 @@ window.onmousemove = mousePos;
 window.onclick = mouseClickDown;
 
 setup();
-draw();
+//draw();
 
 function setup() {
 	context.font = "24px Roboto";
+	decision2();
 }
 
 function draw() {
@@ -346,9 +347,9 @@ function decision2() {
 	context.fillStyle = "black";
 	context.font = "32px Roboto";
 	drawMultilineText(
-		"Ik ben geïnteresseerd in business en economie in onze samenleving.",
+		"Ik heb interesse in verschillende talen en culturen en/of een wetenschappelijke kijk in het leven.",
 		(width * 15) / 40,
-		(height * 22) / 40,
+		(height * 20) / 40,
 		(width * 29) / 40 - (width * 15) / 40
 	);
 }
