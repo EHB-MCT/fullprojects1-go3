@@ -148,8 +148,6 @@ function phase() {
 	} else if (stage == 8) {
 		decision62();
 	} else if (stage == "resultPage") {
-		console.log(choices);
-		// console.log("page" + pageResult);
 		choices[0]();
 	}
 }
@@ -711,6 +709,9 @@ function mouseClickDown(event) {
 		textSelect(mouseX, mouseY, result15, result16, true);
 	} else if (stage == "resultPage") {
 		choices.shift();
+		if (choices.length == 0) {
+			stage = 0;
+		}
 	}
 	//back button
 	if (
@@ -754,7 +755,7 @@ function highlight(colour, x, y, w) {
 	context.restore();
 }
 function result1() {
-	rabbitDoodle.style.display = "none";
+	backBtn.style.display = "none";
 	context.clearRect(0, 0, width, height);
 
 	context.font = "40pt besides";
@@ -773,7 +774,7 @@ function result1() {
 	);
 }
 function result2() {
-	rabbitDoodle.style.display = "none";
+	backBtn.style.display = "none";
 	context.clearRect(0, 0, width, height);
 
 	context.font = "40pt besides";
@@ -804,7 +805,7 @@ function result2() {
 	);
 }
 function result3() {
-	rabbitDoodle.style.display = "none";
+	backBtn.style.display = "none";
 	context.clearRect(0, 0, width, height);
 
 	context.font = "40pt besides";
@@ -829,7 +830,7 @@ function result3() {
 	);
 }
 function result4() {
-	rabbitDoodle.style.display = "none";
+	backBtn.style.display = "none";
 	context.clearRect(0, 0, width, height);
 
 	context.font = "40pt besides";
@@ -868,7 +869,7 @@ function result4() {
 	);
 }
 function result5() {
-	rabbitDoodle.style.display = "none";
+	backBtn.style.display = "none";
 	context.clearRect(0, 0, width, height);
 
 	context.font = "40pt besides";
@@ -911,7 +912,7 @@ function result5() {
 	);
 }
 function result6() {
-	rabbitDoodle.style.display = "none";
+	backBtn.style.display = "none";
 	context.clearRect(0, 0, width, height);
 
 	context.font = "40pt besides";
@@ -936,7 +937,7 @@ function result6() {
 	);
 }
 function result7() {
-	rabbitDoodle.style.display = "none";
+	backBtn.style.display = "none";
 	context.clearRect(0, 0, width, height);
 
 	context.font = "40pt besides";
@@ -967,7 +968,7 @@ function result7() {
 	);
 }
 function result8() {
-	rabbitDoodle.style.display = "none";
+	backBtn.style.display = "none";
 	context.clearRect(0, 0, width, height);
 
 	context.font = "40pt besides";
@@ -998,7 +999,7 @@ function result8() {
 	);
 }
 function result9() {
-	rabbitDoodle.style.display = "none";
+	backBtn.style.display = "none";
 	context.clearRect(0, 0, width, height);
 
 	context.font = "40pt besides";
@@ -1023,7 +1024,7 @@ function result9() {
 	);
 }
 function result10() {
-	rabbitDoodle.style.display = "none";
+	backBtn.style.display = "none";
 	context.clearRect(0, 0, width, height);
 
 	context.font = "40pt besides";
@@ -1060,7 +1061,7 @@ function result10() {
 	);
 }
 function result11() {
-	rabbitDoodle.style.display = "none";
+	backBtn.style.display = "none";
 	context.clearRect(0, 0, width, height);
 
 	context.font = "40pt besides";
@@ -1091,7 +1092,7 @@ function result11() {
 	);
 }
 function result12() {
-	rabbitDoodle.style.display = "none";
+	backBtn.style.display = "none";
 	context.clearRect(0, 0, width, height);
 
 	context.font = "40pt besides";
@@ -1122,7 +1123,7 @@ function result12() {
 	);
 }
 function result13() {
-	rabbitDoodle.style.display = "none";
+	backBtn.style.display = "none";
 	context.clearRect(0, 0, width, height);
 
 	context.font = "40pt besides";
@@ -1159,7 +1160,7 @@ function result13() {
 	);
 }
 function result14() {
-	rabbitDoodle.style.display = "none";
+	backBtn.style.display = "none";
 	context.clearRect(0, 0, width, height);
 
 	context.font = "40pt besides";
@@ -1196,7 +1197,7 @@ function result14() {
 	);
 }
 function result15() {
-	rabbitDoodle.style.display = "none";
+	backBtn.style.display = "none";
 	context.clearRect(0, 0, width, height);
 
 	context.font = "40pt besides";
@@ -1227,7 +1228,7 @@ function result15() {
 	);
 }
 function result16() {
-	rabbitDoodle.style.display = "none";
+	backBtn.style.display = "none";
 	context.clearRect(0, 0, width, height);
 
 	context.font = "40pt besides";
