@@ -351,12 +351,16 @@ td {
 .buttons [id^="button"] {
 	display: none;
 }
-
+.courseText{
+	margin-left: 6.5%;
+}
 .hiddenDiv {
 	display: none;
 	align-items: center;
 	text-align: left;
+	margin-left: 6.5%;
 }
+
 main div {
 	margin-bottom: 50px;
 }
@@ -735,6 +739,9 @@ main div {
 	padding: 0px;
 	margin: 0px;
 }
+.quizDoodles img {
+	display: none;
+}
 @media only screen and (min-width: 1400px) {
 	.sidebar {
 		display: none;
@@ -744,6 +751,8 @@ main div {
 	}
 }
 @media only screen and (max-width: 1400px) {
+	.hiddenDiv{margin-left: 12%;}
+	.courseText{margin-left: 12%;}
 	.logo {
 		margin-left: 70%;
 		margin-top: 10px;
@@ -1073,3 +1082,4 @@ main div {
 	text-align: center;
 	width: 100%;
 }
+
