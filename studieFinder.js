@@ -14,11 +14,11 @@ window.onmousemove = mousePos;
 window.onclick = mouseClickDown;
 
 setup();
-//draw();
+draw();
 
 function setup() {
 	context.font = "24px Roboto";
-	result16();
+	// result16();
 }
 
 function draw() {
@@ -97,7 +97,6 @@ function drawStartMenu() {
 		(height * 23) / 50,
 		(width * 3) / 10
 	);
-	// context.fillText("richting?", (width * 22) / 30, (height * 53) / 100);
 
 	//Welke richting is voor mij?
 	highlight("#00E5FF", (width * 19) / 48, (height * 3) / 32, 600);
@@ -109,7 +108,6 @@ function drawStartMenu() {
 		(height * 4) / 32,
 		(width * 4) / 10
 	);
-	// context.fillText("voor mij?", (width * 26) / 50, (height * 9) / 50);
 
 	//button
 	context.fillStyle = "#9A00FF";
@@ -146,6 +144,14 @@ function phase() {
 		decision3();
 	} else if (stage == 4) {
 		decision4();
+	} else if (stage == 5) {
+		decision51();
+	} else if (stage == 6) {
+		decision52();
+	} else if (stage == 7) {
+		decision61();
+	} else if (stage == 8) {
+		decision62();
 	}
 }
 function textSelect(mouseX, mouseY, optionA, optionB) {
@@ -176,7 +182,11 @@ function backButton() {
 	backBtn.style.bottom = "5%";
 	backBtn.style.left = "10vw";
 }
-function textSelect2(mouseX, mouseY, optionA, optionB, optionC) {
+function textSelect2(mouseX, mouseY, optionA, optionB, optionC, ...args) {
+	let end = args[0];
+	if (end) {
+		return end;
+	}
 	if (
 		mouseX > (width * 6) / 40 &&
 		mouseX < (width * 20) / 40 &&
@@ -562,17 +572,21 @@ function mouseClickDown(event) {
 	}
 	// stages
 	else if (stage == 1) {
-		textSelect(mouseX, mouseY, "a", "b");
+		textSelect(mouseX, mouseY, "Latijn", "Mw");
 	} else if (stage == 2) {
-		textSelect2(mouseX, mouseY, "c", "d", "e");
+		textSelect2(mouseX, mouseY, "KT", "MTW", "E&O");
 	} else if (stage == 3) {
-		textSelect3(mouseX, mouseY, "f", "g", "h", "i");
+		textSelect3(mouseX, mouseY, "EW", "BW", "HW", "NW");
 	} else if (stage == 4) {
-		textSelect(mouseX, mouseY, "j", "k");
+		textSelect(mouseX, mouseY, "verder", "nietVerder");
 	} else if (stage == 5) {
-		textSelect(mouseX, mouseY, "l", "m");
+		textSelect(mouseX, mouseY, "BO", "T&C");
 	} else if (stage == 6) {
-		textSelect(mouseX, mouseY, "n", "o");
+		textSelect(mouseX, mouseY, "BusEco", "Science");
+	} else if (stage == 7) {
+		textSelect2(mouseX, mouseY, "ET", "EW", "BW");
+	} else if (stage == 8) {
+		textSelect(mouseX, mouseY, "WW", "HW");
 	}
 	//back button
 	if (
